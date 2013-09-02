@@ -1,4 +1,4 @@
-package com.lewa.viewtest;
+package com.lewa.viewtest.layout;
 
 import android.content.Context;
 import android.util.AttributeSet;

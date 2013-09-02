@@ -1,8 +1,9 @@
 package com.lewa.viewtest;
 
 import android.os.Bundle;
+import android.view.View;
 import android.app.Activity;
-import android.view.Menu;
+import android.content.Intent;
 
 public class MainActivity extends Activity {
 
@@ -10,13 +11,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        gotoRecents(null);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+    public void gotoRecents(View v) {
+        Intent i = new Intent(this, CommonActivity.class);
+        i.putExtra("fragment", "com.lewa.viewtest.recents.RecentsFragment");
+        startActivity(i);
     }
+    
     
 }
