@@ -1,5 +1,4 @@
 package com.lewa.viewtest;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
@@ -9,7 +8,7 @@ import android.widget.FrameLayout;
 
 public class CommonActivity extends Activity {
 
-    private static final String KEY_FRAGMENT = "fragment";
+    public static final String KEY_FRAGMENT = "fragment";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
