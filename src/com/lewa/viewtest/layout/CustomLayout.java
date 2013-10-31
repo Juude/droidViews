@@ -5,13 +5,10 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 public class CustomLayout extends ViewGroup {
     
-    private static final String TAG = "CustomLayout";
-    private LinearLayout cll ;
-    
+    private static final String TAG = "CustomLayout";    
     public CustomLayout(Context context){
         super(context);
         init();

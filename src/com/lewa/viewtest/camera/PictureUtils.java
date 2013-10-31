@@ -3,10 +3,12 @@ package com.lewa.viewtest.camera;
 
 import android.hardware.Camera;
 import android.hardware.Camera.CameraInfo;
+import android.app.AppGlobals;
 import android.graphics.ImageFormat;
 import android.os.Environment;
 import android.util.Log;
 import android.view.SurfaceHolder;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -34,9 +36,7 @@ public class PictureUtils {
             Camera.Parameters params = mCamera.getParameters();
 
             params.setPictureFormat(ImageFormat.JPEG);
-            params.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
             params.setRotation(ROTATION);
-            params.setFocusMode(Camera.Parameters.FOCUS_MODE_FIXED);
             mCamera.setParameters(params);
 
             mCamera.setPreviewDisplay(mSurfaceHolder);
@@ -67,6 +67,7 @@ public class PictureUtils {
     {
         @Override
         public void onPictureTaken(byte[] data, Camera camera) {
+            Toast.makeText(AppGlobals.getInitialApplication(), "picture token", Toast.LENGTH_LONG).show();
             Log.e(TAG, "data.." + data + "to" + mTempPath);
             closeCamera();
             File dest = new File(mTempPath);

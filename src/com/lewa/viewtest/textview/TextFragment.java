@@ -1,5 +1,5 @@
 
-package com.lewa.viewtest.view;
+package com.lewa.viewtest.textview;
 
 import android.app.Activity;
 import android.app.Fragment;

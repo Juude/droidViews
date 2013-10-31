@@ -8,7 +8,6 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import com.lewa.viewtest.R;
 
@@ -32,7 +31,7 @@ public class TextViewTest extends ViewGroup{
     @Override
     protected void onFinishInflate() {
         Context context = getContext();
-        TextView textSpanTest = (TextView)findViewById(R.id.textSpanTest);
+        //TextView textSpanTest = (TextView)findViewById(R.id.textSpanTest);
         Object [] args = new Integer[2];
         args[0] = 0;
         args[1] = 1;
@@ -49,7 +48,7 @@ public class TextViewTest extends ViewGroup{
                 spannablecontent.setSpan(new ForegroundColorSpan(Color.BLUE), pStart, pEnd, 0);
             }
         }
-        textSpanTest.setText(spannablecontent);
+        //textSpanTest.setText(spannablecontent);
         super.onFinishInflate();
     }
 

@@ -1,5 +1,5 @@
 
-package com.lewa.viewtest.view;
+package com.lewa.viewtest.textview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
