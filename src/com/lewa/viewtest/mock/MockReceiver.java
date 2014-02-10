@@ -23,7 +23,7 @@ public class MockReceiver extends BroadcastReceiver {
     private static final String TAG = "MockReceiver";
     @Override
     public void onReceive(Context context, Intent intent) {
-           final String action = intent.getStringExtra("action");
+           final String action = intent.getStringExtra("a");
            try {
                MockReceiver.class.getMethod(action, Context.class, Intent.class)
                .invoke(this, context, intent);

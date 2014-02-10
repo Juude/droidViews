@@ -42,7 +42,6 @@ public class RecentsFragment extends Fragment{
         mAm = ActivityManagerNative.getDefault();
 
     }
-
     
     @SuppressWarnings("unchecked")
     @Override
@@ -102,8 +101,6 @@ public class RecentsFragment extends Fragment{
             @Override
             protected Void doInBackground(Void... params) {
                 final int origPri = Process.getThreadPriority(Process.myTid());
-                //Process.setThreadPriority(Process.THREAD_PRIORITY_BACKGROUND);
-
                 while (true) {
                     if (isCancelled()) {
                         break;

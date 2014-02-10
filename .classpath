@@ -2,13 +2,11 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/lewa-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2/vendor/lewa/frameworks/base/core/java"/>
-	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2/vendor/lewa/frameworks/base/core/java"/>
-    <classpathentry kind="lib" 
-    path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/secondary-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2/vendor/lewa/frameworks/base/core/java"/>
-	
-    <classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/lewa-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/vendor/lewa/frameworks/base/core/java"/>
+	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/vendor/lewa/frameworks/base/core/java"/>
+	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/secondary-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/frameworks/base/core/java"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

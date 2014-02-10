@@ -10,7 +10,12 @@ import android.widget.ListView;
 import android.app.Activity;
 
 import com.android.internal.util.XmlUtils;
+import com.lewa.viewtest.audio.AudioRecordTest;
+import com.lewa.viewtest.camera.PictureFragment;
+import com.lewa.viewtest.layout.LinearLayoutTest;
 import com.lewa.viewtest.mock.MockUtils;
+import com.lewa.viewtest.preference.ConnectivityPreferenceFragment;
+import com.lewa.viewtest.preference.CustomSwitchFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +30,8 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mHistoryList = (ListView)findViewById(R.id.historyList);
-
-
     }
+    
     @Override
     protected void onPause() {
         super.onPause();
@@ -47,8 +51,14 @@ public class MainActivity extends Activity {
             mHistories = new ArrayList<String>();
             e.printStackTrace();
         }
-        mHistories.add("com.lewa.viewtest.camera.PictureFragment");
-        mHistories.add("com.lewa.viewtest.audio.AudioRecordTest");
+        mHistories.add(PictureFragment.class.getName());
+        mHistories.add(AudioRecordTest.class.getName());
+        mHistories.add(LinearLayoutTest.class.getName());
+        mHistories.add(ConnectivityPreferenceFragment.class.getName());
+        mHistories.add(CustomSwitchFragment.class.getName());
+
+        
+
         mAdapter = new ArrayAdapter
                 (this, android.R.layout.simple_list_item_1, mHistories);
         mHistoryList.setAdapter(mAdapter);
@@ -62,5 +72,6 @@ public class MainActivity extends Activity {
         });
         super.onStart();
     }
+
     
 }

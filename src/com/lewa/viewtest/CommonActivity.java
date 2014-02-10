@@ -3,6 +3,7 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemProperties;
 import android.widget.FrameLayout;
 
 
@@ -13,6 +14,9 @@ public class CommonActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if(SystemProperties.getInt("v5", 1) == 1) {
+            setTheme(lewa.R.style.V5_Theme_Holo_Light);
+        }
         FrameLayout parent = new FrameLayout(this);
         parent.setId(android.R.id.content);
         setContentView(parent);
