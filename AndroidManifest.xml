@@ -51,6 +51,11 @@
             android:label="@string/app_name" >
         </activity>
         
+       <service
+            android:name="com.lewa.viewtest.serviceview.ViewContainerService" >
+            <action android:name="serviceview"/>
+        </service>
+        
         <receiver
             android:name=".mock.MockReceiver" >
             <intent-filter >

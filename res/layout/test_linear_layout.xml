@@ -3,7 +3,7 @@
    1. test dividers in LinearLayout 
    
        android:divider="@*android:drawable/list_section_divider_holo_light"
-   
+   2. test weight
  -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -16,12 +16,14 @@
     
     <View 
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:background="#FF0"
         android:alpha="1"/>
     
     <View 
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="30dp"
+
         android:background="#F00"/>
 </LinearLayout>
