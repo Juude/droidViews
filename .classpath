@@ -2,9 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
-	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/lewa-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/vendor/lewa/frameworks/base/core/java"/>
-	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/vendor/lewa/frameworks/base/core/java"/>
-	<classpathentry kind="lib" path="/home/jdsong/projects/mtk6589_jb2_V5/out/target/common/obj/JAVA_LIBRARIES/secondary-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/frameworks/base/core/java"/>
+	<classpathentry kind="lib" path="/home/jdsong/161/msm8x26_B2B_V5/out/target/common/obj/JAVA_LIBRARIES/lewa-framework_intermediates/classes.jar" sourcepath="/home/jdsong/projects/mtk6589_jb2_V5/vendor/lewa/frameworks/base/core/java"/>
+	<classpathentry kind="lib" path="/home/jdsong/161/msm8x26_B2B_V5/out/target/common/obj/JAVA_LIBRARIES/framework_intermediates/classes.jar" sourcepath="/home/jdsong/161/msm8x26_B2B_V5/frameworks/base/core/java"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
