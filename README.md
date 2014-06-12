@@ -1,4 +1,6 @@
-ViewTest
+droidViews
 ========
 
-android view test
+###TODO
+1. add windowmanager examples
+2. 

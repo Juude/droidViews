@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lewa.viewtest"
+    package="com.juude.viewdemos"
     android:versionCode="1"
     android:versionName="1.0"
 >
     <uses-sdk
-        android:minSdkVersion="15"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-permission android:name="android.permission.GET_TASKS"/>
     <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
@@ -21,15 +21,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     
-    <!--         android:theme="@android:style/Theme.Holo.Light"  -->
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light"
+        android:name=".DroidViewsApplication"
 >
         <activity
-            android:name="com.lewa.viewtest.MainActivity"
+            android:name="com.juude.viewdemos.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -37,30 +37,20 @@
             </intent-filter>
         </activity>
         
-       <activity
-            android:name="com.lewa.viewtest.LayoutActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
         <activity
-            android:name="com.lewa.viewtest.CommonActivity"
-            android:label="@string/app_name" >
-        </activity>
-        
-        <activity
-            android:name="com.lewa.viewtest.dialog.StkDialogActivity"
+            android:theme="@android:style/Theme.Dialog"
+            android:name="com.juude.viewdemos.CommonActivity"
             android:label="@string/app_name" >
         </activity>
         
        <service
-            android:name="com.lewa.viewtest.serviceview.ViewContainerService" >
+            android:name="com.juude.viewdemos.serviceview.ViewContainerService" >
             <action android:name="serviceview"/>
         </service>
         
-        <receiver
-            android:name=".mock.MockReceiver" >
-            <intent-filter >
-                <action android:name="android.mock"/>
+        <receiver android:name="com.juuda.droidmock.mock.MockReceiver" >
+            <intent-filter>
+                <action android:name="android.mock" />
             </intent-filter>
         </receiver>
     </application>

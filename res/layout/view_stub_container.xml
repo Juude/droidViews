@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.lewa.viewtest.view.ViewStubContainer xmlns:android="http://schemas.android.com/apk/res/android"
+<com.juude.viewdemos.view.ViewStubContainer xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
@@ -16,15 +16,15 @@
         android:layout_height="wrap_content"
         android:text="ToggleButton" />
 
-    <com.lewa.viewtest.layout.CustomLayout
+    <com.juude.viewdemos.layout.CustomLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-    </com.lewa.viewtest.layout.CustomLayout>
+    </com.juude.viewdemos.layout.CustomLayout>
 
-    <com.lewa.viewtest.layout.CustomLayout
+    <com.juude.viewdemos.layout.CustomLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
-    </com.lewa.viewtest.layout.CustomLayout>
+    </com.juude.viewdemos.layout.CustomLayout>
 
     <ViewStub
         android:id="@+id/viewStub"
@@ -33,4 +33,4 @@
         android:layout_height="wrap_content" >
     </ViewStub>
     
-</com.lewa.viewtest.view.ViewStubContainer>
+</com.juude.viewdemos.view.ViewStubContainer>
