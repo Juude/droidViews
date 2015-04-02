@@ -1,0 +1,16 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <PreferenceCategory
+            android:title="2">
+
+        <com.lewa.viewtest.widget.SwitchPreference2
+                android:key="mobile_data_preference"
+                android:layout="?android:attr/preferenceLayoutChild"
+                android:title="hello"
+                android:summary="summary" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen><!-- From: file:/Users/juude/AndroidstudioProjects/droidViews/app/src/main/res/xml/preference.xml -->

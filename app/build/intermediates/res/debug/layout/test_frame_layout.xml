@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+1. two at same position
+ -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:divider="@drawable/image"
+    android:showDividers="middle"
+    android:dividerPadding="20dp"
+     >
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#0000"/>
+    
+    <View 
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#9F00"/>
+    
+</FrameLayout>
+<!-- From: file:/Users/juude/AndroidstudioProjects/droidViews/app/src/main/res/layout/test_frame_layout.xml -->

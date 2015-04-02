@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="100dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!-- hellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohellohello -->
+    <com.lewa.droidtest.view.LinedTextView
+        android:text="你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊你好哈哈哈哈哈阿哈哈的你阿飞i大家佛啊"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     />
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nihaoMAMAAAMMA"/>
+</LinearLayout><!-- From: file:/Users/juude/AndroidstudioProjects/droidViews/app/src/main/res/layout/lined_text_fragment.xml -->
