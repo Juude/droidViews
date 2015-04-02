@@ -1,6 +1,4 @@
 droidViews
 ========
 
-###TODO
-1. add windowmanager examples
-2. add more readme
+演示android各种View的效果。
