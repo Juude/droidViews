@@ -1,5 +1,5 @@
 
-package net.juude.droidviews.textview;
+package net.juude.droidviews.widget.textview;
 
 import android.content.Context;
 import android.graphics.Bitmap;

@@ -1,5 +1,5 @@
 
-package net.juude.droidviews.listview;
+package net.juude.droidviews.widget.listview;
 
 import android.app.Activity;
 import android.app.Fragment;

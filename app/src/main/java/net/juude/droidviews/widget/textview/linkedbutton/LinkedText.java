@@ -1,5 +1,5 @@
 
-package net.juude.droidviews.linkedbutton;
+package net.juude.droidviews.widget.textview.linkedbutton;
 
 import android.content.Context;
 import android.text.Spannable;

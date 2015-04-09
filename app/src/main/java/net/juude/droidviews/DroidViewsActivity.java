@@ -13,9 +13,10 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.layout.LinearLayoutTest;
-import net.juude.droidviews.textview.TextFragment;
+import net.juude.droidviews.widget.textview.TextFragment;
 
 import java.util.HashMap;
 
@@ -37,7 +38,8 @@ public class DroidViewsActivity extends Activity {
         sFragmentList = new Class<?>[] {
             PictureFragment.class,
             LinearLayoutTest.class,
-            TextFragment.class
+            TextFragment.class,
+            AnimationFragment.class,
         };
     }
 

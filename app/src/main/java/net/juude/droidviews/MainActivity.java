@@ -9,7 +9,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 
-import net.juude.droidviews.audio.AudioRecordTest;
 import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.layout.LinearLayoutTest;
 import net.juude.droidviews.mock.FragmentMocker;
@@ -59,7 +58,6 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
         mHistories.add(PictureFragment.class.getName());
-        mHistories.add(AudioRecordTest.class.getName());
         mHistories.add(LinearLayoutTest.class.getName());
 
         mAdapter = new ArrayAdapter

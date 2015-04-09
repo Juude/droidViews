@@ -1,4 +1,4 @@
-package net.juude.droidviews.textview;
+package net.juude.droidviews.widget.textview;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -11,19 +11,19 @@ import android.view.ViewGroup;
 
 import net.juude.droidviews.R;
 
-public class TextViewTest extends ViewGroup{
+public class SpannableText extends ViewGroup{
     
     public final String TAG = "TextViewTest";
     
-    public TextViewTest(Context context) {
+    public SpannableText(Context context) {
         this(context, null, 0);
     }
     
-    public TextViewTest(Context context, AttributeSet attrs) {
+    public SpannableText(Context context, AttributeSet attrs) {
         super(context, attrs, 0);
     }
     
-    public TextViewTest(Context context, AttributeSet attrs, int defStyle) {
+    public SpannableText(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
     
@@ -35,7 +35,7 @@ public class TextViewTest extends ViewGroup{
         Object [] args = new Integer[2];
         args[0] = 0;
         args[1] = 1;
-        String str = context.getString(R.string.phone, args); 
+        String str = context.getString(R.string.phone, args);
         SpannableString spannablecontent=new SpannableString(str);
         int start = 0;
         for(int i=0; i < args.length; i++) {
