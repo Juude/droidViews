@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">ViewTest</string>
+    <string name="app_name">droidViews</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world! </string>
     <string name="phone">phone %1$d sms %2$d</string>
