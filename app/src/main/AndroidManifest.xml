@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.juude.viewdemos"
+    package="net.juude.droidviews"
     android:versionCode="1"
     android:versionName="1.0"
 >
@@ -22,14 +22,23 @@
     
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/juude"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Light"
-        android:name="net.juude.viewdemos.DroidViewsApplication"
+        android:name="net.juude.droidviews.DroidViewsApplication"
         android:hardwareAccelerated="true"
 >
         <activity
-            android:name="net.juude.viewdemos.MainActivity"
+            android:name="net.juude.droidviews.DroidViewsActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name="net.juude.droidviews.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,12 +48,12 @@
         
         <activity
             android:theme="@android:style/Theme.Holo.Light"
-            android:name="net.juude.viewdemos.CommonActivity"
+            android:name="net.juude.droidviews.CommonActivity"
             android:label="@string/app_name" >
         </activity>
         
        <service
-            android:name="net.juude.viewdemos.serviceview.ViewContainerService" >
+            android:name="net.juude.droidviews.serviceview.ViewContainerService" >
             <action android:name="serviceview"/>
         </service>
         

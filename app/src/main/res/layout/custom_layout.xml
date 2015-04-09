@@ -9,7 +9,7 @@
         android:background="#000"
         android:layout_marginBottom="200dp"
         />
-    <net.juude.viewdemos.layout.CustomLayout
+    <net.juude.droidviews.layout.CustomLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000" >
@@ -39,7 +39,7 @@
         android:layout_width="10dp"
         android:layout_height="10dp"
         android:background="#0AE"/>
-</net.juude.viewdemos.layout.CustomLayout>
+</net.juude.droidviews.layout.CustomLayout>
 <View android:layout_width="match_parent"
     android:layout_height="160dp"
     android:background="#F09"
