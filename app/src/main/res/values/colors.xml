@@ -3,4 +3,12 @@
 <!--     <color name="color_Primary">@*lewa:color/primary_text_holo_light</color>
  -->
     <color name="color_Primary">#FF00FF</color>
- </resources>
+
+
+    <color name="text_color">#EE111111</color>
+
+    <color name="text_color_gray">#959595</color>
+
+    <dimen name="text_size">16sp</dimen>
+
+</resources>

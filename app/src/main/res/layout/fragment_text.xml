@@ -23,5 +23,13 @@
             android:layout_height="wrap_content"
             android:text="StateListButton"
             android:background="@drawable/state_list"/>
+
+        <TextView
+            android:id="@+id/spannableString"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+/>
     </LinearLayout>
 </ScrollView>

@@ -24,7 +24,7 @@ import java.util.List;
  * TODO: 1.setEmptyView 2.ViewHolder 3.ViewHolder compare 4.
  */
 
-public class ListAdapterTest extends Fragment {
+public class ListDemoFragment extends Fragment {
     private Activity mActivity;
     public static String TAG = "LogsFragment";
     private TestAdapter mLogsAdapter;
