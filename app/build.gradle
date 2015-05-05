@@ -20,5 +20,6 @@ android {
 
 dependencies {
     compile 'com.android.support:support-v4:19.1.0'
+    compile 'com.mcxiaoke.volley:library:1.0.+'
     compile files('libs/droidmocks.jar')
 }

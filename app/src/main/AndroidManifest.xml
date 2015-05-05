@@ -19,7 +19,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
-    
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/juude"
@@ -36,26 +36,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="net.juude.droidviews.MainActivity"
-            android:label="@string/app_name" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         
         <activity
             android:theme="@android:style/Theme.Holo.Light"
             android:name="net.juude.droidviews.CommonActivity"
             android:label="@string/app_name" >
         </activity>
-        
-       <service
-            android:name="net.juude.droidviews.serviceview.ViewContainerService" >
-            <action android:name="serviceview"/>
-        </service>
         
         <receiver android:name="com.juuda.droidmock.mock.MockReceiver" >
             <intent-filter>

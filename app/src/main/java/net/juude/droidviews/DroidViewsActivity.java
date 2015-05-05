@@ -1,9 +1,8 @@
 package net.juude.droidviews;
 
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +15,7 @@ import android.widget.TextView;
 import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.layout.LinearLayoutTest;
+import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.listview.ListDemoFragment;
 import net.juude.droidviews.widget.textview.TextFragment;
 
@@ -25,7 +25,7 @@ import java.util.HashMap;
  * Created by juude on 15-4-9.
  */
 
-public class DroidViewsActivity extends Activity {
+public class DroidViewsActivity extends FragmentActivity {
 
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
@@ -41,7 +41,8 @@ public class DroidViewsActivity extends Activity {
             LinearLayoutTest.class,
             TextFragment.class,
             AnimationFragment.class,
-            ListDemoFragment.class
+            ListDemoFragment.class,
+            VolleyFragment.class
         };
     }
 
@@ -49,7 +50,7 @@ public class DroidViewsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_droidviews);
-        mDefaultFragment = TextFragment.class;
+        mDefaultFragment = VolleyFragment.class;
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mLayoutInflater = LayoutInflater.from(this);
@@ -79,9 +80,9 @@ public class DroidViewsActivity extends Activity {
 
     private void selectFragment(Class clazz) {
         Fragment fragment = getFragment(clazz);
-        FragmentTransaction transaction = getFragmentManager().beginTransaction();
-        transaction.replace(R.id.content_frame, fragment);
-        transaction.commit();
+        getSupportFragmentManager().beginTransaction().
+            replace(R.id.content_frame, fragment).
+            commit();
         setTitle(clazz.getSimpleName());
     }
 
