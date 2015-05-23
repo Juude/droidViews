@@ -33,7 +33,6 @@ public class DroidViewsActivity extends FragmentActivity {
     private LayoutInflater mLayoutInflater;
     private static Class[] sFragmentList;
     private HashMap<Class, Fragment> mFragmentsMap = new HashMap<Class, Fragment>();
-    private Class mDefaultFragment;
 
     static {
         sFragmentList = new Class<?>[] {
@@ -42,15 +41,16 @@ public class DroidViewsActivity extends FragmentActivity {
             TextFragment.class,
             AnimationFragment.class,
             ListDemoFragment.class,
-            VolleyFragment.class
+            VolleyFragment.class,
+            PulltoRefreshFragment.class
         };
     }
+    private Class mDefaultFragment = PulltoRefreshFragment.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_droidviews);
-        mDefaultFragment = VolleyFragment.class;
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mLayoutInflater = LayoutInflater.from(this);
