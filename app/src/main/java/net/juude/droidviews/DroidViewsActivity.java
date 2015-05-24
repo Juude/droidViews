@@ -20,6 +20,7 @@ import net.juude.droidviews.layout.LinearLayoutTest;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.listview.ListDemoFragment;
+import net.juude.droidviews.widget.recyclerview.RecyclerViewFragment;
 import net.juude.droidviews.widget.textview.TextFragment;
 
 import java.util.HashMap;
@@ -48,7 +49,8 @@ public class DroidViewsActivity extends FragmentActivity {
             PulltoRefreshFragment.class,
             RoundCornerViewGroupFragment.class,
             SurfaceViewFragment.class,
-            FrescoFragment.class
+            FrescoFragment.class,
+            RecyclerViewFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
