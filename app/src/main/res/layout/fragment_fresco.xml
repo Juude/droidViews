@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#F00"
+        android:text="circle"/>
+
+    <net.juude.droidviews.fresco.ProgressiveDraweeView
+        android:id="@+id/circle_drawee"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:padding="3dp"
+        fresco:roundAsCircle="true"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        ></View>
+</LinearLayout>

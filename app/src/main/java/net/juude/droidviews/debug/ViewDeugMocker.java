@@ -8,6 +8,7 @@ import android.view.ViewDebug;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.juuda.droidmock.mock.Mocker;
 import net.juude.droidviews.mock.FragmentMocker;
 
@@ -36,7 +37,7 @@ public class ViewDeugMocker extends Mocker{
         String id = mExtras.getString("id", null);
         
         if(id != null) {
-            int viewId = mContext.getResources().getIdentifier(id, "id", "com.lewa.viewtest");
+            int viewId = mContext.getResources().getIdentifier(id, "id", "net.juude.viewdemos");
             dumpViews.clear();
             findViewsById(v, viewId , dumpViews);
         }

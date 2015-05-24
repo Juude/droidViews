@@ -1,7 +1,6 @@
 
-package net.juude.droidviews.surface;
+package net.juude.droidviews.graphics.surface;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,7 @@ import android.view.ViewGroup;
 import android.view.WindowManager.LayoutParams;
 import android.widget.LinearLayout;
 
-public class SurfaceViewFragment extends Fragment {
+public class SurfaceViewFragment extends android.support.v4.app.Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         LinearLayout layout = new LinearLayout(getActivity());

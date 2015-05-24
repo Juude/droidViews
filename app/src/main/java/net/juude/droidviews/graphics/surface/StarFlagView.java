@@ -1,5 +1,5 @@
 
-package net.juude.droidviews.surface;
+package net.juude.droidviews.graphics.surface;
 
 import android.content.Context;
 import android.graphics.Canvas;

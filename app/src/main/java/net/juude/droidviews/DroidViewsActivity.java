@@ -14,7 +14,10 @@ import android.widget.TextView;
 
 import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
+import net.juude.droidviews.fresco.FrescoFragment;
+import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.layout.LinearLayoutTest;
+import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.listview.ListDemoFragment;
 import net.juude.droidviews.widget.textview.TextFragment;
@@ -42,7 +45,10 @@ public class DroidViewsActivity extends FragmentActivity {
             AnimationFragment.class,
             ListDemoFragment.class,
             VolleyFragment.class,
-            PulltoRefreshFragment.class
+            PulltoRefreshFragment.class,
+            RoundCornerViewGroupFragment.class,
+            SurfaceViewFragment.class,
+            FrescoFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
