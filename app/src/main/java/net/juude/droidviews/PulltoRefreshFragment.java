@@ -45,6 +45,7 @@ public class PulltoRefreshFragment extends Fragment{
             @Override
             public void onUIRefreshBegin(PtrFrameLayout ptrFrameLayout) {
                 Log.d(TAG, "onUIRefreshBegin : " );
+                ptrFrameLayout.refreshComplete();
             }
 
             @Override

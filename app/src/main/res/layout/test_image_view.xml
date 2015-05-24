@@ -48,7 +48,7 @@
         android:text="maxHeight" />
    
    <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/image"
@@ -58,7 +58,7 @@
         android:scaleType="centerInside" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="maxHeight" />
