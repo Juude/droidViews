@@ -18,6 +18,7 @@ import net.juude.droidviews.fresco.FrescoFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.layout.LinearLayoutTest;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
+import net.juude.droidviews.rx.RxAndroidFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
 import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.listview.ListDemoFragment;
@@ -52,7 +53,8 @@ public class DroidViewsActivity extends FragmentActivity {
             SurfaceViewFragment.class,
             FrescoFragment.class,
             RecyclerViewFragment.class,
-            VideoPlayFragment.class
+            VideoPlayFragment.class,
+            RxAndroidFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
