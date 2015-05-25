@@ -14,17 +14,17 @@ import android.widget.TextView;
 
 import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
+import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.fresco.FrescoFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
-import net.juude.droidviews.layout.LinearLayoutTest;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
+import net.juude.droidviews.layout.LinearLayoutTest;
 import net.juude.droidviews.rx.RxAndroidFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
 import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.SpinnersFragment;
 import net.juude.droidviews.widget.WebviewFragment;
 import net.juude.droidviews.widget.WidgetsFragment;
-import net.juude.droidviews.widget.imageview.FrescoViewFragment;
 import net.juude.droidviews.widget.imageview.ImageViewFragment;
 import net.juude.droidviews.widget.listview.ListDemoFragment;
 import net.juude.droidviews.widget.recyclerview.RecyclerViewFragment;
@@ -59,12 +59,12 @@ public class DroidViewsActivity extends FragmentActivity {
             FrescoFragment.class,
             RecyclerViewFragment.class,
             VideoPlayFragment.class,
-            RxAndroidFragment.class
+            RxAndroidFragment.class,
             SpinnersFragment.class,
             WebviewFragment.class,
             WidgetsFragment.class ,
             ImageViewFragment.class,
-            FrescoViewFragment.class
+            PopupWindowFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
