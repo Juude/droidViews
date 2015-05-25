@@ -14,14 +14,14 @@ import com.facebook.drawee.view.SimpleDraweeView;
 /**
  * Created by juude on 15/5/24.
  */
-public class ProgressiveDraweeView extends SimpleDraweeView{
+public class CircleDraweeView extends SimpleDraweeView{
 
     private static final String TAG = "ProgressiveDraweeView";
 
     private float mProgress;
     private Paint mPaint;
 
-    public ProgressiveDraweeView(Context context, AttributeSet attrs) {
+    public CircleDraweeView(Context context, AttributeSet attrs) {
         super(context, attrs);
         mPaint = new Paint();
         mPaint.setStyle(Paint.Style.FILL);
