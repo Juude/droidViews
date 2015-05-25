@@ -18,12 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#FF0"
+        android:background="@android:color/holo_orange_dark"
         android:alpha="1"/>
-    
-    <View 
-        android:layout_width="match_parent"
-        android:layout_height="30dp"
 
-        android:background="#F00"/>
 </LinearLayout>

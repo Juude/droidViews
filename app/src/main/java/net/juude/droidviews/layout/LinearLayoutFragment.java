@@ -9,11 +9,11 @@ import android.view.ViewGroup;
 import net.juude.droidviews.R;
 
 
-public class LinearLayoutTest extends Fragment {
+public class LinearLayoutFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.test_linear_layout, null);
+        View v = inflater.inflate(R.layout.fragment_linear_layout, null);
         return v;
     }
     

@@ -10,7 +10,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 
 import net.juude.droidviews.camera.PictureFragment;
-import net.juude.droidviews.layout.LinearLayoutTest;
+import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.mock.FragmentMocker;
 
 import java.io.FileInputStream;
@@ -58,7 +58,7 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
         mHistories.add(PictureFragment.class.getName());
-        mHistories.add(LinearLayoutTest.class.getName());
+        mHistories.add(LinearLayoutFragment.class.getName());
 
         mAdapter = new ArrayAdapter
                 (this, android.R.layout.simple_list_item_1, mHistories);

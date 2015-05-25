@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import net.juude.droidviews.R;
@@ -20,9 +21,6 @@ public class FrescoFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_fresco, null);
 
-        SimpleDraweeView draweeSimple = (SimpleDraweeView) v.findViewById(R.id.drawee_simple);
-        draweeSimple.setImageURI(Uri.parse("http://www.artisan.com.tw/images/blogs/DSC02163.JPG"));
-
         SimpleDraweeView draweeMore = (SimpleDraweeView) v.findViewById(R.id.drawee_more);
         draweeMore.setImageURI(Uri.parse("http://www.artisan.com.tw/images/blogs/DSC02163.JPG"));
 
@@ -31,6 +29,20 @@ public class FrescoFragment extends Fragment{
 
         net.juude.droidviews.fresco.SimpleDraweeView draweeView = (net.juude.droidviews.fresco.SimpleDraweeView) v.findViewById(R.id.default_loading);
         draweeView.setImageURI(Uri.parse("https://40.media.tumblr.com/7589f12f781f7dc9013ed7506e1334e4/tumblr_notbiy66no1urqmrvo1_500.jpg"));
+        draweeView.getHierarchy().setActualImageScaleType(ScalingUtils.ScaleType.CENTER);
+
+        SimpleDraweeView scale_center = (SimpleDraweeView) v.findViewById(R.id.scale_center);
+        scale_center.setImageURI(Uri.parse("http://www.iapps.im/public/uploadfiles/icons/276ed0e2790fe3d1faf70b5e51e0c61e.jpg"));
+
+        SimpleDraweeView scale_center_inside = (SimpleDraweeView) v.findViewById(R.id.scale_center_inside);
+        scale_center_inside.setImageURI(Uri.parse("http://www.iapps.im/public/uploadfiles/icons/276ed0e2790fe3d1faf70b5e51e0c61e.jpg"));
+
+        SimpleDraweeView scale_center_crop = (SimpleDraweeView) v.findViewById(R.id.scale_center_crop);
+        scale_center_crop.setImageURI(Uri.parse("http://www.iapps.im/public/uploadfiles/icons/276ed0e2790fe3d1faf70b5e51e0c61e.jpg"));
+        scale_center_crop.getHierarchy().setActualImageScaleType(ScalingUtils.ScaleType.CENTER_CROP);
+
+        SimpleDraweeView scale_fit_center = (SimpleDraweeView) v.findViewById(R.id.scale_fit_center);
+        scale_fit_center.setImageURI(Uri.parse("http://www.iapps.im/public/uploadfiles/icons/276ed0e2790fe3d1faf70b5e51e0c61e.jpg"));
         return v;
     }
 }
