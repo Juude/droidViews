@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="centerCrop"
+        android:background="#5600"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/drawee_simple"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        fresco:roundedCornerRadius="5dp"
+        />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/drawee_more"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        xmlns:fresco="http://schemas.android.com/apk/res-auto"
+        fresco:fadeDuration="300"
+        fresco:actualImageScaleType="focusCrop"
+        fresco:placeholderImage="@drawable/ic_loading"
+        fresco:placeholderImageScaleType="fitCenter"
+        fresco:overlayImage="@drawable/overlay_image"
+        fresco:pressedStateOverlayImage="@drawable/press_overlay_image"
+        fresco:roundAsCircle="false"
+        fresco:roundedCornerRadius="1dp"
+        fresco:roundTopLeft="true"
+        fresco:roundTopRight="false"
+        fresco:roundBottomLeft="false"
+        fresco:roundBottomRight="true"
+        fresco:roundWithOverlayColor="#FFB"
+        fresco:roundingBorderWidth="2dp"
+        android:clickable="true"
+        />
+    <!--
+            fresco:placeholderImage="http://www.artisan.com.tw/images/blogs/DSC02163.JPG"
+    -->
+</LinearLayout>

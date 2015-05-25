@@ -67,6 +67,8 @@ public class VolleyFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onStop() {
         super.onStop();
-        mStringRequest.cancel();
+        if(mStringRequest != null) {
+            mStringRequest.cancel();
+        }
     }
 }

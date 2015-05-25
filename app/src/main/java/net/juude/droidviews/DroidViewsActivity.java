@@ -21,6 +21,11 @@ import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.rx.RxAndroidFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
 import net.juude.droidviews.volley.VolleyFragment;
+import net.juude.droidviews.widget.SpinnersFragment;
+import net.juude.droidviews.widget.WebviewFragment;
+import net.juude.droidviews.widget.WidgetsFragment;
+import net.juude.droidviews.widget.imageview.FrescoViewFragment;
+import net.juude.droidviews.widget.imageview.ImageViewFragment;
 import net.juude.droidviews.widget.listview.ListDemoFragment;
 import net.juude.droidviews.widget.recyclerview.RecyclerViewFragment;
 import net.juude.droidviews.widget.textview.TextFragment;
@@ -55,6 +60,11 @@ public class DroidViewsActivity extends FragmentActivity {
             RecyclerViewFragment.class,
             VideoPlayFragment.class,
             RxAndroidFragment.class
+            SpinnersFragment.class,
+            WebviewFragment.class,
+            WidgetsFragment.class ,
+            ImageViewFragment.class,
+            FrescoViewFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
