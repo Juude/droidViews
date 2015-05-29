@@ -55,7 +55,7 @@ public class WebviewFragment extends Fragment {
         return v;
     }
 
-    public final class JSInterface {
+    public static final class JSInterface {
         //JavaScript脚本代码可以调用的函数onClick()处理
         private View mWebView;
         public JSInterface(View v) {

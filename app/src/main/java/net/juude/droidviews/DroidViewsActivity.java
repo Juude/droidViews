@@ -16,6 +16,7 @@ import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.fresco.FrescoFragment;
+import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
@@ -64,7 +65,8 @@ public class DroidViewsActivity extends FragmentActivity {
             WebviewFragment.class,
             WidgetsFragment.class ,
             ImageViewFragment.class,
-            PopupWindowFragment.class
+            PopupWindowFragment.class,
+            CircleViewFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
@@ -108,7 +110,7 @@ public class DroidViewsActivity extends FragmentActivity {
         setTitle(clazz.getSimpleName());
     }
 
-    class IndexItemViewHolder {
+    static class IndexItemViewHolder {
         TextView mTitleView;
     }
 

@@ -19,7 +19,7 @@ public class PictureUtils {
     private String mTempPath = Environment.getExternalStorageDirectory()
             .getPath() + File.separator + "0000.jpg";;
     private SurfaceHolder mSurfaceHolder;
-    private final int ROTATION = 270;
+    private static final int ROTATION = 270;
 
     public PictureUtils(SurfaceHolder holder)
     {

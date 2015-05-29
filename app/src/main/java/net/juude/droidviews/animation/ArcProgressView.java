@@ -136,7 +136,7 @@ public class ArcProgressView extends View implements ValueAnimator.AnimatorUpdat
         }
     }
 
-    private class CustomInterpolator extends LinearInterpolator
+    private static class CustomInterpolator extends LinearInterpolator
     { // TODO: make this useable
         @Override
         public float getInterpolation(float input) {

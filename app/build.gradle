@@ -4,6 +4,10 @@ android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
 
+    lintOptions {
+        abortOnError false
+    }
+
     defaultConfig {
         applicationId "com.juude.viewdemos"
         minSdkVersion 15
@@ -20,6 +24,7 @@ android {
 
 dependencies {
     compile project(':ptr-lib-debug')
+    compile project(':library')
     compile 'com.android.support:support-v4:19.1.0'
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile files('libs/droidmocks.jar')

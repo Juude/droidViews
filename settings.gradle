@@ -1,1 +1,1 @@
-include ':app', ':ptr-lib-debug'
+include ':app', ':ptr-lib-debug', ':library'
