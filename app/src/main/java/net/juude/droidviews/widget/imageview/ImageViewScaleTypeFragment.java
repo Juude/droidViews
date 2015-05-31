@@ -11,10 +11,10 @@ import net.juude.droidviews.R;
 /**
  * Created by juude on 15-5-14.
  */
-public class ImageViewFragment extends Fragment{
+public class ImageViewScaleTypeFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_image_view, container, false);
+        View v = inflater.inflate(R.layout.fragment_image_scaletype_view, container, false);
         return v;
     }
 }
