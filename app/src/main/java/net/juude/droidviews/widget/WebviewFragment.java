@@ -6,9 +6,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import net.juude.droidviews.R;
 
@@ -27,7 +29,7 @@ public class WebviewFragment extends Fragment {
         webView.getSettings().setJavaScriptEnabled(true);
         webView.addJavascriptInterface(new JSInterface(webView), "android");
         EditText edit_url = (EditText) v.findViewById(R.id.edit_url);
-        String url = "https://github.com/juude";
+        String url = "http://kids.dev.putao.io/weixin/pages/articleInfo.html?id=57&isandroid=true";
         edit_url.setText(url);
         webView.loadUrl(url);
         v.findViewById(R.id.reset).setOnClickListener(new View.OnClickListener() {
@@ -52,6 +54,12 @@ public class WebviewFragment extends Fragment {
                 mWebView.loadUrl(url);
             }
         });
+        mWebView.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                Log.d(TAG, "onGlobalLayout height is " + mWebView.getHeight());
+            }
+        });
         return v;
     }
 
@@ -64,23 +72,21 @@ public class WebviewFragment extends Fragment {
 
         @JavascriptInterface
         public void onSizeChanged(final String height) {
-            Log.d(TAG, "height : " + height);
+            //Log.d(TAG, "height : " + height);
+            Toast.makeText(mWebView.getContext(), "onSizeChanged ", Toast.LENGTH_LONG).show();
             mWebView.post(new Runnable() {
                 @Override
                 public void run() {
                     ViewGroup.LayoutParams lp = mWebView.getLayoutParams();
                     lp.height = Integer.parseInt(height) ;
-                    mWebView.setLayoutParams(lp);
+                    //mWebView.setLayoutParams(lp);
                 }
             });
         }
 
+        @JavascriptInterface
         public void onClick() {
-            mWebView.post(new Runnable() {
-                public void run() {
-
-                }
-            });
+            Toast.makeText(mWebView.getContext(), "onclicked ", Toast.LENGTH_LONG).show();
         }
     }
 }

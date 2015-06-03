@@ -5,16 +5,21 @@
     <LinearLayout
         android:orientation="vertical" android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/edit_url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
         <LinearLayout
             android:id="@+id/header"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:background="#3FF0">
-            <EditText
-                android:id="@+id/edit_url"
+            <Button
+                android:id="@+id/height"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"/>
+                android:text="height"/>
+
             <Button
                 android:id="@+id/load"
                 android:layout_width="wrap_content"
