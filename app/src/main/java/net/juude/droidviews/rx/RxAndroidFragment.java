@@ -14,7 +14,6 @@ import net.juude.droidviews.R;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.app.AppObservable;
-import rx.android.view.ViewObservable;
 import rx.observables.ConnectableObservable;
 import rx.subscriptions.Subscriptions;
 
@@ -53,6 +52,7 @@ public class RxAndroidFragment extends Fragment {
                 edit_text.setText(s);
             }
         });
+        v.setOnClickListener(v1 -> Toast.makeText(getActivity(), "ff", Toast.LENGTH_LONG).show());
         return v;
     }
 
