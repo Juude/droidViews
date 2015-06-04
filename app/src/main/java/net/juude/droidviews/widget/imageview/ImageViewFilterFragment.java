@@ -1,7 +1,5 @@
 package net.juude.droidviews.widget.imageview;
 
-import android.app.job.JobInfo;
-import android.app.job.JobScheduler;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Bundle;
@@ -15,7 +13,6 @@ import android.widget.TextView;
 
 import net.juude.droidviews.R;
 
-import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -43,14 +40,11 @@ public class ImageViewFilterFragment extends Fragment{
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                getActivity().runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        mCurrentMode += 1;
-                        mCurrentMode %= Modes.length;
-                        mMultiplyFilter.setColorFilter(Color.RED, Modes[mCurrentMode]);
-                        mType.setText("filter : " + Modes[mCurrentMode]);
-                    }
+                getActivity().runOnUiThread(() -> {
+                    mCurrentMode += 1;
+                    mCurrentMode %= Modes.length;
+                    mMultiplyFilter.setColorFilter(Color.RED, Modes[mCurrentMode]);
+                    mType.setText("filter : " + Modes[mCurrentMode]);
                 });
             }
         };
