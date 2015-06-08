@@ -9,10 +9,7 @@ import android.view.ViewGroup;
 
 import in.srain.cube.views.ptr.PtrFrameLayout;
 import in.srain.cube.views.ptr.PtrUIHandler;
-import in.srain.cube.views.ptr.header.StoreHouseHeader;
 import in.srain.cube.views.ptr.indicator.PtrIndicator;
-
-import static net.juude.droidviews.R.drawable.gradient;
 
 /**
  * Created by juude on 15/5/23.
@@ -25,7 +22,7 @@ public class PulltoRefreshFragment extends Fragment{
         View v = inflater.inflate(R.layout.fragment_pull_to_refresh, null);
         final PtrFrameLayout ptrFrameLayout = (PtrFrameLayout) v;
         View header = new View(getActivity());
-        header.setBackground(getResources().getDrawable(R.drawable.gradient));
+        header.setBackgroundDrawable(getResources().getDrawable(R.drawable.gradient));
         header.setLayoutParams(new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 300));
 
         ptrFrameLayout.setDurationToCloseHeader(1500);

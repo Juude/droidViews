@@ -52,7 +52,7 @@ public class RxAndroidFragment extends Fragment {
                 edit_text.setText(s);
             }
         });
-        v.setOnClickListener(v1 -> Toast.makeText(getActivity(), "ff", Toast.LENGTH_LONG).show());
+        v.setOnClickListener(v1 -> Toast.makeText(getActivity(), "clicked", Toast.LENGTH_LONG).show());
         return v;
     }
 
