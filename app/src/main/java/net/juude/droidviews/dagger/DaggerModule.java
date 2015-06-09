@@ -9,7 +9,7 @@ import dagger.Provides;
 public class DaggerModule {
 
     @Provides
-    public String moduleName() {
+    public String providesName() {
         return "Hey Jude";
     }
 }

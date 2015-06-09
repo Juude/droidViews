@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
+import net.juude.droidviews.dagger.DaggerFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.fresco.FrescoFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
@@ -65,11 +66,11 @@ public class DroidViewsActivity extends FragmentActivity {
             SpinnersFragment.class,
             WebviewFragment.class,
             WidgetsFragment.class ,
-            ImageViewFragment.class,
-            CircleViewFragment.class
+            CircleViewFragment.class,
             ImageViewScaleTypeFragment.class,
             PopupWindowFragment.class,
-            ImageViewFilterFragment.class
+            ImageViewFilterFragment.class,
+            DaggerFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;

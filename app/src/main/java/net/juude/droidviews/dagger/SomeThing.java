@@ -1,5 +1,7 @@
 package net.juude.droidviews.dagger;
 
+import net.juude.droidviews.DroidViewsApplication;
+
 import javax.inject.Inject;
 
 /**
@@ -8,9 +10,13 @@ import javax.inject.Inject;
 public class SomeThing {
 
     @Inject
-    public String mName;
+    protected String mName;
 
     public SomeThing() {
+        DroidViewsApplication.getInstance().getGraph().inject(this);
+    }
 
-    };
+    public String getName(){
+        return mName;
+    }
 }

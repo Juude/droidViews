@@ -15,9 +15,7 @@ public interface Graph {
 
     public final static class Initializer {
         public static Graph init() {
-            //return builder()
-            //        .build();
-            return null;
+            return DaggerGraph.builder().build();
         }
     }
 }

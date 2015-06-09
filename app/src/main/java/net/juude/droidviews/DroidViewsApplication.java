@@ -11,6 +11,7 @@ import net.juude.droidviews.fresco.SimpleDraweeView;
 
 
 public class DroidViewsApplication extends Application{
+    private static DroidViewsApplication sInstance;
     private Graph mGraph;
 
     @Override
@@ -19,6 +20,11 @@ public class DroidViewsApplication extends Application{
         Fresco.initialize(this);
         initializeDrawee(this);
         mGraph = Graph.Initializer.init();
+        sInstance = this;
+    }
+
+    public static DroidViewsApplication getInstance() {
+        return sInstance;
     }
 
     private static void initializeDrawee(Context context) {
