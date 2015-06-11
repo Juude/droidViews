@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-//import net.juude.droidviews.BR;
+import net.juude.droidviews.BR;
 import net.juude.droidviews.R;
 
 /**
@@ -22,9 +22,9 @@ public class DataBindingFragment extends Fragment{
         ViewDataBinding dataBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_data_binding, container, false);
         //dataBinding.setVariable(BR.)
         User user = new User();
-        user.setSex("双性");
-        user.setName("斌佳");
-        //dataBinding.setVariable(BR.user, user);
+        user.setSex("男");
+        user.setName("Juude");
+        dataBinding.setVariable(BR.user, user);
         return dataBinding.getRoot();
     }
 }
