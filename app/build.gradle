@@ -1,20 +1,21 @@
 apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.neenbedankt.android-apt'
-//apply plugin: 'com.android.databinding'
+apply plugin: 'com.android.databinding'
+
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
 
     lintOptions {
         abortOnError false
     }
 
     defaultConfig {
-        applicationId "com.juude.viewdemos"
+        applicationId "net.juude.droidviews"
         minSdkVersion 15
-        targetSdkVersion 19
+        targetSdkVersion 22 
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -28,7 +29,10 @@ android {
         }
     }
     retrolambda {
-        javaVersion JavaVersion.VERSION_1_6
+        println("JAVA_HOME: " + System.getenv("JAVA_HOME"))
+        println("JAVA7_HOME: " + System.getenv("JAVA7_HOME"))
+        println("JAVA8_HOME: " + System.getenv("JAVA8_HOME"))
+        javaVersion JavaVersion.VERSION_1_7
     }
 }
 
