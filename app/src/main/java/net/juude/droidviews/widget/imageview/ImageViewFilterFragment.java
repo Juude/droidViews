@@ -40,11 +40,14 @@ public class ImageViewFilterFragment extends Fragment{
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
-                getActivity().runOnUiThread(() -> {
-                    mCurrentMode += 1;
-                    mCurrentMode %= Modes.length;
-                    mMultiplyFilter.setColorFilter(Color.RED, Modes[mCurrentMode]);
-                    mType.setText("filter : " + Modes[mCurrentMode]);
+                getActivity().runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        mCurrentMode += 1;
+                        mCurrentMode %= Modes.length;
+                        mMultiplyFilter.setColorFilter(Color.RED, Modes[mCurrentMode]);
+                        mType.setText("filter : " + Modes[mCurrentMode]);
+                    }
                 });
             }
         };
