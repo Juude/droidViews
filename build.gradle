@@ -18,5 +18,8 @@ allprojects {
         maven {
             url "https://oss.sonatype.org/content/repositories/snapshots"
         }
+        maven {
+            url "http://127.0.0.1:8081/nexus/content/repositories/juude-id/"
+        }
     }
 }

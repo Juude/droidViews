@@ -39,7 +39,7 @@ retrolambda
 
 dependencies {
     compile project(':ptr-lib-debug')
-    compile project(':library')
+//    compile project(':library')
     compile 'com.android.support:support-v4:22.1.0'
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile files('libs/droidmocks.jar')
@@ -52,4 +52,6 @@ dependencies {
     apt 'com.google.dagger:dagger-compiler:2.0.1'
     provided 'org.glassfish:javax.annotation:10.0-b28'
     apt 'com.android.databinding:compiler:1.0-rc0'
+    compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'net.juude.droidviews:droidViews:1.0'
 }

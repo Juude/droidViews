@@ -1,5 +1,6 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'maven'
+apply plugin: 'signing'
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
@@ -21,4 +22,46 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.1.1'
+}
+
+
+configurations {
+    archives {
+        extendsFrom configurations.default
+    }
+}
+
+signing {
+    required { has("release") && gradle.taskGraph.hasTask("uploadArchives") }
+    sign configurations.archives
+}
+
+uploadArchives {
+    configuration = configurations.archives
+    repositories.mavenDeployer {
+        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+        repository(url: 'http://127.0.0.1:8081/nexus/content/repositories/juude-id/') {
+            authentication(userName: "admin",
+                    password: "admin123")
+        }
+
+        pom.project {
+            name 'juude-name'
+            packaging 'aar'
+            description 'none'
+            url 'http://127.0.0.1:8081/nexus/content/repositories/juude-id/'
+            licenses {
+                license {
+                    name 'example'
+                    url 'example'
+                    distribution 'example'
+                }
+            }
+
+
+            groupId "net.juude.droidviews"
+            artifactId rootProject.name //LibA
+            version android.defaultConfig.versionName
+        }
+    }
 }
