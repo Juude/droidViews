@@ -27,7 +27,6 @@ public class RxAndroidFragment extends Fragment {
     public RxAndroidFragment() {
         super();
         setRetainInstance(true);
-        net.juude.library.CircleView
     }
 
     @Nullable
