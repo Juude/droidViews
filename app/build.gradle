@@ -16,6 +16,10 @@ android {
         applicationId "net.juude.droidviews"
         minSdkVersion 15
         targetSdkVersion 22
+        ndk {
+            moduleName "jni"
+            ldLibs "log"
+        }
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -54,4 +58,5 @@ dependencies {
     apt 'com.android.databinding:compiler:1.0-rc0'
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'net.juude.droidviews:droidViews:1.0'
+    compile 'com.squareup:otto:1.3.8'
 }

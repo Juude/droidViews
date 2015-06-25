@@ -21,6 +21,7 @@ import net.juude.droidviews.fresco.FrescoFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
+import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.rx.RxAndroidFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
@@ -72,7 +73,8 @@ public class DroidViewsActivity extends FragmentActivity {
             PopupWindowFragment.class,
             ImageViewFilterFragment.class,
             DaggerFragment.class,
-            DataBindingFragment.class
+            DataBindingFragment.class,
+            JniFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
