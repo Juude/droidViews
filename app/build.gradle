@@ -43,7 +43,7 @@ retrolambda
 
 dependencies {
     compile project(':ptr-lib-debug')
-//    compile project(':library')
+    compile project(':jarlibrary')
     compile 'com.android.support:support-v4:22.1.0'
     compile 'com.mcxiaoke.volley:library:1.0.+'
     compile files('libs/droidmocks.jar')

@@ -4,9 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/droidViews.iml" filepath="$PROJECT_DIR$/droidViews.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jarlibrary/jarlibrary.iml" filepath="$PROJECT_DIR$/jarlibrary/jarlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/ptr-lib-debug/ptr-lib-debug.iml" filepath="$PROJECT_DIR$/ptr-lib-debug/ptr-lib-debug.iml" />
     </modules>
   </component>
 </project>
-

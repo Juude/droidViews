@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,9 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import net.juude.Yo;
 import net.juude.droidviews.animation.AnimationFragment;
 import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.dagger.DaggerFragment;
@@ -43,6 +46,7 @@ import java.util.HashMap;
 
 public class DroidViewsActivity extends FragmentActivity {
 
+    private static final String TAG = "DroidViewsActivity";
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private IndexAdapter mIndexAdapter;
@@ -93,6 +97,8 @@ public class DroidViewsActivity extends FragmentActivity {
         // Set the list's click listener
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
         selectFragment(mDefaultFragment);
+        Toast.makeText(this, net.juude.Yo.Yo(), Toast.LENGTH_LONG).show();
+        Log.d(TAG, " property : " + Yo.Yo());
     }
 
     private Fragment getFragment(Class clazz) {
