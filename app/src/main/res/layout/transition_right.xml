@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/transition"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+>
+    <View
+        android:id="@+id/redSqureG"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#8F00">
+    </View>
+
+    <View
+        android:id="@+id/greenSqure"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:background="#30F0">
+    </View>
+
+    <View
+        android:id="@+id/blueSqure"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="#300F">
+    </View>
+</LinearLayout>

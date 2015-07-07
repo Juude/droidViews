@@ -24,6 +24,7 @@ import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.rx.RxAndroidFragment;
+import net.juude.droidviews.transition.TransitionFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
 import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.SpinnersFragment;
@@ -76,7 +77,8 @@ public class DroidViewsActivity extends FragmentActivity {
             DaggerFragment.class,
             DataBindingFragment.class,
             JniFragment.class,
-            InfoFragment.class
+            InfoFragment.class,
+            TransitionFragment.class
         };
     }
     private Class mDefaultFragment = PulltoRefreshFragment.class;
