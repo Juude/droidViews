@@ -13,6 +13,6 @@ public class Yo {
         for (Object key : properties.keySet()) {
             sb.append(" " + key + " : " + properties.get(key) + "\n");
         }
-        return "Yo" + sb.toString();
+        return "Yo" + sb.toString() + properties.toString();
 	}
 }
