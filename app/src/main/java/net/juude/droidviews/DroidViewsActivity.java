@@ -23,6 +23,7 @@ import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
+import net.juude.droidviews.rebound.ReboundFragment;
 import net.juude.droidviews.rx.RxAndroidFragment;
 import net.juude.droidviews.transition.TransitionFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
@@ -78,10 +79,11 @@ public class DroidViewsActivity extends FragmentActivity {
             DataBindingFragment.class,
             JniFragment.class,
             InfoFragment.class,
-            TransitionFragment.class
+            TransitionFragment.class,
+            ReboundFragment.class
         };
     }
-    private Class mDefaultFragment = PulltoRefreshFragment.class;
+    private Class mDefaultFragment = TransitionFragment.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

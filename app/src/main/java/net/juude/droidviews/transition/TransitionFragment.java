@@ -41,6 +41,7 @@ public class TransitionFragment extends Fragment{
         return v;
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     private void transitionTo(Scene scene) {
         mCurrentScene = scene;
         TransitionManager.go(scene);
