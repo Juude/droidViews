@@ -17,6 +17,7 @@ import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.dagger.DaggerFragment;
 import net.juude.droidviews.databinding.DataBindingFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
+import net.juude.droidviews.drawable.DrawableMultipleViewsFragment;
 import net.juude.droidviews.fresco.FrescoFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
@@ -80,7 +81,9 @@ public class DroidViewsActivity extends FragmentActivity {
             JniFragment.class,
             InfoFragment.class,
             TransitionFragment.class,
-            ReboundFragment.class
+            ReboundFragment.class,
+            DrawableMultipleViewsFragment.class,
+
         };
     }
     private Class mDefaultFragment = TransitionFragment.class;
