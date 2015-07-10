@@ -24,6 +24,7 @@ import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
+import net.juude.droidviews.otto.OttoFragment;
 import net.juude.droidviews.rebound.ReboundFragment;
 import net.juude.droidviews.rx.RxAndroidFragment;
 import net.juude.droidviews.transition.TransitionFragment;
@@ -83,7 +84,7 @@ public class DroidViewsActivity extends FragmentActivity {
             TransitionFragment.class,
             ReboundFragment.class,
             DrawableMultipleViewsFragment.class,
-
+            OttoFragment.class
         };
     }
     private Class mDefaultFragment = TransitionFragment.class;
