@@ -19,6 +19,7 @@ import net.juude.droidviews.databinding.DataBindingFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.drawable.DrawableMultipleViewsFragment;
 import net.juude.droidviews.fresco.FrescoFragment;
+import net.juude.droidviews.glide.GlideFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
@@ -57,6 +58,7 @@ public class DroidViewsActivity extends FragmentActivity {
 
     static {
         sFragmentList = new Class<?>[] {
+            GlideFragment.class,
             PictureFragment.class,
             LinearLayoutFragment.class,
             TextFragment.class,

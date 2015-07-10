@@ -66,6 +66,7 @@ dependencies {
     apt "org.androidannotations:androidannotations:$AAVersion"
     compile "org.androidannotations:androidannotations-api:$AAVersion"
     compile 'com.github.bumptech.glide:glide:3.6.0'
+    compile 'com.malinskiy:superrecyclerview:1.1.0'
 }
 
 
