@@ -8,8 +8,6 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -41,19 +39,8 @@ public class VolleyFragment extends Fragment implements View.OnClickListener {
         switch (v.getId()){
             case R.id.string_request:
                 CharSequence url = ((TextView)getView().findViewById(R.id.edit_url)).getText();
-                mStringRequest = new StringRequest(url.toString(), new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        setViewText(R.id.result, response);
-                    }
-                },
-                 new Response.ErrorListener() {
-
-                     @Override
-                     public void onErrorResponse(VolleyError error) {
-                         setViewText(R.id.result, "请求失败"+ error.getMessage() + error.getCause());
-                     }
-                 }
+                mStringRequest = new StringRequest(url.toString(), response -> setViewText(R.id.result, response),
+                        error -> setViewText(R.id.result, "请求失败"+ error.getMessage() + error.getCause())
                 );
                 mRequestQueue.add(mStringRequest);
                 break;
