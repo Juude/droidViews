@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.google.common.eventbus.Subscribe;
 import com.squareup.otto.Produce;
+import com.squareup.otto.Subscribe;
 
 import net.juude.droidviews.R;
 
@@ -59,7 +59,8 @@ public class OttoFragment2 extends Fragment {
         return new String(String.valueOf(new Date(System.currentTimeMillis())));
     }
 
-    @Subscribe public void receiveResults(String string){
+    @Subscribe
+    public void receiveResults(String string){
         time.setText(string);
     }
 }

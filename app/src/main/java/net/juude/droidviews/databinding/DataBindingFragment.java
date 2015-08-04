@@ -1,6 +1,5 @@
 package net.juude.droidviews.databinding;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -28,7 +27,7 @@ public class DataBindingFragment extends Fragment{
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getActivity(), DataBindingActivity.class));
+                //startActivity(new Intent(getActivity(), DataBindingActivity.class));
             }
         });
         return button;

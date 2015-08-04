@@ -2,6 +2,7 @@ package net.juude.droidviews;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilderSupplier;
@@ -9,8 +10,8 @@ import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilderSupp
 import net.juude.droidviews.dagger.Graph;
 import net.juude.droidviews.fresco.SimpleDraweeView;
 
-
 public class DroidViewsApplication extends Application{
+    private static final String TAG = "DroidViewsApplication";
     private static DroidViewsApplication sInstance;
     private Graph mGraph;
 
@@ -35,4 +36,15 @@ public class DroidViewsApplication extends Application{
         return mGraph;
     }
 
+    @Override
+    public void onLowMemory() {
+        super.onLowMemory();
+        Log.d(TAG, "onLowMemory");
+    }
+
+    @Override
+    public void onTerminate() {
+        super.onTerminate();
+        Log.d(TAG, "onTerminate");
+    }
 }
