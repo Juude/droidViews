@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <net.juude.droidviews.surface.DemoGLSurfaceView
+        android:id="@+id/demoGLSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </net.juude.droidviews.surface.DemoGLSurfaceView>
+
+    <net.juude.droidviews.surface.CanvasSurfaceView
+        android:id="@+id/canvasSurfaceView"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+    </net.juude.droidviews.surface.CanvasSurfaceView>
+</LinearLayout>

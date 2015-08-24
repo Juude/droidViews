@@ -52,7 +52,7 @@ public class MemoryFragment extends Fragment {
     for(int i = 1; ; i += 1) {
         byte[] bytes = new byte[(int) Math.pow(2, 20) * 2];
         list.add(bytes);
-        Log.d(TAG, "i = " + i);
+        Log.d(TAG, "i = " + i + " current memory : " + (Runtime.getRuntime().totalMemory()/1024/1024) + "M max memory : " + ((Runtime.getRuntime().maxMemory()/1024/1024) + "M"));
         try {
             Thread.sleep(100);
         } catch (InterruptedException e) {

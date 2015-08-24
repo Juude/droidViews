@@ -1,5 +1,5 @@
 
-package net.juude.droidviews.graphics.surface;
+package net.juude.droidviews.surface;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;

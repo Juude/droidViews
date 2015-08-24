@@ -22,13 +22,14 @@ import net.juude.droidviews.fresco.FrescoFragment;
 import net.juude.droidviews.glide.GlideFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
-import net.juude.droidviews.graphics.surface.SurfaceViewFragment;
 import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.memory.MemoryFragment;
 import net.juude.droidviews.otto.OttoFragment;
 import net.juude.droidviews.rebound.ReboundFragment;
 import net.juude.droidviews.rx.RxAndroidFragment;
+import net.juude.droidviews.surface.SurfaceFragment;
+import net.juude.droidviews.surface.SurfaceViewFragment;
 import net.juude.droidviews.transition.TransitionFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
 import net.juude.droidviews.volley.VolleyFragment;
@@ -88,7 +89,8 @@ public class DroidViewsActivity extends FragmentActivity {
             ReboundFragment.class,
             DrawableMultipleViewsFragment.class,
             OttoFragment.class,
-            MemoryFragment.class
+            MemoryFragment.class,
+            SurfaceFragment.class
         };
     }
     private Class mDefaultFragment = MemoryFragment.class;
