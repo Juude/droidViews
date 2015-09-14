@@ -21,4 +21,8 @@ allprojects {
             url "http://127.0.0.1:8081/nexus/content/repositories/juude-id/"
         }
     }
+    ext {
+        gdxVersion = '1.6.4'
+        aiVersion = '1.4.0'
+    }
 }

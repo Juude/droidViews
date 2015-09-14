@@ -2,6 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'me.tatarka.retrolambda' //retrolambda
 apply plugin: 'com.neenbedankt.android-apt'
 
+configurations { natives }
 
 android {
     compileSdkVersion 22
@@ -39,6 +40,13 @@ android {
         javaVersion JavaVersion.VERSION_1_7
     }
 
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            assets.srcDirs = ['src/main/assets-particle', 'src/main/assets-raw', 'src/main/assets']
+        }
+    }
+
 }
 def AAVersion = '3.3.1'
 
@@ -71,6 +79,11 @@ dependencies {
     compile 'com.alibaba:fastjson:1.1.25'
     compile 'com.malinskiy:superrecyclerview:1.1.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
+    compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
+    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
+    compile "com.badlogicgames.gdx:gdx:$gdxVersion"
 }
 
 
@@ -85,5 +98,25 @@ apt {
         // You can set optional annotation processing options here, like these commented options:
         // logLevel 'INFO'
         // logFile '/var/log/aa.log'
+    }
+}
+
+task copyAndroidNatives() {
+    file("libs/armeabi/").mkdirs();
+    file("libs/armeabi-v7a/").mkdirs();
+    file("libs/x86/").mkdirs();
+
+    configurations.natives.files.each { jar ->
+        def outputDir = null
+        if (jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
+        if (jar.name.endsWith("natives-armeabi.jar")) outputDir = file("libs/armeabi")
+        if (jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
+        if (outputDir != null) {
+            copy {
+                from zipTree(jar)
+                into outputDir
+                include "*.so"
+            }
+        }
     }
 }
