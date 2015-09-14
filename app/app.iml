@@ -127,8 +127,8 @@
     <orderEntry type="library" exported="" name="otto-1.3.8" level="project" />
     <orderEntry type="library" exported="" name="gdx-backend-android-1.6.4" level="project" />
     <orderEntry type="library" exported="" name="framework_classes" level="project" />
-    <orderEntry type="library" exported="" name="okhttp-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="gdx-1.6.4" level="project" />
+    <orderEntry type="library" exported="" name="okhttp-2.4.0" level="project" />
     <orderEntry type="library" exported="" name="fresco-0.5.0" level="project" />
     <orderEntry type="library" exported="" name="fbcore-0.5.0" level="project" />
     <orderEntry type="library" exported="" name="androidannotations-api-3.3.1" level="project" />

@@ -8,6 +8,7 @@
         android:minSdkVersion="17"
         android:targetSdkVersion="19" />
     <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.software.live_wallpaper" />
     <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
     <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
     <uses-permission android:name="android.permission.STATUS_BAR"/>
@@ -49,6 +50,17 @@
                 <action android:name="android.mock" />
             </intent-filter>
         </receiver>
+
+        <service android:name=".libgdx.SnowWallpaper"
+            android:label="@string/app_name"
+            android:icon="@mipmap/ic_launcher"
+            android:permission="android.permission.BIND_WALLPAPER">
+            <intent-filter>
+                <action android:name="android.service.wallpaper.WallpaperService" />
+            </intent-filter>
+            <meta-data android:name="android.service.wallpaper"
+                android:resource="@xml/livewallpaper" />
+        </service>
     </application>
 
 </manifest>
