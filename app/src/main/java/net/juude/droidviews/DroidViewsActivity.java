@@ -32,6 +32,7 @@ import net.juude.droidviews.surface.SurfaceFragment;
 import net.juude.droidviews.surface.SurfaceViewFragment;
 import net.juude.droidviews.transition.TransitionFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
+import net.juude.droidviews.view.SystemUiDemoFragment;
 import net.juude.droidviews.volley.VolleyFragment;
 import net.juude.droidviews.widget.SpinnersFragment;
 import net.juude.droidviews.widget.WebviewFragment;
@@ -60,6 +61,7 @@ public class DroidViewsActivity extends FragmentActivity {
 
     static {
         sFragmentList = new Class<?>[] {
+            SystemUiDemoFragment.class,
             GlideFragment.class,
             PictureFragment.class,
             LinearLayoutFragment.class,
