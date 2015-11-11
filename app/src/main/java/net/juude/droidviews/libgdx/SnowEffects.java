@@ -70,6 +70,7 @@ public class SnowEffects extends ApplicationAdapter {
     public void resize (int width, int height) {
     }
 
+    @Override
     public void render () {
         spriteBatch.getProjectionMatrix().setToOrtho2D(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
         float delta = Gdx.graphics.getDeltaTime();
