@@ -27,6 +27,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="jarlibrary.jarlibrary" level="project" />
   </component>
 </module>

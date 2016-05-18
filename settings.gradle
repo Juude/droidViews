@@ -1,1 +1,1 @@
-include ':app', ':ptr-lib-debug', ':library', ':jarlibrary'
+include ':app', ':library', ':jarlibrary', ':testdemos'
