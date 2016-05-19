@@ -1,2 +1,0 @@
-configurations.create("default")
-artifacts.add("default", file('ptr-lib-debug.aar'))

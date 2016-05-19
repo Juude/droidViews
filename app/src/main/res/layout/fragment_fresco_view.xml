@@ -27,7 +27,7 @@
         xmlns:fresco="http://schemas.android.com/apk/res-auto"
         fresco:fadeDuration="300"
         fresco:actualImageScaleType="focusCrop"
-        fresco:placeholderImage="@drawable/ic_loading"
+        fresco:placeholderImage="@drawable/mario"
         fresco:placeholderImageScaleType="fitCenter"
         fresco:overlayImage="@drawable/overlay_image"
         fresco:pressedStateOverlayImage="@drawable/press_overlay_image"

@@ -10,6 +10,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/dumper" />
+            <option value="$PROJECT_DIR$/gdx" />
             <option value="$PROJECT_DIR$/jarlibrary" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/testdemos" />
@@ -19,6 +21,8 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/dumper" />
+            <option value="$PROJECT_DIR$/gdx" />
             <option value="$PROJECT_DIR$/jarlibrary" />
             <option value="$PROJECT_DIR$/library" />
             <option value="$PROJECT_DIR$/testdemos" />

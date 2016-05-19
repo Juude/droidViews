@@ -17,7 +17,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/stary"
+        android:src="@drawable/mario"
         android:scaleType="centerCrop"/>
 
     <TextView
@@ -32,7 +32,7 @@
     <ImageView
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/stary"
+        android:src="@drawable/mario"
         android:scaleType="fitCenter"/>
 
     <TextView
@@ -47,7 +47,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/stary"
+        android:src="@drawable/mario"
         android:scaleType="fitStart"/>
 
     <TextView
@@ -62,7 +62,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/stary"
+        android:src="@drawable/mario"
         android:scaleType="fitXY"/>
     <TextView
         android:layout_width="match_parent"
@@ -76,7 +76,7 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/stary"/>
+        android:src="@drawable/mario"/>
 </LinearLayout>
 <!--<ScrollView-->
 <!--xmlns:android="http://schemas.android.com/apk/res/android"-->

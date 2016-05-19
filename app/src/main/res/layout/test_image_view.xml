@@ -11,7 +11,7 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/image" />
+        android:src="@drawable/mario" />
 
     <TextView
         android:id="@+id/textView1"
@@ -23,7 +23,7 @@
         android:id="@+id/imageView2"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        android:src="@drawable/image" />
+        android:src="@drawable/mario" />
 
     <TextView
         android:id="@+id/textView2"
@@ -35,7 +35,7 @@
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/image"
+        android:src="@drawable/mario"
         android:maxHeight="40dp"
         android:maxWidth="1000dp"
         android:adjustViewBounds="true"
@@ -51,7 +51,7 @@
         android:id="@+id/imageView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/image"
+        android:src="@drawable/mario"
         android:maxHeight="40dp"
         android:maxWidth="1000dp"
         android:adjustViewBounds="true"
