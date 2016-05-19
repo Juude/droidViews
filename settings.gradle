@@ -1,1 +1,1 @@
-include ':app', ':library', ':jarlibrary', ':testdemos', ':gdx'
+include ':app', ':library', ':jarlibrary', ':testdemos', ':gdx', ':stethdemos'
