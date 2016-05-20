@@ -4,10 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/droidViews.iml" filepath="$PROJECT_DIR$/droidViews.iml" />
-      <module fileurl="file://$PROJECT_DIR$/dumper/dumper.iml" filepath="$PROJECT_DIR$/dumper/dumper.iml" />
       <module fileurl="file://$PROJECT_DIR$/gdx/gdx.iml" filepath="$PROJECT_DIR$/gdx/gdx.iml" />
       <module fileurl="file://$PROJECT_DIR$/jarlibrary/jarlibrary.iml" filepath="$PROJECT_DIR$/jarlibrary/jarlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/stethdemos/stethdemos.iml" filepath="$PROJECT_DIR$/stethdemos/stethdemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/testdemos/testdemos.iml" filepath="$PROJECT_DIR$/testdemos/testdemos.iml" />
     </modules>
   </component>
