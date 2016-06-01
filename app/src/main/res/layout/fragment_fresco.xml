@@ -20,7 +20,7 @@
         android:gravity="center"/>
 
 
-    <net.juude.droidviews.fresco.CircleDraweeView
+    <net.juude.imagedemos.fresco.CircleDraweeView
         android:id="@+id/circle_drawee"
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -32,7 +32,7 @@
         android:layout_height="2dp"
         ></View>
 
-    <net.juude.droidviews.fresco.SimpleDraweeView
+    <net.juude.imagedemos.fresco.SimpleDraweeView
         android:id="@+id/default_loading"
         android:layout_width="300dp"
         android:layout_height="300dp"

@@ -8,7 +8,7 @@ import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.drawee.backends.pipeline.PipelineDraweeControllerBuilderSupplier;
 
 import net.juude.droidviews.dagger.Graph;
-import net.juude.droidviews.fresco.SimpleDraweeView;
+import net.juude.imagedemos.fresco.SimpleDraweeView;
 
 public class DroidViewsApplication extends Application{
     private static final String TAG = "DroidViewsApplication";

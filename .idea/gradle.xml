@@ -11,10 +11,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/gdx" />
+            <option value="$PROJECT_DIR$/gdxdemos" />
+            <option value="$PROJECT_DIR$/imagedemos" />
             <option value="$PROJECT_DIR$/jarlibrary" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/rxdemos" />
             <option value="$PROJECT_DIR$/stethdemos" />
             <option value="$PROJECT_DIR$/testdemos" />
+            <option value="$PROJECT_DIR$/transitiondemos" />
           </set>
         </option>
         <option name="myModules">
@@ -22,10 +26,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/gdx" />
+            <option value="$PROJECT_DIR$/gdxdemos" />
+            <option value="$PROJECT_DIR$/imagedemos" />
             <option value="$PROJECT_DIR$/jarlibrary" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/rxdemos" />
             <option value="$PROJECT_DIR$/stethdemos" />
             <option value="$PROJECT_DIR$/testdemos" />
+            <option value="$PROJECT_DIR$/transitiondemos" />
           </set>
         </option>
       </GradleProjectSettings>
