@@ -1,5 +1,10 @@
 package net.juude.transitiondemos;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
+import android.content.Context;
+import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -9,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import com.squareup.picasso.Picasso;
 
 /**
  * Created by juude on 16/6/1.
@@ -23,27 +29,59 @@ public class ListFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final RecyclerView recyclerView = new RecyclerView(getActivity());
+        recyclerView.setBackgroundColor(Color.RED);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        recyclerView.setAdapter(new RecyclerView.Adapter() {
+        recyclerView.setAdapter(new ImageAdapter(getActivity()));
+        recyclerView.setLayoutParams(new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        return recyclerView;
+    }
 
-            @Override
-            public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-                View v = new ImageView(getActivity());
-                return new RecyclerView.ViewHolder(v) {
-                };
-            }
 
-            @Override
-            public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    static class ImageAdapter extends RecyclerView.Adapter<ImageViewHolder> implements View.OnClickListener {
 
-            }
+        private final Context mContext;
 
-            @Override
-            public int getItemCount() {
-                return mImages.length;
-            }
-        });
+        public ImageAdapter(Context context) {
+            mContext = context;
+        }
+
+        @Override
+        public ImageViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+            View v = new ImageView(mContext);
+            v.setOnClickListener(this);
+            v.setLayoutParams(new ViewGroup.LayoutParams(200, 200));
+            return new ImageViewHolder(v);
+        }
+
+        @Override
+        public void onBindViewHolder(ImageViewHolder holder, int position) {
+            holder.itemView.setTag(position);
+            Picasso.with(mContext).load(mImages[position]).into((ImageView) holder.itemView);
+        }
+
+        @Override
+        public int getItemCount() {
+            return mImages.length;
+        }
+
+        @Override
+        public void onClick(View v) {
+            Intent i = new Intent(mContext, DetailActivity.class);
+            final String path = mImages[(int) v.getTag()];
+            i.putExtra("path", path);
+            v.setTransitionName(path);
+            ActivityOptions transitionActivityOptions =
+                    ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, v, path);
+
+            mContext.startActivity(i, transitionActivityOptions.toBundle());
+        }
+    }
+    static class ImageViewHolder extends RecyclerView.ViewHolder {
+
+        public ImageViewHolder(View itemView) {
+            super(itemView);
+        }
     }
 }
