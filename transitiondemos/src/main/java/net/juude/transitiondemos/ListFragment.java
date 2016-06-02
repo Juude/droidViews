@@ -1,12 +1,14 @@
 package net.juude.transitiondemos;
 
 import android.app.Activity;
-import android.app.ActivityOptions;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -71,11 +73,12 @@ public class ListFragment extends Fragment{
             Intent i = new Intent(mContext, DetailActivity.class);
             final String path = mImages[(int) v.getTag()];
             i.putExtra("path", path);
-            v.setTransitionName(path);
-            ActivityOptions transitionActivityOptions =
-                    ActivityOptions.makeSceneTransitionAnimation((Activity) mContext, v, path);
-
-            mContext.startActivity(i, transitionActivityOptions.toBundle());
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                v.setTransitionName(path);
+            }
+            ActivityOptionsCompat transitionActivityOptions =
+                    ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) mContext, v, path);
+            ActivityCompat.startActivity((Activity) mContext, i, transitionActivityOptions.toBundle());
         }
     }
     static class ImageViewHolder extends RecyclerView.ViewHolder {
