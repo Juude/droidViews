@@ -16,14 +16,4 @@
 
 如果我们想让自己的软件保持竞争性，就不得不实现这些新需求，所以，换言之就是我们应该这样做：</string>
 
-    <string-array name="planets_array">
-        <item>Mercury</item>
-        <item>Venus</item>
-        <item>Earth</item>
-        <item>Mars</item>
-        <item>Jupiter</item>
-        <item>Saturn</item>
-        <item>Uranus</item>
-        <item>Neptune</item>
-    </string-array>
 </resources>

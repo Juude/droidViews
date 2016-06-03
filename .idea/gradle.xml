@@ -9,6 +9,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/droidwidgets" />
             <option value="$PROJECT_DIR$/gdx" />
@@ -16,15 +17,18 @@
             <option value="$PROJECT_DIR$/imagedemos" />
             <option value="$PROJECT_DIR$/jarlibrary" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/network" />
             <option value="$PROJECT_DIR$/rxdemos" />
             <option value="$PROJECT_DIR$/stethdemos" />
             <option value="$PROJECT_DIR$/testdemos" />
             <option value="$PROJECT_DIR$/transitiondemos" />
+            <option value="$PROJECT_DIR$/widgetsdemos" />
           </set>
         </option>
         <option name="myModules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/animation" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/droidwidgets" />
             <option value="$PROJECT_DIR$/gdx" />
@@ -32,10 +36,12 @@
             <option value="$PROJECT_DIR$/imagedemos" />
             <option value="$PROJECT_DIR$/jarlibrary" />
             <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/network" />
             <option value="$PROJECT_DIR$/rxdemos" />
             <option value="$PROJECT_DIR$/stethdemos" />
             <option value="$PROJECT_DIR$/testdemos" />
             <option value="$PROJECT_DIR$/transitiondemos" />
+            <option value="$PROJECT_DIR$/widgetsdemos" />
           </set>
         </option>
       </GradleProjectSettings>
