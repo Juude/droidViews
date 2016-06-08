@@ -75,45 +75,5 @@ dependencies {
     compile 'com.alibaba:fastjson:1.1.25'
     compile 'com.malinskiy:superrecyclerview:1.1.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
-    compile "com.badlogicgames.gdx:gdx-backend-android:$gdxVersion"
-    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi"
-    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-armeabi-v7a"
-    natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86"
-    compile "com.badlogicgames.gdx:gdx:$gdxVersion"
-
 }
 
-
-apt {
-    arguments {
-        androidManifestFile variant.outputs[0].processResources.manifestFile
-        // if you have multiple outputs (when using splits), you may want to have other index than 0
-
-        // you should set your package name here if you are using different application IDs
-        // resourcePackageName "your.package.name"
-
-        // You can set optional annotation processing options here, like these commented options:
-        // logLevel 'INFO'
-        // logFile '/var/log/aa.log'
-    }
-}
-
-task copyAndroidNatives() {
-    file("libs/armeabi/").mkdirs();
-    file("libs/armeabi-v7a/").mkdirs();
-    file("libs/x86/").mkdirs();
-
-    configurations.natives.files.each { jar ->
-        def outputDir = null
-        if (jar.name.endsWith("natives-armeabi-v7a.jar")) outputDir = file("libs/armeabi-v7a")
-        if (jar.name.endsWith("natives-armeabi.jar")) outputDir = file("libs/armeabi")
-        if (jar.name.endsWith("natives-x86.jar")) outputDir = file("libs/x86")
-        if (outputDir != null) {
-            copy {
-                from zipTree(jar)
-                into outputDir
-                include "*.so"
-            }
-        }
-    }
-}

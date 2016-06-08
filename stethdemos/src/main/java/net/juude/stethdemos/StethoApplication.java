@@ -1,11 +1,14 @@
 package net.juude.stethdemos;
 
+import android.app.Activity;
 import android.app.Application;
+import android.os.Bundle;
 
 import com.facebook.stetho.InspectorModulesProvider;
 import com.facebook.stetho.Stetho;
 import com.facebook.stetho.inspector.protocol.ChromeDevtoolsDomain;
 import com.facebook.stetho.rhino.JsRuntimeReplFactoryBuilder;
+
 
 /**
  * Created by juude on 16/5/19.
@@ -27,5 +30,7 @@ public class StethoApplication extends Application{
                     }
                 })
                 .build());
+        registerActivityLifecycleCallbacks(ActivityInfo.getInstance());
     }
+
 }

@@ -6,6 +6,6 @@
         android:id="@+id/spinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:popupBackground="@drawable/round_corner">
+        android:popupBackground="@null">
     </Spinner>
 </LinearLayout>

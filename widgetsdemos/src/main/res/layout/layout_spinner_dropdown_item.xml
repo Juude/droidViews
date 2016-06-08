@@ -7,5 +7,5 @@
     android:layout_height="50dp"
     android:ellipsize="marquee"
     android:gravity="center_vertical"
-    android:drawableLeft="@drawable/ic_action_grade"
+    android:drawableLeft="@null"
 />

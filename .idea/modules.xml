@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/droidViews.iml" filepath="$PROJECT_DIR$/droidViews.iml" />
-      <module fileurl="file://$PROJECT_DIR$/droidwidgets/droidwidgets.iml" filepath="$PROJECT_DIR$/droidwidgets/droidwidgets.iml" />
       <module fileurl="file://$PROJECT_DIR$/gdx/gdx.iml" filepath="$PROJECT_DIR$/gdx/gdx.iml" />
       <module fileurl="file://$PROJECT_DIR$/gdxdemos/gdxdemos.iml" filepath="$PROJECT_DIR$/gdxdemos/gdxdemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagedemos/imagedemos.iml" filepath="$PROJECT_DIR$/imagedemos/imagedemos.iml" />

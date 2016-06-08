@@ -1,4 +1,4 @@
-package net.juude.droidviews.libgdx;
+package net.juude.gdx;
 
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Gdx;
