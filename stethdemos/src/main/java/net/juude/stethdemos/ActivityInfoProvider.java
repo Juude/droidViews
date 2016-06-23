@@ -5,18 +5,18 @@ import android.app.Application;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 
-import java.lang.ref.WeakReference;
+import java.util.Stack;
 
 /**
  * Created by sjd on 16/6/8.
  */
-public class ActivityInfo implements Application.ActivityLifecycleCallbacks{
-    private static ActivityInfo sInstance;
-    private WeakReference<Activity> mTopActivity;
-
-    public static ActivityInfo getInstance() {
+public class ActivityInfoProvider implements Application.ActivityLifecycleCallbacks{
+    private static ActivityInfoProvider sInstance;
+    private Activity mTopActivity;
+    private Stack<Activity> mActivityStack = new Stack<>();
+    public static ActivityInfoProvider getInstance() {
         if (sInstance == null) {
-            sInstance = new ActivityInfo();
+            sInstance = new ActivityInfoProvider();
         }
         return sInstance;
     }
@@ -28,22 +28,22 @@ public class ActivityInfo implements Application.ActivityLifecycleCallbacks{
 
     @Override
     public void onActivityStarted(Activity activity) {
-
+        mActivityStack.push(activity);
+        mTopActivity = activity;
     }
 
     @Override
     public void onActivityResumed(Activity activity) {
-        mTopActivity = new WeakReference<>(activity);
     }
 
     @Override
     public void onActivityPaused(Activity activity) {
-
     }
 
     @Override
     public void onActivityStopped(Activity activity) {
-
+        mActivityStack.pop();
+        mTopActivity = null;
     }
 
     @Override
@@ -58,9 +58,10 @@ public class ActivityInfo implements Application.ActivityLifecycleCallbacks{
 
     @Nullable
     public Activity getTopActivityOrNull() {
-        if (mTopActivity != null &&  mTopActivity.get() != null) {
-            return mTopActivity.get();
-        }
-        return null;
+        return mTopActivity;
+    }
+
+    public Stack<Activity> getActivityStack() {
+        return mActivityStack;
     }
 }

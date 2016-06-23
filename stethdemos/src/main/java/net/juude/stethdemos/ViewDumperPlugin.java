@@ -12,9 +12,10 @@ import com.facebook.stetho.dumpapp.DumperPlugin;
 import java.util.List;
 
 /**
- * Created by sjd on 16/6/8.
+ * Created by juude on 16/6/8.
  */
 public class ViewDumperPlugin implements DumperPlugin{
+
     @Override
     public String getName() {
         return "view";
@@ -22,11 +23,12 @@ public class ViewDumperPlugin implements DumperPlugin{
 
     @Override
     public void dump(DumperContext dumpContext) throws DumpException {
-        Activity topActivity = ActivityInfo.getInstance().getTopActivityOrNull();
+        Activity topActivity = ActivityInfoProvider.getInstance().getTopActivityOrNull();
         if (topActivity == null) {
             return;
         }
         View topView = topActivity.getWindow().getDecorView();
+
     }
 
     private void getTopFragment(Activity topActivity) {

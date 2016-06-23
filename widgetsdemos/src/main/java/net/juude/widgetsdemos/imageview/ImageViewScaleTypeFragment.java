@@ -6,7 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.juude.droidviews.R;
+import net.juude.widgetsdemos.R;
+
 
 /**
  * Created by juude on 15-5-14.

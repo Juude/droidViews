@@ -1,8 +1,6 @@
 package net.juude.stethdemos;
 
-import android.app.Activity;
 import android.app.Application;
-import android.os.Bundle;
 
 import com.facebook.stetho.InspectorModulesProvider;
 import com.facebook.stetho.Stetho;
@@ -30,7 +28,7 @@ public class StethoApplication extends Application{
                     }
                 })
                 .build());
-        registerActivityLifecycleCallbacks(ActivityInfo.getInstance());
+        registerActivityLifecycleCallbacks(ActivityInfoProvider.getInstance());
     }
 
 }

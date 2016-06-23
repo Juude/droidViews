@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import net.juude.droidviews.R;
+import net.juude.widgetsdemos.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

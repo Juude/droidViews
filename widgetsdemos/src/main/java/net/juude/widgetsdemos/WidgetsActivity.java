@@ -1,4 +1,4 @@
-package net.juude.droidviews;
+package net.juude.widgetsdemos;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,22 +12,9 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import net.juude.droidviews.camera.PictureFragment;
-import net.juude.droidviews.dagger.DaggerFragment;
-import net.juude.droidviews.databinding.DataBindingFragment;
-import net.juude.droidviews.dialog.PopupWindowFragment;
-import net.juude.droidviews.graphics.DrawableMultipleViewsFragment;
-import net.juude.droidviews.graphics.CircleViewFragment;
-import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
-import net.juude.droidviews.jni.JniFragment;
-import net.juude.droidviews.layout.LinearLayoutFragment;
-import net.juude.droidviews.memory.MemoryFragment;
-import net.juude.droidviews.otto.OttoFragment;
-import net.juude.droidviews.rx.RxAndroidFragment;
-import net.juude.droidviews.surface.SurfaceFragment;
-import net.juude.droidviews.surface.SurfaceViewFragment;
-import net.juude.droidviews.video.VideoPlayFragment;
-import net.juude.droidviews.view.SystemUiDemoFragment;
+import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
+import net.juude.widgetsdemos.recyclerview.ViewPagerFragment;
+import net.juude.widgetsdemos.textview.TextFragment;
 
 import java.util.HashMap;
 
@@ -35,7 +22,7 @@ import java.util.HashMap;
  * Created by juude on 15-4-9.
  */
 
-public class DroidViewsActivity extends FragmentActivity {
+public class WidgetsActivity extends FragmentActivity {
 
     private static final String TAG = "DroidViewsActivity";
     private DrawerLayout mDrawerLayout;
@@ -45,34 +32,20 @@ public class DroidViewsActivity extends FragmentActivity {
     private static Class[] sFragmentList;
     private HashMap<Class, Fragment> mFragmentsMap = new HashMap<Class, Fragment>();
 
+    private static Class mDefaultFragment = ViewPagerFragment.class;
     static {
         sFragmentList = new Class<?>[] {
-            SystemUiDemoFragment.class,
-            PictureFragment.class,
-            LinearLayoutFragment.class,
-            PulltoRefreshFragment.class,
-            RoundCornerViewGroupFragment.class,
-            SurfaceViewFragment.class,
-            VideoPlayFragment.class,
-            RxAndroidFragment.class,
-            CircleViewFragment.class,
-            PopupWindowFragment.class,
-            DaggerFragment.class,
-            DataBindingFragment.class,
-            JniFragment.class,
-            InfoFragment.class,
-            DrawableMultipleViewsFragment.class,
-            OttoFragment.class,
-            MemoryFragment.class,
-            SurfaceFragment.class
+                RecyclerViewScrollFragment.class,
+                ViewPagerFragment.class,
+                TextFragment.class,
+                WidgetsFragment.class
         };
     }
-    private Class mDefaultFragment = MemoryFragment.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_droidviews);
+        setContentView(R.layout.activity_widgets);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mLayoutInflater = LayoutInflater.from(this);
@@ -103,8 +76,8 @@ public class DroidViewsActivity extends FragmentActivity {
     private void selectFragment(Class clazz) {
         Fragment fragment = getFragment(clazz);
         getSupportFragmentManager().beginTransaction().
-            replace(R.id.content_frame, fragment).
-            commit();
+                replace(R.id.content_frame, fragment).
+                commit();
         setTitle(clazz.getSimpleName());
     }
 

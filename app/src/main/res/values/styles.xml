@@ -17,16 +17,6 @@
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
 
-    <style name="MainText">
-        <item name="android:textSize">20sp</item>
-        <item name="android:color">#000</item>
-    </style>
-
-    <style name="SubText">
-        <item name="android:textSize">16sp</item>
-        <item name="android:textColor">#FF0</item>
-    </style>
-
     <style name="PopupAnimation">
         <item name="android:windowEnterAnimation">@anim/pop_show</item>
         <item name="android:windowExitAnimation">@anim/pop_hide</item>

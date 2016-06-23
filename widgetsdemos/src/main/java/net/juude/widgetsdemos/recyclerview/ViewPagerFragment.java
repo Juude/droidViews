@@ -10,16 +10,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import net.juude.droidviews.R;
+import net.juude.widgetsdemos.R;
 
 /**
  * Created by juude on 15/5/24.
  */
-public class RecyclerViewFragment extends Fragment {
+public class ViewPagerFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_recycler_view, null);
+        View v = inflater.inflate(R.layout.fragment_view_pager, null);
         final ViewPager view_pager = (ViewPager) v.findViewById(R.id.view_pager);
         view_pager.setAdapter(new PagerAdapter() {
             @Override
@@ -39,7 +39,6 @@ public class RecyclerViewFragment extends Fragment {
             public boolean isViewFromObject(View view, Object o) {
                 return view == o;
             }
-
 
         });
         return v;

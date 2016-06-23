@@ -2,9 +2,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="2300px"
         android:orientation="vertical"
         android:divider="@drawable/divider"
         android:dividerPadding="10dp"
@@ -14,10 +14,10 @@
             android:layout_height="50dp"
             android:text="StateListTextView"
             android:background="@drawable/state_list"/>
-         <!--<View-->
-             <!--android:layout_width="match_parent"-->
-             <!--android:layout_height="wrap_content"-->
-             <!--android:background="@drawable/divider"></View>-->
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/divider"></View>-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,15 +28,15 @@
             android:id="@+id/spannableString"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
+            android:textColor="@android:color/primary_text_dark"
             android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/smarterSpannable"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_color"
+            android:textColor="@android:color/primary_text_dark"
             android:textSize="16sp"
-/>
-    </LinearLayout>
+            />
+    </RelativeLayout>
 </ScrollView>

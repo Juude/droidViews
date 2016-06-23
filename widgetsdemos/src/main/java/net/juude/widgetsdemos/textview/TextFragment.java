@@ -13,7 +13,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import net.juude.droidviews.R;
+import net.juude.widgetsdemos.R;
+
 
 public class TextFragment extends Fragment {
     public static final String TAG = TextFragment.class.getSimpleName();
