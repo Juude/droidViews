@@ -1,4 +1,4 @@
-package net.juude.droidviews.rx;
+package net.juude.rxdemos.rx;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import net.juude.droidviews.R;
+import net.juude.rxdemos.R;
 
 import rx.Subscriber;
 import rx.Subscription;
@@ -52,7 +52,6 @@ public class RxAndroidFragment extends Fragment {
                 edit_text.setText(s);
             }
         });
-        v.setOnClickListener(v1 -> Toast.makeText(getActivity(), "clicked", Toast.LENGTH_LONG).show());
         return v;
     }
 

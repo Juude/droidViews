@@ -1,4 +1,4 @@
-package net.juude.droidviews.rx;
+package net.juude.rxdemos.rx;
 
 import android.os.SystemClock;
 

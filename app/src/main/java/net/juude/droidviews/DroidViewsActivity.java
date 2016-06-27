@@ -23,7 +23,7 @@ import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.memory.MemoryFragment;
 import net.juude.droidviews.otto.OttoFragment;
-import net.juude.droidviews.rx.RxAndroidFragment;
+import net.juude.rxdemos.rx.RxAndroidFragment;
 import net.juude.droidviews.surface.SurfaceFragment;
 import net.juude.droidviews.surface.SurfaceViewFragment;
 import net.juude.droidviews.video.VideoPlayFragment;

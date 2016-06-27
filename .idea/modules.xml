@@ -5,11 +5,11 @@
       <module fileurl="file://$PROJECT_DIR$/animation/animation.iml" filepath="$PROJECT_DIR$/animation/animation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/droidViews.iml" filepath="$PROJECT_DIR$/droidViews.iml" />
-      <module fileurl="file://$PROJECT_DIR$/gdx/gdx.iml" filepath="$PROJECT_DIR$/gdx/gdx.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snow/gdx.iml" filepath="$PROJECT_DIR$/snow/gdx.iml" />
       <module fileurl="file://$PROJECT_DIR$/gdxdemos/gdxdemos.iml" filepath="$PROJECT_DIR$/gdxdemos/gdxdemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/imagedemos/imagedemos.iml" filepath="$PROJECT_DIR$/imagedemos/imagedemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/jarlibrary/jarlibrary.iml" filepath="$PROJECT_DIR$/jarlibrary/jarlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarydemo/library.iml" filepath="$PROJECT_DIR$/librarydemo/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxdemos/rxdemos.iml" filepath="$PROJECT_DIR$/rxdemos/rxdemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/stethdemos/stethdemos.iml" filepath="$PROJECT_DIR$/stethdemos/stethdemos.iml" />
