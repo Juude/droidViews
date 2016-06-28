@@ -10,11 +10,19 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import net.juude.rxdemos.R;
+import net.juude.rxdemos.data.QuoteItem;
 
+import java.util.List;
+
+import rx.Observable;
+import rx.Observer;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.android.app.AppObservable;
+import rx.android.schedulers.AndroidSchedulers;
+import rx.functions.Func1;
 import rx.observables.ConnectableObservable;
+import rx.schedulers.Schedulers;
 import rx.subscriptions.Subscriptions;
 
 /**
@@ -52,6 +60,30 @@ public class RxAndroidFragment extends Fragment {
                 edit_text.setText(s);
             }
         });
+        SampleObservables.quotes()
+                .filter(new Func1<List<QuoteItem>, Boolean>() {
+                    @Override
+                    public Boolean call(List<QuoteItem> quoteItems) {
+                        return Boolean.TRUE;
+                    }
+                })
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Observer<List<QuoteItem>>() {
+                    @Override
+                    public void onCompleted() {
+
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+
+                    }
+
+                    @Override
+                    public void onNext(List<QuoteItem> quoteItems) {
+
+                    }
+                });
         return v;
     }
 

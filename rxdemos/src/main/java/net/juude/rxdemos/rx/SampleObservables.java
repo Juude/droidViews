@@ -2,6 +2,11 @@ package net.juude.rxdemos.rx;
 
 import android.os.SystemClock;
 
+import net.juude.rxdemos.data.QuoteItem;
+import net.juude.rxdemos.data.QuotesRepository;
+
+import java.util.List;
+
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
@@ -40,6 +45,15 @@ public class SampleObservables {
                 final String fakeJson = "{\"result\": 42}";
                 subscriber.onNext(fakeJson);
                 subscriber.onCompleted();
+            }
+        }).subscribeOn(Schedulers.io());
+    }
+
+    public static Observable<List<QuoteItem>> quotes() {
+        return Observable.create(new Observable.OnSubscribe<List<QuoteItem>>() {
+            @Override
+            public void call(Subscriber<? super List<QuoteItem>> subscriber) {
+                subscriber.onNext(QuotesRepository.getQuotes());
             }
         }).subscribeOn(Schedulers.io());
     }
