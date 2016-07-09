@@ -57,6 +57,7 @@ public class MainApplication extends Application {
 			// .apatch file path
 			String patchFileString = Environment.getExternalStorageDirectory()
 					.getAbsolutePath() + APATCH_PATH;
+			Log.d(TAG, "patchFileString : " + patchFileString);
 			mPatchManager.addPatch(patchFileString);
 			Log.d(TAG, "apatch:" + patchFileString + " added.");
 		} catch (IOException e) {

@@ -33,7 +33,8 @@ public class A {
 	static int i = 10;
 
 	public static String a(String str) {
-		Log.i("euler", "fix error");
+		Log.i("euler", "check fixed the error");
+		Fix.a("heh");
 		return "a";
 	}
 
