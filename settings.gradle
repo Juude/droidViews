@@ -1,4 +1,4 @@
-include ':app', ':library', ':jarlibrary',
+include ':app', ':library', ':jarlibrary', ':andfixdemo',
         ':testdemos', ':gdx', ':stethdemos', ':imagedemos',
         ':gdxdemos', ':rxdemos', ':transitiondemos',
-        ':widgetsdemos', ':animation', ':network'
+        ':widgetsdemos', ':animation', ':network',':andfixdemo'
