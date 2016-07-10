@@ -6,4 +6,9 @@ package net.juude.rxdemos.data;
 public class QuoteItem {
     public String quote;
     public String author;
+
+    @Override
+    public String toString() {
+        return "quote: " + quote + "\nauthor" + author;
+    }
 }

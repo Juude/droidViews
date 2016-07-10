@@ -49,12 +49,5 @@ public class SampleObservables {
         }).subscribeOn(Schedulers.io());
     }
 
-    public static Observable<List<QuoteItem>> quotes() {
-        return Observable.create(new Observable.OnSubscribe<List<QuoteItem>>() {
-            @Override
-            public void call(Subscriber<? super List<QuoteItem>> subscriber) {
-                subscriber.onNext(QuotesRepository.getQuotes());
-            }
-        }).subscribeOn(Schedulers.io());
-    }
+
 }

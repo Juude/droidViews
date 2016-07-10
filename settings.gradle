@@ -1,4 +1,4 @@
 include ':app', ':library', ':jarlibrary', ':andfixdemo',
         ':testdemos', ':gdx', ':stethdemos', ':imagedemos',
         ':gdxdemos', ':rxdemos', ':transitiondemos',
-        ':widgetsdemos', ':animation', ':network',':andfixdemo'
+        ':widgetsdemos', ':animation', ':network',':andfixdemo',":snow" ,":librarydemo"

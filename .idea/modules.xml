@@ -11,8 +11,10 @@
       <module fileurl="file://$PROJECT_DIR$/imagedemos/imagedemos.iml" filepath="$PROJECT_DIR$/imagedemos/imagedemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/jarlibrary/jarlibrary.iml" filepath="$PROJECT_DIR$/jarlibrary/jarlibrary.iml" />
       <module fileurl="file://$PROJECT_DIR$/librarydemo/library.iml" filepath="$PROJECT_DIR$/librarydemo/library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/librarydemo/librarydemo.iml" filepath="$PROJECT_DIR$/librarydemo/librarydemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/network/network.iml" filepath="$PROJECT_DIR$/network/network.iml" />
       <module fileurl="file://$PROJECT_DIR$/rxdemos/rxdemos.iml" filepath="$PROJECT_DIR$/rxdemos/rxdemos.iml" />
+      <module fileurl="file://$PROJECT_DIR$/snow/snow.iml" filepath="$PROJECT_DIR$/snow/snow.iml" />
       <module fileurl="file://$PROJECT_DIR$/stethdemos/stethdemos.iml" filepath="$PROJECT_DIR$/stethdemos/stethdemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/testdemos/testdemos.iml" filepath="$PROJECT_DIR$/testdemos/testdemos.iml" />
       <module fileurl="file://$PROJECT_DIR$/transitiondemos/transitiondemos.iml" filepath="$PROJECT_DIR$/transitiondemos/transitiondemos.iml" />
