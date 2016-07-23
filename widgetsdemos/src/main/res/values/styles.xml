@@ -19,4 +19,9 @@
         <item name="android:textColor">#FF0</item>
     </style>
 
+    <style name="TranslucentDialg" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
 </resources>

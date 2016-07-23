@@ -13,7 +13,6 @@ import android.os.Bundle;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.content.PermissionChecker;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,7 +24,7 @@ import permissions.dispatcher.NeedsPermission;
 import permissions.dispatcher.RuntimePermissions;
 
 /**
- * Created by sjd on 16/7/23.
+ * Created by juude on 16/7/23.
  */
 @RuntimePermissions
 public class AlertDialogFragment extends Fragment implements View.OnClickListener {
@@ -40,6 +39,7 @@ public class AlertDialogFragment extends Fragment implements View.OnClickListene
         View v  = inflater.inflate(R.layout.fragment_alert_dialog, null);
         v.findViewById(R.id.showalertdialog).setOnClickListener(this);
         v.findViewById(R.id.showdialog).setOnClickListener(this);
+        v.findViewById(R.id.show_dialog_activity).setOnClickListener(this);
         return v;
     }
 
@@ -52,6 +52,12 @@ public class AlertDialogFragment extends Fragment implements View.OnClickListene
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();
     }
+
+    private void startDialogActivity() {
+        Intent intent = new Intent(getActivity(), DialogActivity.class);
+        startActivity(intent);
+    }
+
 
     @NeedsPermission(Manifest.permission.SYSTEM_ALERT_WINDOW)
     public void createAndShowDialog() {
@@ -73,7 +79,9 @@ public class AlertDialogFragment extends Fragment implements View.OnClickListene
                 if (Build.VERSION.SDK_INT >= 23) {
                     checkAndShowDialog();
                 }
-
+                break;
+            case R.id.show_dialog_activity:
+                startDialogActivity();
                 break;
         }
     }

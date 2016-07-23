@@ -24,6 +24,13 @@
             >
         </activity>
 
+        <activity
+            android:name=".alertdialog.DialogActivity"
+            android:theme="@style/TranslucentDialg"
+            android:launchMode="standard"
+            >
+        </activity>
+
     </application>
 
 </manifest>
