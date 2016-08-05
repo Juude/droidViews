@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import net.juude.Yo;
 
 /**
  * Created by juude on 15-7-3.
@@ -30,14 +29,10 @@ public class InfoFragment extends Fragment{
     public void onResume() {
         super.onResume();
         StringBuilder sb = new StringBuilder();
-        sb.append(Yo.Yo())
-                .append("\n");
 
         Log.d(TAG, " yo : " + sb.toString());
         mTextInfo.setText(sb.toString());
         try {
-            logAndAppend(TAG, "environ " + new Joiner("\n ").of(Os.environ()));
-
             logAndAppend(TAG, "View " + Class.forName("android.view.View"));
             logAndAppend(TAG, "ActiveServices" + Class.forName("com.android.server.ActiveServices"));
             logAndAppend(TAG, "MiuiInitServer " + Class.forName("com.miui.server.MiuiInitServer"));

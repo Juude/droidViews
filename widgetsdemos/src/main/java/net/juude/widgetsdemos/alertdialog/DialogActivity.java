@@ -14,4 +14,9 @@ public class DialogActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.layout_alert_dialog);
     }
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

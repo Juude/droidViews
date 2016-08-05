@@ -13,7 +13,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import net.juude.droidviews.camera.PictureFragment;
-import net.juude.droidviews.dagger.DaggerFragment;
 import net.juude.droidviews.databinding.DataBindingFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.graphics.DrawableMultipleViewsFragment;
@@ -23,7 +22,6 @@ import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.memory.MemoryFragment;
 import net.juude.droidviews.otto.OttoFragment;
-import net.juude.rxdemos.rx.RxAndroidFragment;
 import net.juude.droidviews.surface.SurfaceFragment;
 import net.juude.droidviews.surface.SurfaceViewFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
@@ -50,21 +48,19 @@ public class DroidViewsActivity extends FragmentActivity {
             SystemUiDemoFragment.class,
             PictureFragment.class,
             LinearLayoutFragment.class,
-            PulltoRefreshFragment.class,
             RoundCornerViewGroupFragment.class,
             SurfaceViewFragment.class,
             VideoPlayFragment.class,
-            RxAndroidFragment.class,
             CircleViewFragment.class,
             PopupWindowFragment.class,
-            DaggerFragment.class,
             DataBindingFragment.class,
             JniFragment.class,
             InfoFragment.class,
             DrawableMultipleViewsFragment.class,
             OttoFragment.class,
             MemoryFragment.class,
-            SurfaceFragment.class
+            SurfaceFragment.class,
+            AlarmManagerFragment.class
         };
     }
     private Class mDefaultFragment = MemoryFragment.class;

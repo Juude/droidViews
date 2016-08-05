@@ -43,11 +43,11 @@ public class AlertDialogFragment extends Fragment implements View.OnClickListene
         return v;
     }
 
-
     private void createAndShowAlertDialog() {
         View v = LayoutInflater.from(getContext()).inflate(R.layout.layout_alert_dialog, null);
         Dialog dialog = new AlertDialog.Builder(getActivity())
                 .setView(v)
+                .setCancelable(false)
                 .create();
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         dialog.show();

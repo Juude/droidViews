@@ -22,6 +22,9 @@
     <style name="TranslucentDialg" parent="Theme.AppCompat.Dialog.Alert">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowCloseOnTouchOutside">false</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>
