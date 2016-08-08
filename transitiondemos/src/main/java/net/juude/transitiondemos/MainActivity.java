@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 /**
  * Created by juude on 16/6/1.
@@ -18,6 +19,18 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setFragment(ListFragment.class);
+        findViewById(R.id.buttonActivity).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ActivityRouter
+                        .router(MainActivity.this)
+                        .to(DetailActivity.class)
+                        .extra("onCreateTime", 3000)
+                        .extra("onResumeTime", 3000)
+                        .extra("onStartTime", 6000)
+                        .go();
+            }
+        });
     }
 
     @Override
@@ -36,8 +49,8 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void setFragment(Class<?> clazz) {
-        getSupportFragmentManager().
-                beginTransaction()
+        getSupportFragmentManager()
+                .beginTransaction()
                 .replace(R.id.fragment_container,
                         Fragment.instantiate(this, clazz.getName()))
                 .commit();

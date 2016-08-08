@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NoBackground" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowBackground">@android:drawable/alert_dark_frame</item>
+    </style>
+
 </resources>
