@@ -3,3 +3,8 @@
 /.gradle/*
 /.idea/*
 local.properties
+testdemos/testdemos.iml
+imagedemos/imagedemos.iml
+gradledemo/gradledemo.iml
+depend1/depend1.iml
+app/app.iml
