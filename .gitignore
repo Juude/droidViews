@@ -13,3 +13,6 @@ gdxdemos/gdxdemos.iml
 animation/animation.iml
 andfixdemo/andfixdemo.iml
 librarydemo/librarydemo.iml
+snow/snow.iml
+.idea/gradle.xml
+transitiondemos/transitiondemos.iml
