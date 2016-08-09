@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import top.perf.utils.collect.ActivityRouter;
+
 /**
  * Created by juude on 16/6/1.
  */
@@ -23,12 +25,12 @@ public class MainActivity extends AppCompatActivity{
             @Override
             public void onClick(View v) {
                 ActivityRouter
-                        .router(MainActivity.this)
-                        .to(DetailActivity.class)
-                        .extra("onCreateTime", 3000)
-                        .extra("onResumeTime", 3000)
-                        .extra("onStartTime", 6000)
-                        .go();
+                    .router(MainActivity.this)
+                    .to(DetailActivity.class)
+                    .extra("onCreateTime", 3000)
+                    .extra("onResumeTime", 3000)
+                    .extra("onStartTime", 6000)
+                    .go();
             }
         });
     }

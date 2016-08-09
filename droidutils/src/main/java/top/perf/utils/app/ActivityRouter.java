@@ -1,9 +1,11 @@
-package net.juude.transitiondemos;
+package top.perf.utils.app;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+
+import top.perf.utils.collect.Preconditions;
 
 /**
  * Created by juude on 16/8/8.
@@ -79,8 +81,8 @@ public class ActivityRouter {
         }
 
         private Bundle getBundle() {
-            if (this.bundles == null) {
-                this.bundles = new Bundle();
+            if (bundles == null) {
+                bundles = new Bundle();
             }
             return bundles;
         }

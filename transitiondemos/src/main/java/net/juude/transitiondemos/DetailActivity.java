@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -21,8 +22,10 @@ public class DetailActivity extends AppCompatActivity{
         imageView.setTransitionName(imagePath);
         setContentView(imageView);
         Log.d(TAG, "onCreate begin");
+        Toast.makeText(this.getApplication(), "onCreate begin", Toast.LENGTH_SHORT).show();
         sleepIgnoreExceptions(getLongExtra("onCreateTime"));
-        Log.d(TAG, "onCreate begin");
+        Log.d(TAG, "onCreate end");
+        Toast.makeText(this.getApplication(), "onCreate end", Toast.LENGTH_SHORT).show();
     }
 
 
@@ -42,7 +45,9 @@ public class DetailActivity extends AppCompatActivity{
     protected void onStart() {
         super.onStart();
         Log.d(TAG, "onStart begin");
+        Toast.makeText(this.getApplication(), "onStart begin", Toast.LENGTH_SHORT).show();
         sleepIgnoreExceptions(getLongExtra("onStartTime"));
+        Toast.makeText(this, "onStart end", Toast.LENGTH_SHORT).show();
         Log.d(TAG, "onStart end");
     }
 
@@ -50,7 +55,9 @@ public class DetailActivity extends AppCompatActivity{
     protected void onResume() {
         super.onResume();
         Log.d(TAG, "onResume begin");
+        Toast.makeText(this, "onResume begin", Toast.LENGTH_SHORT).show();
         sleepIgnoreExceptions(getLongExtra("onResumeTime"));
         Log.d(TAG, "onResume end");
+        Toast.makeText(this, "onResume end", Toast.LENGTH_SHORT).show();
     }
 }

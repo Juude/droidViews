@@ -1,9 +1,9 @@
-package net.juude.droidviews.utils;
+package top.perf.utils.collect;
 
 import android.support.annotation.NonNull;
 
 /**
- * Created by juude on 15-5-11.
+ * Created by juude on 16/8/9.
  */
 public class Joiner {
     private String mSeprator;
