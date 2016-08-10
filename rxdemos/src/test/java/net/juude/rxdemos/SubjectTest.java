@@ -11,18 +11,18 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.Subscription;
 import rx.functions.Action1;
 import rx.observers.TestSubscriber;
 import rx.subjects.AsyncSubject;
 import rx.subjects.PublishSubject;
 import rx.subjects.ReplaySubject;
-
 /**
  * Created by juude on 16/8/9.
  */
 
-public class TestMultipleObservers {
+public class SubjectTest {
 
     @Test
     public void testMultipleObservers() {
@@ -99,5 +99,14 @@ public class TestMultipleObservers {
         testSubscriber.assertNoErrors();
         List<String> results = testSubscriber.getOnNextEvents();
         Assert.assertTrue(results.size() == 3);
+    }
+
+    @Test
+    public void testCompleteTwice() {
+        PublishSubject<String> publishSubject = PublishSubject.create();
+        publishSubject.subscribe(new SimplePrintSubscriber("testCompleteTwice"));
+        publishSubject.onNext("ddd");
+        publishSubject.onCompleted();
+        publishSubject.onCompleted();
     }
 }

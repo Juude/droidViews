@@ -16,3 +16,5 @@ librarydemo/librarydemo.iml
 snow/snow.iml
 .idea/gradle.xml
 transitiondemos/transitiondemos.iml
+droidutils/droidutils.iml
+rxdemos/rxdemos.iml
