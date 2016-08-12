@@ -14,6 +14,8 @@ import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
 import rx.functions.Action1;
+import rx.functions.Func1;
+import rx.functions.Func2;
 import rx.observers.TestSubscriber;
 import rx.subjects.AsyncSubject;
 import rx.subjects.PublishSubject;
@@ -43,12 +45,12 @@ public class SubjectTest {
             }
         });
 
-        Observable.interval(1, TimeUnit.SECONDS).subscribe(new Action1<Long>() {
-            @Override
-            public void call(Long aLong) {
-                observable.onNext("next  : " + System.currentTimeMillis());
-            }
-        });
+//        Observable.interval(1, TimeUnit.SECONDS).subscribe(new Action1<Long>() {
+//            @Override
+//            public void call(Long aLong) {
+//                observable.onNext("next  : " + System.currentTimeMillis());
+//            }
+//        });
 //        try {
 //            Thread.sleep(33333);
 //        } catch (InterruptedException e) {
@@ -104,9 +106,51 @@ public class SubjectTest {
     @Test
     public void testCompleteTwice() {
         PublishSubject<String> publishSubject = PublishSubject.create();
-        publishSubject.subscribe(new SimplePrintSubscriber("testCompleteTwice"));
+        SimplePrintSubscriber subscriber = new SimplePrintSubscriber("testCompleteTwice");
+        publishSubject.retry(2).subscribe(subscriber);
         publishSubject.onNext("ddd");
+        publishSubject.onError(new Error());
+        System.out.println(subscriber.isUnsubscribed());
+        if (subscriber.isUnsubscribed()) {
+            publishSubject.subscribe(subscriber);
+        }
+        publishSubject.onNext("e333");
         publishSubject.onCompleted();
         publishSubject.onCompleted();
     }
+
+    @Test
+    public void testRetry() {
+        Observable.create(new Observable.OnSubscribe<String>() {
+
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                System.out.println("subscribing");
+                subscriber.onError(new RuntimeException("always fails"));
+            }
+        }).retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
+            @Override
+            public Observable<?> call(Observable<? extends Throwable> observable) {
+                return observable.zipWith(Observable.range(1, 3), new Func2<Throwable, Integer, Object>() {
+                    @Override
+                    public Object call(Throwable throwable, Integer integer) {
+                        return integer;
+                    }
+                }).flatMap(new Func1<Object, Observable<?>>() {
+                    @Override
+                    public Observable<?> call(Object integer) {
+                        System.out.println("delay retry by " + integer + " second(s)");
+                        return Observable.timer((Integer)integer, TimeUnit.SECONDS);
+                    }
+                });
+            }
+        }).toBlocking().forEach(new Action1<String>() {
+            @Override
+            public void call(String s) {
+                System.out.println(s);
+            }
+        });
+
+    }
+
 }
