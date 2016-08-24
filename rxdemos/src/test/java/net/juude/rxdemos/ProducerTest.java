@@ -7,9 +7,11 @@ import org.junit.Test;
 import rx.Observable;
 import rx.Producer;
 import rx.Subscriber;
+import rx.observers.TestSubscriber;
 
 /**
  * Created by sjd on 16/8/12.
+ * TODO:// request not only onSubscribe
  */
 public class ProducerTest {
     @Test
@@ -30,5 +32,28 @@ public class ProducerTest {
         })
         .take(3)
         .subscribe(simplePrintSubscriber);
+    }
+
+    @Test
+    public void testSingleProducer() {
+        Observable<Integer> source = Observable.just(1);
+
+        TestSubscriber<Integer> ts = new TestSubscriber<>();
+        ts.requestMore(0);                                     // (1)
+
+        source.subscribe(ts);
+
+        for (Integer event : ts.getOnNextEvents()) {
+            System.out.println(event);
+        }
+        System.out.println("--");
+
+        ts.unsubscribe();                                      // (2)
+
+        source.subscribe(ts);
+
+        for (Integer event : ts.getOnNextEvents()) {
+            System.out.println(event);
+        }
     }
 }
