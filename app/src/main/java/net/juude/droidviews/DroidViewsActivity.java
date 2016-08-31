@@ -1,9 +1,15 @@
 package net.juude.droidviews;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
+import android.content.Intent;
+import android.content.IntentFilter;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,10 +24,8 @@ import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.graphics.DrawableMultipleViewsFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
-import net.juude.droidviews.jni.JniFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.memory.MemoryFragment;
-import net.juude.droidviews.otto.OttoFragment;
 import net.juude.droidviews.surface.SurfaceFragment;
 import net.juude.droidviews.surface.SurfaceViewFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
@@ -54,13 +58,9 @@ public class DroidViewsActivity extends FragmentActivity {
             CircleViewFragment.class,
             PopupWindowFragment.class,
             DataBindingFragment.class,
-            JniFragment.class,
-            InfoFragment.class,
             DrawableMultipleViewsFragment.class,
-            OttoFragment.class,
             MemoryFragment.class,
             SurfaceFragment.class,
-            AlarmManagerFragment.class
         };
     }
     private Class mDefaultFragment = MemoryFragment.class;
@@ -79,6 +79,21 @@ public class DroidViewsActivity extends FragmentActivity {
         // Set the list's click listener
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
         selectFragment(mDefaultFragment);
+        registerReceiver(mReceiver, new IntentFilter("com.alipay.security.namecertified"));
+    }
+
+    private BroadcastReceiver mReceiver = new BroadcastReceiver() {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            Log.d(TAG, "action :" + intent.getAction());
+        }
+    };
+
+    public void jumpToUrl(String url) {
+        Intent intent = new Intent();
+        intent.setData(Uri.parse(url));
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        getApplication().startActivity(intent);
     }
 
     private Fragment getFragment(Class clazz) {
@@ -94,6 +109,12 @@ public class DroidViewsActivity extends FragmentActivity {
             mFragmentsMap.put(clazz, fragment);
         }
         return fragment;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        unregisterReceiver(mReceiver);
     }
 
     private void selectFragment(Class clazz) {
