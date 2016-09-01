@@ -12,6 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
 import rx.Subscriber;
+import rx.functions.Action0;
 import rx.functions.Func1;
 import rx.functions.Func2;
 import rx.subjects.PublishSubject;
@@ -89,10 +90,16 @@ public class ErrorHandlingTest {
                 subscriber.onError(new Error("ddd"));
             }
         })
+        .doOnSubscribe(new Action0() {
+            @Override
+            public void call() {
+                System.out.println("who is subscribe create");
+            }
+        })
         .retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
             @Override
             public Observable<?> call(Observable<? extends Throwable> observable) {
-                return observable.zipWith(Observable.range(1, 3), new Func2<Throwable, Integer, Integer>() {
+                return observable.zipWith(Observable.range(1, 1000), new Func2<Throwable, Integer, Integer>() {
                     @Override
                     public Integer call(Throwable throwable, Integer integer) {
                         return integer;
@@ -104,6 +111,24 @@ public class ErrorHandlingTest {
                         return Observable.timer(integer, TimeUnit.SECONDS);
                     }
                 });
+            }
+        })
+        .doOnSubscribe(new Action0() {
+            @Override
+            public void call() {
+                System.out.println("who is subscribe me retry when");
+            }
+        })
+        .doOnCompleted(new Action0() {
+            @Override
+            public void call() {
+                System.out.println("doOnComplete");
+            }
+        })
+        .retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
+            @Override
+            public Observable<?> call(Observable<? extends Throwable> observable) {
+                return observable;
             }
         })
         .subscribe(new Subscriber<String>() {
@@ -123,7 +148,6 @@ public class ErrorHandlingTest {
                 System.out.println("onNext : " + s);
             }
         });
-
         TimerUtils.sleepIgnoreExceptions(10000);
     }
 }

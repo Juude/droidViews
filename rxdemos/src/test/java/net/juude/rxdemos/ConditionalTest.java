@@ -12,22 +12,22 @@ import rx.observers.TestSubscriber;
 import top.perf.utils.timer.TimerUtils;
 
 /**
- * Created by sjd on 16/8/11.
+ * Created by juude on 16/8/11.
  */
 public class ConditionalTest {
-    //@Test
+    @Test
     public void testAmb() {
         TestSubscriber testSubscriber = new TestSubscriber();
         Observable
-                .interval(1, TimeUnit.SECONDS)
-                .map(new Func1<Long, Long>() {
-                    @Override
-                    public Long call(Long aLong) {
-                        return 666L * aLong;
-                    }
-                })
-                .ambWith(Observable.interval(2, TimeUnit.SECONDS))
-                .subscribe(testSubscriber);
+        .interval(1, TimeUnit.SECONDS)
+        .map(new Func1<Long, Long>() {
+            @Override
+            public Long call(Long aLong) {
+                return 666L * aLong;
+            }
+        })
+        .ambWith(Observable.interval(2, TimeUnit.SECONDS))
+        .subscribe(testSubscriber);
         testSubscriber.assertNoErrors();
         System.out.println(testSubscriber.getOnNextEvents());
         TimerUtils.sleepIgnoreExceptions(5000);
@@ -53,7 +53,8 @@ public class ConditionalTest {
             public void call(Subscriber<? super Object> subscriber) {
                 subscriber.onCompleted();
             }
-        }).switchIfEmpty(Observable.just("333"))
+        })
+        .switchIfEmpty(Observable.just("333"))
         .subscribe(new SimplePrintSubscriber("testDefault"));
     }
 }

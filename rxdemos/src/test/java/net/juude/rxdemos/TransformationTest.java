@@ -10,13 +10,16 @@ import rx.functions.Func1;
 public class TransformationTest {
     @Test
     public void testMap() {
-        Observable.just(1, 3).map(new Func1<Integer, Integer>() {
+        System.out.println("testMap");
+        Observable.just(1, 3)
+        .map(new Func1<Integer, Integer>() {
             @Override
             public Integer call(Integer integer) {
                 return integer * 2;
             }
-        }).toBlocking()
-         .forEach(new Action1<Integer>() {
+        })
+        .toBlocking()
+        .forEach(new Action1<Integer>() {
              @Override
              public void call(Integer integer) {
                  System.out.println(integer);
@@ -26,7 +29,7 @@ public class TransformationTest {
 
     @Test
     public void testFlatMap() {
-        System.out.println("flatMap");
+        System.out.println("testFlatMap");
         Observable.just(1, 3)
         .flatMap(new Func1<Integer, Observable<Integer>>(){
             @Override
