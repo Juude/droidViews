@@ -18,7 +18,6 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import net.juude.droidviews.camera.PictureFragment;
 import net.juude.droidviews.databinding.DataBindingFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.graphics.DrawableMultipleViewsFragment;
@@ -50,7 +49,6 @@ public class DroidViewsActivity extends FragmentActivity {
     static {
         sFragmentList = new Class<?>[] {
             SystemUiDemoFragment.class,
-            PictureFragment.class,
             LinearLayoutFragment.class,
             RoundCornerViewGroupFragment.class,
             SurfaceViewFragment.class,
