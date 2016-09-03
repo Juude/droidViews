@@ -13,7 +13,7 @@ import com.facebook.rebound.SimpleSpringListener;
 import com.facebook.rebound.Spring;
 import com.facebook.rebound.SpringSystem;
 
-import net.juude.droidviews.R;
+import net.juude.animation.R;
 
 /**
  * Created by juude on 15-7-8.
@@ -25,11 +25,11 @@ public class ReboundFragment extends Fragment{
         View v = inflater.inflate(R.layout.fragment_rebound, null);
         SimpleDraweeView simpleDraweeView = (SimpleDraweeView) v.findViewById(R.id.rebound_image);
         simpleDraweeView.setImageURI(Uri.parse("http://www.keenthemes.com/preview/metronic/theme/assets/global/plugins/jcrop/demos/demo_files/image1.jpg"));
-        simpleDraweeView.setOnClickListener(v1 -> rebound(v1));
+        //simpleDraweeView.setOnClickListener(v1 -> rebound(v1));
         return v;
     }
 
-    private void rebound(final View v){
+    private void rebound(final View v) {
         // Create a system to run the physics loop for a set of springs.
         SpringSystem springSystem = SpringSystem.create();
 

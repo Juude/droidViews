@@ -1,13 +1,7 @@
 package net.juude.rxdemos;
-
-import android.provider.Settings;
-import android.util.Log;
-
 import net.juude.rxdemos.test.SimplePrintSubscriber;
 
 import org.junit.Test;
-
-import java.util.Observer;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
