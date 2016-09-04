@@ -1,5 +1,8 @@
 package net.juude.rxdemos;
 import junit.framework.Assert;
+
+import net.juude.rxdemos.test.SimplePrintSubscriber;
+
 import org.junit.Test;
 
 import java.util.List;
@@ -26,7 +29,7 @@ public class ErrorHandlingTest {
             @Override
             public void call(Subscriber<? super String> subscriber) {
                 subscriber.onNext(String.valueOf(System.currentTimeMillis()));
-                subscriber.onError(new Error("ddd"));
+                subscriber.onError(new Error("error"));
             }
         })
         .doOnSubscribe(new Action0() {
@@ -42,73 +45,58 @@ public class ErrorHandlingTest {
     }
 
     @Test
-    public void testRetryWhen() {
+    public void testRetryFunc() {
+        final AtomicInteger atomicInteger = new AtomicInteger(0);
         Observable.create(new Observable.OnSubscribe<String>() {
             @Override
             public void call(Subscriber<? super String> subscriber) {
                 subscriber.onNext(String.valueOf(System.currentTimeMillis()));
-                subscriber.onError(new Error("ddd"));
+                subscriber.onError(new Exception(String.valueOf(atomicInteger.incrementAndGet())));
             }
         })
-        .doOnSubscribe(new Action0() {
+        .retry(new Func2<Integer, Throwable, Boolean>() {
             @Override
-            public void call() {
-                System.out.println("who is subscribe create");
+            public Boolean call(Integer integer, Throwable throwable) {
+                System.out.println("integer: " + integer + "  throwable : " + throwable.getMessage() + "\n" + LogUtils.getStackTraceString(throwable));
+                return false;
+            }
+        })
+        .toBlocking()
+        .subscribe(new SimplePrintSubscriber("testRetryFunc"));
+        System.out.println("atomicInteger : " + atomicInteger.intValue());
+        Assert.assertTrue(atomicInteger.intValue() == 5);
+    }
+
+    @Test
+    public void testRetryWhen() {
+        final AtomicInteger atomicInteger = new AtomicInteger(3);
+        Observable.create(new Observable.OnSubscribe<String>() {
+            @Override
+            public void call(Subscriber<? super String> subscriber) {
+                subscriber.onNext(String.valueOf(System.currentTimeMillis()));
+                subscriber.onError(new Error(String.valueOf(atomicInteger.decrementAndGet())));
             }
         })
         .retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
             @Override
             public Observable<?> call(Observable<? extends Throwable> observable) {
-                return observable.zipWith(Observable.range(1, 3), new Func2<Throwable, Integer, Integer>() {
+                return observable.takeWhile(new Func1<Throwable, Boolean>() {
                     @Override
-                    public Integer call(Throwable throwable, Integer integer) {
-                        return integer;
+                    public Boolean call(Throwable throwable) {
+                        return Integer.parseInt(throwable.getMessage()) > 0;
                     }
-                }).flatMap(new Func1<Integer, Observable<?>>() {
+                })
+                .flatMap(new Func1<Throwable, Observable<?>>() {
                     @Override
-                    public Observable<?> call(Integer integer) {
-                        System.out.println("integer: " + integer);
-                        return Observable.timer(integer, TimeUnit.SECONDS);
+                    public Observable<?> call(Throwable throwable) {
+                        return Observable.timer(1, TimeUnit.SECONDS);
                     }
                 });
             }
         })
-        .doOnSubscribe(new Action0() {
-            @Override
-            public void call() {
-                System.out.println("who is subscribe me retry when");
-            }
-        })
-        .doOnCompleted(new Action0() {
-            @Override
-            public void call() {
-                System.out.println("doOnComplete");
-            }
-        })
-        .retryWhen(new Func1<Observable<? extends Throwable>, Observable<?>>() {
-            @Override
-            public Observable<?> call(Observable<? extends Throwable> observable) {
-                return observable;
-            }
-        })
         .toBlocking()
-        .subscribe(new Subscriber<String>() {
-
-            @Override
-            public void onCompleted() {
-                System.out.println("completexx");
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                System.out.println("onError" + LogUtils.getStackTraceString(e));
-            }
-
-            @Override
-            public void onNext(String s) {
-                System.out.println("onNext : " + s);
-            }
-        });
+        .subscribe(new TestSubscriber<String>());
+        Assert.assertEquals(atomicInteger.intValue(), 0);
     }
 
     @Test
