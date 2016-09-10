@@ -4,7 +4,9 @@ jar {
 	manifest {
         attributes 'Main-Class': 'net.juude.Yo'
 	}
-
+	dependencies {
+		compile 'junit:junit:4.10'
+	}
 	sourceCompatibility = 1.7
 	targetCompatibility = 1.7
 }

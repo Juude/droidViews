@@ -116,7 +116,7 @@ public class ErrorHandlingTest {
             }
         })
         .subscribe(testSubscriber);
-        org.junit.Assert.assertEquals(testSubscriber.getOnNextEvents().get(0).intValue(), -1);
+        Assert.assertEquals(testSubscriber.getOnNextEvents().get(0).intValue(), -1);
     }
 
     @Test

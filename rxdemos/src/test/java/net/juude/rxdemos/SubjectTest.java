@@ -9,10 +9,12 @@ import org.junit.Test;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
 
 import rx.Observable;
 import rx.Subscriber;
 import rx.Subscription;
+import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
 import rx.functions.Func2;
@@ -44,18 +46,6 @@ public class SubjectTest {
                 System.out.println("subscription2 : " + o);
             }
         });
-
-//        Observable.interval(1, TimeUnit.SECONDS).subscribe(new Action1<Long>() {
-//            @Override
-//            public void call(Long aLong) {
-//                observable.onNext("next  : " + System.currentTimeMillis());
-//            }
-//        });
-//        try {
-//            Thread.sleep(33333);
-//        } catch (InterruptedException e) {
-//            e.printStackTrace();
-//        }
     }
 
     @Test
@@ -153,4 +143,36 @@ public class SubjectTest {
 
     }
 
+    @Test
+    public void testOnSubscribe() {
+        final AtomicBoolean doOnSubscribeCalled = new AtomicBoolean(false);
+        final AtomicBoolean doOnTerminateCalled = new AtomicBoolean(false);
+        final AtomicBoolean doOnNextCalled = new AtomicBoolean(false);
+        PublishSubject<Integer> publishSubject = PublishSubject.create();
+        publishSubject
+                .doOnSubscribe(new Action0() {
+                    @Override
+                    public void call() {
+                        doOnSubscribeCalled.set(true);
+                    }
+                })
+                .doOnTerminate(new Action0() {
+                    @Override
+                    public void call() {
+                        doOnTerminateCalled.set(true);
+                    }
+                })
+                .doOnNext(new Action1<Integer>() {
+                    @Override
+                    public void call(Integer integer) {
+                        doOnNextCalled.set(true);
+                    }
+                })
+                .subscribe(new TestSubscriber<Integer>());
+        publishSubject.onNext(22232);
+        publishSubject.onError(new Exception("wewewe"));
+        Assert.assertEquals(doOnSubscribeCalled.get(), true);
+        Assert.assertEquals(doOnNextCalled.get(), true);
+        Assert.assertEquals(doOnTerminateCalled.get(), true);
+    }
 }

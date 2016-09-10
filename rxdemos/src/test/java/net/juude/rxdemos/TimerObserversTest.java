@@ -6,6 +6,8 @@ import junit.framework.Assert;
 import net.juude.rxdemos.test.SimplePrintSubscriber;
 
 import org.junit.Test;
+
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
 import rx.Observable;
@@ -19,16 +21,18 @@ import top.perf.utils.timer.TimerUtils;
  * Created by juude on 16/8/10.
  */
 public class TimerObserversTest {
+    //this will test timer emit item every second
     @Test
     public void testTimer() {
-        TestSubscriber testSubscriber = new TestSubscriber();
-        Observable.interval(1, TimeUnit.SECONDS).subscribe(testSubscriber);
-        testSubscriber.assertNoErrors();
-        //testSubscriber.to
-        Assert.assertTrue(testSubscriber.getOnNextEvents().isEmpty());
-
+        final CountDownLatch countDownLatch = new CountDownLatch(1);
         Observable.interval(1, TimeUnit.SECONDS)
                 .take(3)
+                .doOnTerminate(new Action0() {
+                    @Override
+                    public void call() {
+                        countDownLatch.countDown();
+                    }
+                })
                 .subscribe(new Action1<Long>() {
                     @Override
                     public void call(Long aLong) {
@@ -50,7 +54,21 @@ public class TimerObserversTest {
                 .take(5)
                 .subscribeOn(Schedulers.io())
                 .subscribe(new SimplePrintSubscriber("take5"));
+        try {
+            countDownLatch.await();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
 
-        TimerUtils.sleepIgnoreExceptions(10000);
+    //this will mock the ve
+    @Test
+    public void testTimerRequest() {
+        Observable.timer(1, TimeUnit.SECONDS).take(3).toBlocking().subscribe(new Action1<Long>() {
+            @Override
+            public void call(Long aLong) {
+                System.out.println(aLong);
+            }
+        });
     }
 }
