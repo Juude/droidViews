@@ -8,6 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.malinskiy.superrecyclerview.SuperRecyclerView;
+
 /**
  * Created by juude on 15-6-9.
  */

@@ -2,6 +2,8 @@ package net.juude.rxdemos;
 
 import org.junit.Test;
 
+import java.util.concurrent.TimeUnit;
+
 import rx.Observable;
 import rx.Subscriber;
 import rx.functions.Action1;
@@ -12,6 +14,33 @@ import rx.schedulers.Schedulers;
  * Created by sjd on 16/9/9.
  */
 public class BlockingTest {
+
+    @Test
+    public void testSchedulerlocking() {
+        Observable.interval(1, TimeUnit.SECONDS)
+                .subscribeOn(Schedulers.io())
+                .take(3)
+                .toBlocking()
+                .subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                        System.out.println(aLong);
+                    }
+                });
+    }
+
+    @Test
+    public void testTimerBlocking() {
+        Observable.interval(1, TimeUnit.SECONDS)
+                .take(3)
+                .toBlocking()
+                .subscribe(new Action1<Long>() {
+                    @Override
+                    public void call(Long aLong) {
+                        System.out.println(aLong);
+                    }
+                });
+    }
 
     @Test
     public void testBlocking() {

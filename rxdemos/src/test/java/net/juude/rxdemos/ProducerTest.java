@@ -5,6 +5,7 @@ import net.juude.rxdemos.test.SimplePrintSubscriber;
 import org.junit.Test;
 
 import java.util.Date;
+import java.util.StringTokenizer;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.TimeUnit;
 
@@ -79,12 +80,24 @@ public class ProducerTest {
                 subscriber.setProducer(new DateProducer(subscriber));
             }
         });
-        Observable.zip(Observable.interval(1, TimeUnit.SECONDS), observable, new Func2<Long, String, String>() {
+//        Observable.zip(observable, Observable.interval(1, TimeUnit.SECONDS), new Func2<String, Long, String>() {
+//            @Override
+//            public String call(String s, Long integer) {
+//                return s;
+//            }
+//        })
+        Observable.zip(Observable.interval(1, TimeUnit.SECONDS).take(4), observable, new Func2<Long, String, String>() {
             @Override
-            public String call(Long integer, String s) {
+            public String call(Long i, String s) {
                 return s;
             }
         })
+//        Observable.zip(Observable.interval(1, TimeUnit.SECONDS), Observable.just("3", "23", "2342"), new Func2<Long, String, String>() {
+//            @Override
+//            public String call(Long i, String s) {
+//                return s;
+//            }
+//        })
         .doOnTerminate(new Action0() {
             @Override
             public void call() {
@@ -113,12 +126,15 @@ public class ProducerTest {
 
         @Override
         public void request(long n) {
-            //System.out.println("request: [" + n + "] ismax : " + (n == Long.MAX_VALUE));
+            System.out.println("request: [" + n + "] ismax : " + (n == Long.MAX_VALUE));
             if (n == Long.MAX_VALUE) {
                 subscriber.onNext(new Date().toString());
                 return;
             }
-            subscriber.onNext(new Date().toString());
+            for (int i = 0; i < n; i++) {
+                subscriber.onNext(new Date().toString());
+            }
+            subscriber.onCompleted();
         }
     }
 

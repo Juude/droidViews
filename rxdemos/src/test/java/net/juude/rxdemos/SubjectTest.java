@@ -20,6 +20,7 @@ import rx.functions.Func1;
 import rx.functions.Func2;
 import rx.observers.TestSubscriber;
 import rx.subjects.AsyncSubject;
+import rx.subjects.BehaviorSubject;
 import rx.subjects.PublishSubject;
 import rx.subjects.ReplaySubject;
 /**
@@ -141,6 +142,25 @@ public class SubjectTest {
             }
         });
 
+    }
+
+    @Test
+    public void testBehaviorSubject() {
+        BehaviorSubject<String> behaviorSubject = BehaviorSubject.create();
+        behaviorSubject.onNext("eefa");
+        behaviorSubject.subscribe(new Action1<String>() {
+            @Override
+            public void call(String s) {
+                System.out.println(s);
+            }
+        });
+        behaviorSubject.onNext("fsafasdf");
+        behaviorSubject.subscribe(new Action1<String>() {
+            @Override
+            public void call(String s) {
+                System.out.println(s);
+            }
+        });
     }
 
     @Test
