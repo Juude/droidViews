@@ -14,8 +14,8 @@ import java.lang.reflect.Constructor;
 
 public class CommonActivity extends Activity {
 
-    public static final String KEY_FRAGMENT = "fragment";
-    public static final String KEY_VIEW = "view";
+    public  static final String KEY_FRAGMENT = "fragment";
+    public  static final String KEY_VIEW = "view";
     private static final String TAG = "CommonActivity";
 
     @Override

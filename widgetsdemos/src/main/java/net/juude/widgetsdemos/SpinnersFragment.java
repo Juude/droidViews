@@ -20,7 +20,7 @@ public class SpinnersFragment extends Fragment{
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.planets_array, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(R.layout.layout_spinner_dropdown_item);
+        //adapter.setDropDownViewResource(R.layout.layout_spinner_dropdown_item);
 // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
         return v;

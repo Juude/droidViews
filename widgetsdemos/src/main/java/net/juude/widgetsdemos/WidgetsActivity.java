@@ -40,7 +40,8 @@ public class WidgetsActivity extends FragmentActivity {
                 ViewPagerFragment.class,
                 TextFragment.class,
                 WidgetsFragment.class,
-                AlertDialogFragment.class
+                AlertDialogFragment.class,
+                SpinnersFragment.class
         };
     }
 

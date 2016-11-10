@@ -2,7 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="2300px"
         android:orientation="vertical"
@@ -38,5 +38,13 @@
             android:textColor="@android:color/primary_text_dark"
             android:textSize="16sp"
             />
-    </RelativeLayout>
+        <EditText
+            android:layout_width="78dp"
+            android:layout_height="27dp"
+            android:textSize="12sp"
+            android:inputType="numberDecimal"
+            android:background="@drawable/color_rect"
+            android:gravity="center"
+            android:hint="¥最低价"/>
+    </LinearLayout>
 </ScrollView>

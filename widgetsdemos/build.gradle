@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:23.0.1'
     compile "com.github.hotchemi:permissionsdispatcher:${latest_version}"
     apt "com.github.hotchemi:permissionsdispatcher-processor:${latest_version}"
+    compile 'com.google.android:flexbox:0.2.3'
 }
