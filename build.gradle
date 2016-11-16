@@ -24,5 +24,10 @@ allprojects {
     ext {
         gdxVersion = '1.6.4'
         aiVersion = '1.4.0'
+        _buildToolsVersion = "25"
+        _compileSdkVersion = 25
+        support_sdk_version = "25.0.1"
     }
 }
+
+

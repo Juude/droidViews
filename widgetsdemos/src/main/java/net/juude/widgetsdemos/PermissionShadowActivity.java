@@ -15,7 +15,7 @@ import android.util.Log;
 import net.juude.widgetsdemos.alertdialog.PermissionRequester;
 
 /**
- * Created by sjd on 16/7/23.
+ * Created by juude on 16/7/23.
  */
 @TargetApi(Build.VERSION_CODES.M)
 public class PermissionShadowActivity extends AppCompatActivity{

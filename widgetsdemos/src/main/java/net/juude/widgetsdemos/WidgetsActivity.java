@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import net.juude.widgetsdemos.alertdialog.AlertDialogFragment;
+import net.juude.widgetsdemos.design.NestingScrollingFragment;
 import net.juude.widgetsdemos.flexbox.FlexboxFragment;
 import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
 import net.juude.widgetsdemos.recyclerview.ViewPagerFragment;
@@ -37,6 +38,7 @@ public class WidgetsActivity extends FragmentActivity {
     private static Class mDefaultFragment = ViewPagerFragment.class;
     static {
         sFragmentList = new Class<?>[] {
+                NestingScrollingFragment.class,
                 RecyclerViewScrollFragment.class,
                 ViewPagerFragment.class,
                 TextFragment.class,
