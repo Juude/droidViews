@@ -13,6 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import net.juude.widgetsdemos.alertdialog.AlertDialogFragment;
+import net.juude.widgetsdemos.flexbox.FlexboxFragment;
 import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
 import net.juude.widgetsdemos.recyclerview.ViewPagerFragment;
 import net.juude.widgetsdemos.textview.TextFragment;
@@ -41,7 +42,8 @@ public class WidgetsActivity extends FragmentActivity {
                 TextFragment.class,
                 WidgetsFragment.class,
                 AlertDialogFragment.class,
-                SpinnersFragment.class
+                SpinnersFragment.class,
+                FlexboxFragment.class
         };
     }
 

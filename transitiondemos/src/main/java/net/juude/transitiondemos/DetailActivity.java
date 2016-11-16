@@ -9,7 +9,7 @@ import android.widget.Toast;
 import com.squareup.picasso.Picasso;
 
 /**
- * Created by sjd on 16/6/1.
+ * Created by juude on 16/6/1.
  */
 public class DetailActivity extends AppCompatActivity{
     private static final String TAG = "DetailActivity";

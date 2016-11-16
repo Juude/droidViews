@@ -153,7 +153,12 @@ public class GlideFragment extends Fragment{
                         if(object.getBoolean("is_album") == false) {
                             mImages.add(array.getJSONObject(i).getString("link"));
                         }
-                        getActivity().runOnUiThread(() -> mRecyclerImages.getAdapter().notifyDataSetChanged());
+                        getActivity().runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                mRecyclerImages.getAdapter().notifyDataSetChanged();
+                            }
+                        });
                     }
                 }
             }
