@@ -27,6 +27,7 @@ allprojects {
         _buildToolsVersion = "25"
         _compileSdkVersion = 25
         support_sdk_version = "25.0.1"
+        okhttp_version = '3.4.2'
     }
 }
 

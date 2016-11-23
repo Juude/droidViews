@@ -8,9 +8,7 @@ import android.view.ViewDebug;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.facebook.drawee.view.SimpleDraweeView;
 import com.juuda.droidmock.mock.Mocker;
-import net.juude.droidviews.mock.FragmentMocker;
 
 import java.io.BufferedWriter;
 import java.io.PrintWriter;

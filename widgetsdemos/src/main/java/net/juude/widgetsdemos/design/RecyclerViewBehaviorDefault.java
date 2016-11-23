@@ -12,9 +12,9 @@ import net.juude.widgetsdemos.R;
  * Created by juude on 2016/11/16.
  */
 
-public class RecyclerViewBehavior extends CoordinatorLayout.Behavior<RecyclerView> {
+public class RecyclerViewBehaviorDefault extends CoordinatorLayout.Behavior<RecyclerView> {
 
-    public RecyclerViewBehavior(Context context, AttributeSet attrs) {
+    public RecyclerViewBehaviorDefault(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
