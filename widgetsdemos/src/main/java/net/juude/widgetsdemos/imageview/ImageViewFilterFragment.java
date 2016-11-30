@@ -19,7 +19,8 @@ import java.util.TimerTask;
 /**
  * Created by juude on 15/5/31.
  */
-public class ImageViewFilterFragment extends Fragment{
+public class ImageViewFilterFragment extends Fragment {
+
     private int mCurrentMode = 0;
     private ImageView mMultiplyFilter;
     private TextView mType;

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2015 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            android:fitsSystemWindows="false"
+            app:statusBarScrim="#0000"
+            app:contentScrim="#FFF"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+
+            <ImageView
+                android:id="@+id/backdrop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                app:layout_collapseMode="parallax"
+                android:src="@drawable/picaso_women"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:title="Picaso"
+                app:popupTheme="@style/WhiteToolbar"
+                app:layout_collapseMode="none" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/super_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#AAA"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:text="353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\nAnd this is the end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="98dp"
+            >
+        </TextView>
+    </android.support.v4.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#33A"
+        android:layout_gravity="bottom"
+        >
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

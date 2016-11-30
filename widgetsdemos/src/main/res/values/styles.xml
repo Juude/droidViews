@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:statusBarColor">#000</item>
     </style>
 
 
@@ -27,4 +28,8 @@
         <item name="android:gravity">center</item>
     </style>
 
+
+    <style name="WhiteToolbar" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:textColorPrimary">#FFF</item>
+    </style>
 </resources>
