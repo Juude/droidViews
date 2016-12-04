@@ -31,7 +31,7 @@ public class ViewPagerFragment extends Fragment {
             public Object instantiateItem(ViewGroup container, int position) {
                 TextView textView = new TextView(getActivity());
                 textView.setText("PAGE " + position);
-                view_pager.addView(textView);
+                container.addView(textView);
                 return textView;
             }
 

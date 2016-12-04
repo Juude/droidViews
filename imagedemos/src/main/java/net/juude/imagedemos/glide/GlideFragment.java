@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,16 +17,17 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.bumptech.glide.Glide;
-import com.squareup.okhttp.Callback;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
-import com.squareup.okhttp.Response;
 
-import net.juude.droidviews.R;
-import net.juude.droidviews.utils.LLog;
+import net.juude.imagedemos.R;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 /**
  * Created by juude on 15-7-10.
@@ -59,21 +61,21 @@ public class GlideFragment extends Fragment{
                 Glide.with(getActivity())
                         .load("https://raw.githubusercontent.com/JuudeDemos/WebDisk/master/food/IMG_0693.PNG")
                         .fitCenter()
-                        .placeholder(R.drawable.ic_action_grade)
+                        .placeholder(R.drawable.overlay_image)
                         .into(mGlideImage);
 
                 ImageView mGlideImageRes = (ImageView) itemView.findViewById(R.id.glide_image_res);
                 Glide.with(getActivity())
                         .load("android.resource://net.juude.droidviews/drawable/juude")
                         .fitCenter()
-                        .placeholder(R.drawable.ic_action_grade)
+                        .placeholder(R.drawable.overlay_image)
                         .into(mGlideImageRes);
 
                 ImageView mGlideImageAssets = (ImageView) itemView.findViewById(R.id.glide_image_assets);
                 Glide.with(getActivity())
                         .load("android_asset://download.png")
                         .fitCenter()
-                        .placeholder(R.drawable.ic_action_grade)
+                        .placeholder(R.drawable.overlay_image)
                         .into(mGlideImageAssets);
             }else {
                 image_url = (TextView) itemView.findViewById(R.id.image_url);
@@ -111,10 +113,10 @@ public class GlideFragment extends Fragment{
             if (position == 0) {
                 //pass ...
             }else {
-                LLog.d(TAG, "img url" + mImages.get(position-1));
+                Log.d(TAG, "img url" + mImages.get(position-1));
                 Glide.with(getActivity())
                         .load(Uri.parse(mImages.get(position -1)))
-                        .placeholder(R.drawable.ic_action_grade)
+                        .placeholder(R.drawable.overlay_image)
                         .fitCenter()
                         .transform(new CircleCrop(getActivity()))
                         .into(holder.image_view);
@@ -138,15 +140,15 @@ public class GlideFragment extends Fragment{
                         .build()
         ).enqueue(new Callback() {
             @Override
-            public void onFailure(Request request, IOException e) {
+            public void onFailure(Call call, IOException e) {
 
             }
 
             @Override
-            public void onResponse(Response response) throws IOException {
+            public void onResponse(Call call, Response response) throws IOException {
                 JSONArray array = JSON.parseObject(response.body().string())
                         .getJSONArray("data");
-                        //response.body().string();
+                //response.body().string();
                 synchronized (mImages) {
                     for(int i = 0; i < array.size(); i++) {
                         JSONObject object = array.getJSONObject(i);
@@ -162,6 +164,7 @@ public class GlideFragment extends Fragment{
                     }
                 }
             }
+
         });
     }
 

@@ -1,4 +1,4 @@
-package net.juude.widgetsdemos;
+package net.juude.imagedemos;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,15 +12,8 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import net.juude.widgetsdemos.alertdialog.AlertDialogFragment;
-import net.juude.widgetsdemos.design.ApplayoutNestScrollingFragment;
-import net.juude.widgetsdemos.design.ApplayoutRecyclerViewFragment;
-import net.juude.widgetsdemos.design.NestingScrollingFragment;
-import net.juude.widgetsdemos.flexbox.FlexboxFragment;
-import net.juude.widgetsdemos.imageview.ImageViewFilterFragment;
-import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
-import net.juude.widgetsdemos.recyclerview.ViewPagerFragment;
-import net.juude.widgetsdemos.textview.TextFragment;
+import net.juude.imagedemos.fresco.FrescoFragment;
+import net.juude.imagedemos.glide.GlideFragment;
 
 import java.util.HashMap;
 
@@ -28,7 +21,7 @@ import java.util.HashMap;
  * Created by juude on 15-4-9.
  */
 
-public class WidgetsActivity extends FragmentActivity {
+public class ImageDemosActivity extends FragmentActivity {
 
     private static final String TAG = "DroidViewsActivity";
     private DrawerLayout mDrawerLayout;
@@ -38,27 +31,18 @@ public class WidgetsActivity extends FragmentActivity {
     private static Class[] sFragmentList;
     private HashMap<Class, Fragment> mFragmentsMap = new HashMap<Class, Fragment>();
 
-    private static Class mDefaultFragment = ViewPagerFragment.class;
+    private static Class mDefaultFragment = FrescoFragment.class;
     static {
         sFragmentList = new Class<?>[] {
-                ApplayoutNestScrollingFragment.class,
-                ApplayoutRecyclerViewFragment.class,
-                NestingScrollingFragment.class,
-                RecyclerViewScrollFragment.class,
-                ViewPagerFragment.class,
-                TextFragment.class,
-                WidgetsFragment.class,
-                AlertDialogFragment.class,
-                SpinnersFragment.class,
-                FlexboxFragment.class,
-                ImageViewFilterFragment.class
+            FrescoFragment.class,
+            GlideFragment.class
         };
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_widgets);
+        setContentView(R.layout.activity_main);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mLayoutInflater = LayoutInflater.from(this);

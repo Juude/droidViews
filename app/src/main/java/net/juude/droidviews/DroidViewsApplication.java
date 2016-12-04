@@ -3,7 +3,6 @@ package net.juude.droidviews;
 import android.app.Application;
 import android.util.Log;
 
-import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.stetho.DumperPluginsProvider;
 import com.facebook.stetho.InspectorModulesProvider;
 import com.facebook.stetho.Stetho;
@@ -18,7 +17,6 @@ public class DroidViewsApplication extends Application{
     @Override
     public void onCreate() {
         super.onCreate();
-        Fresco.initialize(this);
         sInstance = this;
         Stetho.initialize(Stetho.newInitializerBuilder(DroidViewsApplication.this)
                 .enableWebKitInspector(new InspectorModulesProvider() {

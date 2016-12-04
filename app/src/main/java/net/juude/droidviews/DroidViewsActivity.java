@@ -18,7 +18,6 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import net.juude.droidviews.databinding.DataBindingFragment;
 import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.graphics.DrawableMultipleViewsFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
@@ -55,7 +54,6 @@ public class DroidViewsActivity extends FragmentActivity {
             VideoPlayFragment.class,
             CircleViewFragment.class,
             PopupWindowFragment.class,
-            DataBindingFragment.class,
             DrawableMultipleViewsFragment.class,
             MemoryFragment.class,
             SurfaceFragment.class,
