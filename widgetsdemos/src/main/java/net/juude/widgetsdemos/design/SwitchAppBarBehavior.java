@@ -9,12 +9,10 @@ import android.animation.ValueAnimator;
 import android.content.Context;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CoordinatorLayout;
-import android.support.v4.animation.ValueAnimatorCompat;
 import android.support.v4.widget.NestedScrollView;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
-import android.view.ViewPropertyAnimator;
 
 import net.juude.widgetsdemos.R;
 
@@ -27,12 +25,8 @@ import top.perf.utils.UIUtils;
 public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
 
     private NestedScrollView mMainScroll;
-    private View mDividerSection;
-    private View mBottomPanel;
-    private View mProductDetailsMore;
-    private View mToolbar;
     private int mOffsetToLoadMore;
-    private int OFFSET_TO_LOAD_MORE = 100;
+    private int OFFSET_TO_LOAD_MORE = 50;
     private boolean mIsLoadingMore = false;
     private static final int PAGE_ANIMATION_DURATION = 500;
 
@@ -64,7 +58,7 @@ public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
             return;
         }
         NestedScrollView scrollView = mIsLoadingMore ? subScroll(coordinatorLayout) : mainScroll(coordinatorLayout);
-        int translationY = (int) (scrollView.getTranslationY() - dyUnconsumed);
+        int translationY = (int) (scrollView.getTranslationY() - dyUnconsumed/3);
         if (mIsLoadingMore && translationY < 0 || !mIsLoadingMore && translationY > 0) {
             translationY = 0;
         }
@@ -89,20 +83,6 @@ public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
         }
     }
 
-    private View toolbar(CoordinatorLayout parent) {
-        if (mToolbar == null) {
-            mToolbar = parent.findViewById(R.id.toolbar);
-        }
-        return mToolbar;
-    }
-
-    private View bootomPanel(CoordinatorLayout parent) {
-        if (mBottomPanel == null) {
-            mBottomPanel = parent.findViewById(R.id.bottom_panel);
-        }
-        return mBottomPanel;
-    }
-
     private NestedScrollView mainScroll(CoordinatorLayout parent) {
         if (mMainScroll == null) {
             mMainScroll = (NestedScrollView) parent.findViewById(R.id.main_scroll);
@@ -123,14 +103,14 @@ public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
         mMainScroll = mainScroll(coordinatorLayout);
         mSubScroll = subScroll(coordinatorLayout);
         if (mIsLoadingMore) {
-            if (mSubScroll.getTranslationY() > UIUtils.convertDpToPx(coordinatorLayout.getContext(), 100)) {
+            if (mSubScroll.getTranslationY() > mOffsetToLoadMore) {
                 Log.d(TAG, "jump");
                 animateToMain();
             } else {
                 mSubScroll.animate().translationY(0).setDuration(300).start();
             }
         } else {
-            if (mMainScroll.getTranslationY() < -UIUtils.convertDpToPx(coordinatorLayout.getContext(), 100)) {
+            if (mMainScroll.getTranslationY() < -mOffsetToLoadMore) {
                 Log.d(TAG, "jump");
                 animateToSub();
             } else {

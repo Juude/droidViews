@@ -32,4 +32,9 @@
     <style name="WhiteToolbar" parent="ThemeOverlay.AppCompat.Light">
         <item name="android:textColorPrimary">#FFF</item>
     </style>
+
+    <style name="PopupAnimation">
+        <item name="android:windowEnterAnimation">@anim/pop_show</item>
+        <item name="android:windowExitAnimation">@anim/pop_hide</item>
+    </style>
 </resources>

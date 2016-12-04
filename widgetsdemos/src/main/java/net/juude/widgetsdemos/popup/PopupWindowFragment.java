@@ -1,4 +1,4 @@
-package net.juude.droidviews.dialog;
+package net.juude.widgetsdemos.popup;
 
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.PopupWindow;
 import android.widget.Toast;
 
-import net.juude.droidviews.R;
+import net.juude.widgetsdemos.R;
 /**
  * Created by juude on 15-5-25.
  * this demo will pop up window when click
