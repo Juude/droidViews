@@ -18,12 +18,12 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import net.juude.droidviews.dialog.PopupWindowFragment;
 import net.juude.droidviews.graphics.DrawableMultipleViewsFragment;
 import net.juude.droidviews.graphics.CircleViewFragment;
 import net.juude.droidviews.graphics.RoundCornerViewGroupFragment;
 import net.juude.droidviews.layout.LinearLayoutFragment;
 import net.juude.droidviews.memory.MemoryFragment;
+import net.juude.droidviews.overdraw.OverdrawFragment;
 import net.juude.droidviews.surface.SurfaceFragment;
 import net.juude.droidviews.surface.SurfaceViewFragment;
 import net.juude.droidviews.video.VideoPlayFragment;
@@ -53,10 +53,10 @@ public class DroidViewsActivity extends FragmentActivity {
             SurfaceViewFragment.class,
             VideoPlayFragment.class,
             CircleViewFragment.class,
-            PopupWindowFragment.class,
             DrawableMultipleViewsFragment.class,
             MemoryFragment.class,
             SurfaceFragment.class,
+            OverdrawFragment.class
         };
     }
     private Class mDefaultFragment = MemoryFragment.class;
@@ -65,6 +65,7 @@ public class DroidViewsActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_droidviews);
+        getWindow().setBackgroundDrawable(null);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mLayoutInflater = LayoutInflater.from(this);

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="overdraw 0"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFF"/>
+    <TextView
+        android:text="overdraw 1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:visibility="invisible"
+        android:background="#FFF"/>
+
+    <TextView
+        android:text="overdraw 2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:background="#FFF"/>
+
+    <TextView
+        android:text="overdraw 3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="300dp"
+        android:background="#FFF"/>
+    <TextView
+        android:text="overdraw 4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="400dp"
+        android:background="#FFF"/>
+</RelativeLayout>
