@@ -24,7 +24,8 @@
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:layout_behavior="net.juude.widgetsdemos.design.SwitchAppBarBehavior">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -59,9 +60,9 @@
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.widget.NestedScrollView
-        android:id="@+id/super_recycler_view"
+        android:id="@+id/main_scroll"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#AAA"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <TextView
@@ -73,11 +74,34 @@
         </TextView>
     </android.support.v4.widget.NestedScrollView>
 
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/sub_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F88"
+        android:visibility="invisible"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <TextView
+            android:text="353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\n353453\njelrjq\nwerjql\nrjqwlrkq\nerqjewlr\nAnd this is the end"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="98dp"
+            >
+        </TextView>
+    </android.support.v4.widget.NestedScrollView>
+
     <LinearLayout
+        android:id="@+id/bottom_panel"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#33A"
         android:layout_gravity="bottom"
         >
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="this is bottom view"/>
     </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>
