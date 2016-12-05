@@ -3,9 +3,11 @@ package net.juude.imagedemos.viewpager;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
@@ -31,13 +33,17 @@ import rx.schedulers.Schedulers;
 
 public class ImageViewPagerFragment extends Fragment {
 
-    private ImageGallery mViewPager;
+    private WebView mWebView;
+    ImageGalleryDelegate mImageGalleryHelper;
+    private ArrayList<String> mImages;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.image_gallery, null, false);
-        mViewPager = (ImageGallery) v.findViewById(R.id.image_gallery);
+        final View v = inflater.inflate(R.layout.image_gallery, container, false);
+        mImageGalleryHelper = new ImageGalleryDelegate((ViewPager) v.findViewById(R.id.image_gallery));
+        mWebView = (WebView)v.findViewById(R.id.webview_article);
+        mWebView.loadUrl("http://gank.io/api");
         retriveImages();
         return v;
     }
@@ -94,8 +100,13 @@ public class ImageViewPagerFragment extends Fragment {
 
             @Override
             public void onNext(ArrayList<String> images) {
-                mViewPager.bind(images);
+                mImages = images;
+                mImageGalleryHelper.bind(images);
             }
         });
     }
+
+
+
+
 }

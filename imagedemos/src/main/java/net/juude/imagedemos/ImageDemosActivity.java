@@ -32,7 +32,7 @@ public class ImageDemosActivity extends FragmentActivity {
     private static Class[] sFragmentList;
     private HashMap<Class, Fragment> mFragmentsMap = new HashMap<Class, Fragment>();
 
-    private static Class mDefaultFragment = FrescoFragment.class;
+    private static Class mDefaultFragment = ImageViewPagerFragment.class;
     static {
         sFragmentList = new Class<?>[] {
             FrescoFragment.class,

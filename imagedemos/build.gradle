@@ -30,4 +30,6 @@ dependencies {
     compile "io.reactivex:rxjava:${rxjava_version}"
     compile "io.reactivex:rxandroid:${rxandroid_version}"
     compile "com.squareup.okhttp3:okhttp:${okhttp_version}"
+    compile "me.relex:photodraweeview:${photodraweeview_version}"
+    compile project(':droidutils')
 }
