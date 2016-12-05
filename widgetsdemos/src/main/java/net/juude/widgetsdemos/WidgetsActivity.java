@@ -18,6 +18,7 @@ import net.juude.widgetsdemos.design.ApplayoutRecyclerViewFragment;
 import net.juude.widgetsdemos.design.NestingScrollingFragment;
 import net.juude.widgetsdemos.flexbox.FlexboxFragment;
 import net.juude.widgetsdemos.imageview.ImageViewFilterFragment;
+import net.juude.widgetsdemos.popup.BottomViewFragment;
 import net.juude.widgetsdemos.popup.PopupWindowFragment;
 import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
 import net.juude.widgetsdemos.recyclerview.ViewPagerFragment;
@@ -53,7 +54,8 @@ public class WidgetsActivity extends FragmentActivity {
                 SpinnersFragment.class,
                 FlexboxFragment.class,
                 ImageViewFilterFragment.class,
-                PopupWindowFragment.class
+                PopupWindowFragment.class,
+                BottomViewFragment.class
         };
     }
 

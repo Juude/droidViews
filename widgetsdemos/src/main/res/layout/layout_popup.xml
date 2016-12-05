@@ -2,41 +2,54 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/popup"
+    android:visibility="gone"
+    android:animateLayoutChanges="true"
+    android:clipChildren="true">
     <View
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></View>
-    <LinearLayout
-        android:id="@+id/main_area"
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="100dp">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:textColor="@android:color/white"
-        android:text="开始"
-        android:gravity="center"
-        android:background="@android:color/holo_green_light"/>
+        <LinearLayout
+            android:id="@+id/main_area"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@android:color/white"
+            android:text="开始"
+            android:gravity="center"
+            android:background="@android:color/holo_green_light"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_red_light"
-        android:text="暂停"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_red_light"
+            android:text="暂停"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:textColor="@android:color/white"
-        android:background="@android:color/holo_purple"
-        android:text="结束"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_purple"
+            android:text="结束"/>
+        </LinearLayout>
+    </FrameLayout>
 
-    </LinearLayout>
+    <View
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:visibility="visible" />
 </LinearLayout>

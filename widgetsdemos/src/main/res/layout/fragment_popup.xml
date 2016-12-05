@@ -1,10 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <Button
-        android:id="@+id/click_me"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Click ME"/>
-</LinearLayout>
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/buton_show_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to Show Bottom Dialog"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/bottom_panel"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_gravity="bottom"
+        android:background="#F0F" />
+
+    <include layout="@layout/layout_popup" />
+</FrameLayout>

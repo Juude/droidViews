@@ -26,7 +26,7 @@ public class PopupWindowFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = View.inflate(getActivity(), R.layout.fragment_popup, null);
-        v.findViewById(R.id.click_me).setOnClickListener(new View.OnClickListener() {
+        v.findViewById(R.id.buton_show_dialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 View popUp = View.inflate(getActivity(), R.layout.layout_popup, null);
