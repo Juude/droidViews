@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    compileSdkVersion _compileSdkVersion
+    buildToolsVersion _buildToolsVersion
 
     defaultConfig {
         applicationId "net.juude.rxdemos"
@@ -26,6 +26,6 @@ dependencies {
     compile "io.reactivex:rxjava:${rxjava_version}"
     compile "io.reactivex:rxandroid:${rxandroid_version}"
     compile "com.squareup.okhttp3:okhttp:${okhttp_version}"
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile "com.squareup.retrofit2:retrofit:${retrofit_version}"
     compile project(':droidutils')
 }
