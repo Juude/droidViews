@@ -7,7 +7,6 @@
     android:paddingLeft="20dp"
     android:paddingRight="?android:attr/scrollbarSize"
     android:baselineAligned="false"
-    android:background="?android:attr/selectableItemBackground"
     android:descendantFocusability="blocksDescendants">
 
     <RelativeLayout

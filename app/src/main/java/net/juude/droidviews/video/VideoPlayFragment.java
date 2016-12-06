@@ -21,9 +21,6 @@ public class VideoPlayFragment extends Fragment{
         WebView video_view = (WebView) v.findViewById(R.id.video_view);
         video_view.getSettings().setJavaScriptEnabled(true);
         video_view.loadUrl("http://player.youku.com/embed/XOTYyNTU0MjYw");
-        //video_view.loadData("<iframe height=498 width=510 src=\"http://player.youku.com/embed/XOTYyNTU0MjYw\" frameborder=0 allowfullscreen></iframe>",
-        //        "text/html; charset=UTF-8",
-        //        null);
         return v;
     }
 }

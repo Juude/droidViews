@@ -1,15 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:orientation="vertical" android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="match_parent">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="Fragment Popup"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#DDD"
+            >
+        </android.support.v7.widget.Toolbar>
+
         <Button
-            android:id="@+id/buton_show_dialog"
+            android:id="@+id/toggleBottomDialog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Click to Show Bottom Dialog"/>
+
+        <Button
+            android:id="@+id/toggleTopDialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click to Top Bottom Dialog"/>
     </LinearLayout>
 
     <View
@@ -18,6 +35,18 @@
         android:layout_height="20dp"
         android:layout_gravity="bottom"
         android:background="#F0F" />
-
     <include layout="@layout/layout_popup" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginTop="?attr/actionBarSize"
+        >
+        <View
+            android:id="@+id/top_dialog"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#EDD"/>
+    </FrameLayout>
 </FrameLayout>

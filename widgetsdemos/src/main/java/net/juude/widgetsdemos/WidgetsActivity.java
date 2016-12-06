@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,7 +19,7 @@ import net.juude.widgetsdemos.design.ApplayoutRecyclerViewFragment;
 import net.juude.widgetsdemos.design.NestingScrollingFragment;
 import net.juude.widgetsdemos.flexbox.FlexboxFragment;
 import net.juude.widgetsdemos.imageview.ImageViewFilterFragment;
-import net.juude.widgetsdemos.popup.BottomViewFragment;
+import net.juude.widgetsdemos.popup.SlideViewFragment;
 import net.juude.widgetsdemos.popup.PopupWindowFragment;
 import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
 import net.juude.widgetsdemos.recyclerview.ViewPagerFragment;
@@ -30,7 +31,7 @@ import java.util.HashMap;
  * Created by juude on 15-4-9.
  */
 
-public class WidgetsActivity extends FragmentActivity {
+public class WidgetsActivity extends AppCompatActivity {
 
     private static final String TAG = "DroidViewsActivity";
     private DrawerLayout mDrawerLayout;
@@ -55,7 +56,7 @@ public class WidgetsActivity extends FragmentActivity {
                 FlexboxFragment.class,
                 ImageViewFilterFragment.class,
                 PopupWindowFragment.class,
-                BottomViewFragment.class
+                SlideViewFragment.class
         };
     }
 

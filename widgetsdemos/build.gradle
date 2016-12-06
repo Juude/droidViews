@@ -42,4 +42,5 @@ dependencies {
     compile "io.reactivex:rxandroid:${rxandroid_version}"
     compile project(':locallibs')
     compile project(':droidutils')
+    compile "com.facebook.rebound:rebound:${rebound_version}"
 }

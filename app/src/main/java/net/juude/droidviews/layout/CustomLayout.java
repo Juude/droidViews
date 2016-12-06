@@ -51,5 +51,4 @@ public class CustomLayout extends ViewGroup {
             v.layout(itemWidth*i, t, (i+1)*itemWidth, b);
         }
     }
-
 }

@@ -56,7 +56,8 @@ public class DroidViewsActivity extends FragmentActivity {
             DrawableMultipleViewsFragment.class,
             MemoryFragment.class,
             SurfaceFragment.class,
-            OverdrawFragment.class
+            OverdrawFragment.class,
+            OneClickMultiTag.class
         };
     }
     private Class mDefaultFragment = MemoryFragment.class;

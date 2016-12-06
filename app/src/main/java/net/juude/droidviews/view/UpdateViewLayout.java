@@ -20,7 +20,4 @@ public class UpdateViewLayout extends RelativeLayout{
                 ViewGroup.LayoutParams.WRAP_CONTENT));
         super.onAttachedToWindow();
     }
-    
-    
-
 }

@@ -16,7 +16,7 @@ public class CircleViewFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_circle_view, null);
+        View v = inflater.inflate(R.layout.fragment_circle_view, container, false);
         return v;
     }
 }

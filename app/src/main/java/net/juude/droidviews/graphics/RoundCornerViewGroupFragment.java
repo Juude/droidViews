@@ -2,7 +2,6 @@ package net.juude.droidviews.graphics;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.graphics.Color;
 import android.graphics.Path;
 import android.graphics.RectF;
 import android.os.Bundle;

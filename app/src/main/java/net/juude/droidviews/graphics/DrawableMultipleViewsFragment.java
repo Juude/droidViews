@@ -4,6 +4,7 @@ import android.annotation.TargetApi;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
+import android.graphics.PixelFormat;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -19,6 +20,7 @@ import net.juude.droidviews.R;
  * Created by juude on 15-7-8.
  */
 public class DrawableMultipleViewsFragment extends Fragment {
+
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Nullable
     @Override
@@ -51,7 +53,7 @@ public class DrawableMultipleViewsFragment extends Fragment {
 
         @Override
         public int getOpacity() {
-            return 0;
+            return PixelFormat.OPAQUE;
         }
     }
 
