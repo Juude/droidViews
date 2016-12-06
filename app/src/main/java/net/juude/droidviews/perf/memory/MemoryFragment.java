@@ -20,6 +20,8 @@ import butterknife.OnClick;
 
 /**
  * Created by juude on 15-8-4.
+ * this class demonstrate how to create memory leak.
+ * press triggerMemory button to trigger memory leak.
  */
 public class MemoryFragment extends Fragment {
     private static final String TAG = "MemoryFragment";

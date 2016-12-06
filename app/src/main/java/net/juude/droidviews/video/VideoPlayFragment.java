@@ -12,6 +12,7 @@ import net.juude.droidviews.R;
 
 /**
  * Created by juude on 15/5/24.
+ * this project plays a video on youku to show to to embed a video
  */
 public class VideoPlayFragment extends Fragment{
     @Nullable

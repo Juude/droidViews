@@ -8,7 +8,10 @@ import android.view.ViewGroup;
 
 import net.juude.droidviews.R;
 
-
+/**
+ * this class demonstrate usage of LinearLayout include
+ *  1. dividers
+ * */
 public class LinearLayoutFragment extends Fragment {
 
     @Override

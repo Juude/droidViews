@@ -5,7 +5,12 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-
+/**
+ * This Class demonstrate how to create a custom layout.
+ * to write a custom layout, you need to care about 'onMeasure' and 'onLayout' methods.
+ * override 'onMeasure' to decide the size of current view and child views.
+ * override 'onLayout' to decide the position of child views.
+ * */
 public class CustomLayout extends ViewGroup {
     
     private static final String TAG = "CustomLayout";    

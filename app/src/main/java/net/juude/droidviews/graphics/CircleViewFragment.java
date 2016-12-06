@@ -11,6 +11,7 @@ import net.juude.droidviews.R;
 
 /**
  * Created by juude on 15-5-29.
+ * a circle layout demo.
  */
 public class CircleViewFragment extends Fragment{
     @Nullable

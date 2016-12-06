@@ -28,6 +28,7 @@ import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 /**
  * Created by juude on 15-8-24.
+ * this file is to show how to draw on GLSurfaceView using OpenGL
  */
 public class DemoGLSurfaceView extends GLSurfaceView{
     private GLES20TriangleRenderer mRenderer;

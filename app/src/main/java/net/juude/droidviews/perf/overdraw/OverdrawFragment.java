@@ -11,6 +11,7 @@ import net.juude.droidviews.R;
 
 /**
  * Created by sjd on 2016/12/4.
+ * //this class demonstrate overdraw, open overdraw settings to show overdraw info.
  */
 
 public class OverdrawFragment extends Fragment {

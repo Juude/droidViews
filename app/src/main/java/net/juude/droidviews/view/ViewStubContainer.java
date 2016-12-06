@@ -7,6 +7,9 @@ import android.widget.LinearLayout;
 
 import net.juude.droidviews.R;
 
+/**
+ * this class is to show how to use ViewStub.
+ * */
 public class ViewStubContainer extends LinearLayout{
 
     public ViewStubContainer(Context context, AttributeSet attrs, int defStyle) {

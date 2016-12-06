@@ -14,6 +14,7 @@ import java.lang.reflect.Method;
 
 /**
  * Created by juude on 15-8-21.
+ * This project is intended to show how to draw on SurfaceView use canvas
  */
 public class CanvasSurfaceView extends SurfaceView implements SurfaceHolder.Callback {
 
