@@ -15,7 +15,9 @@ import android.widget.TextView;
 
 import net.juude.widgetsdemos.R;
 
-
+/**
+ * shows how to use TextViews.
+ * */
 public class TextFragment extends Fragment {
     public static final String TAG = TextFragment.class.getSimpleName();
     public final static boolean DEBUG = true;

@@ -1,4 +1,4 @@
-package net.juude.widgetsdemos.recyclerview;
+package net.juude.widgetsdemos.viewpager;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -14,6 +14,7 @@ import net.juude.widgetsdemos.R;
 
 /**
  * Created by juude on 15/5/24.
+ * This class shows how to use ViewPager without using Fragment.
  */
 public class ViewPagerFragment extends Fragment {
     @Nullable

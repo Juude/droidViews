@@ -48,10 +48,8 @@ public class DroidViewsActivity extends FragmentActivity {
             SystemUiDemoFragment.class,
             LinearLayoutFragment.class,
             RoundCornerViewGroupFragment.class,
-            SurfaceViewFragment.class,
             VideoPlayFragment.class,
             CircleViewFragment.class,
-            DrawableMultipleViewsFragment.class,
             MemoryFragment.class,
             SurfaceFragment.class,
             OverdrawFragment.class,
@@ -63,7 +61,6 @@ public class DroidViewsActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_droidviews);
-        getWindow().setBackgroundDrawable(null);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerList = (ListView) findViewById(R.id.left_drawer);
         mLayoutInflater = LayoutInflater.from(this);

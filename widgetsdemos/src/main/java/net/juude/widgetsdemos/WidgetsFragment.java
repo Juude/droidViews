@@ -20,6 +20,7 @@ import java.util.Calendar;
 public class WidgetsFragment extends Fragment{
     private static final String TAG = "WidgetsFragment";
     private DateDialogFragment mDateDialogFragment;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_widgets, container, false);
@@ -70,8 +71,5 @@ public class WidgetsFragment extends Fragment{
         public void showSetDate(int year,int month,int day) {
             Toast.makeText(getActivity(), year + "/" + month + "/" + day, Toast.LENGTH_SHORT).show();
         }
-
     }
-
-
 }

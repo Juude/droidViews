@@ -24,6 +24,7 @@ import java.util.Random;
 
 /**
  * Created by juude on 15/5/24.
+ * RecyclerView in a ScrollView
  */
 public class RecyclerViewScrollFragment extends Fragment {
     private RecyclerView mRecyclerView;
