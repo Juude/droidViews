@@ -21,7 +21,6 @@ import net.juude.widgetsdemos.imageview.ImageViewFilterFragment;
 import net.juude.widgetsdemos.imageview.ImageViewScaleTypeFragment;
 import net.juude.widgetsdemos.popup.SlideViewFragment;
 import net.juude.widgetsdemos.popup.PopupWindowFragment;
-import net.juude.widgetsdemos.recyclerview.RecyclerViewScrollFragment;
 import net.juude.widgetsdemos.viewpager.ImageViewPagerFragment;
 import net.juude.widgetsdemos.viewpager.ViewPagerFragment;
 import net.juude.widgetsdemos.textview.TextFragment;
@@ -48,7 +47,6 @@ public class WidgetsActivity extends AppCompatActivity {
             ApplayoutNestScrollingFragment.class,
             ApplayoutRecyclerViewFragment.class,
             NestingScrollingFragment.class,
-            RecyclerViewScrollFragment.class,
             ViewPagerFragment.class,
             TextFragment.class,
             WidgetsFragment.class,
@@ -59,7 +57,8 @@ public class WidgetsActivity extends AppCompatActivity {
             PopupWindowFragment.class,
             SlideViewFragment.class,
             ImageViewScaleTypeFragment.class,
-            ImageViewPagerFragment.class
+            ImageViewPagerFragment.class,
+            WebviewFragment.class
         };
     }
 

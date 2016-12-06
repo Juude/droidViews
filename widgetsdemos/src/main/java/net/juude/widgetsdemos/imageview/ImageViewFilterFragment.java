@@ -36,11 +36,15 @@ public class ImageViewFilterFragment extends Fragment {
 
     @Override
     public void onResume() {
-        Timer mTimer = new Timer();
+        final Timer mTimer = new Timer();
 
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
+                if (getActivity() == null) {
+                    mTimer.cancel();
+                    return;
+                }
                 getActivity().runOnUiThread(new Runnable() {
                     @Override
                     public void run() {

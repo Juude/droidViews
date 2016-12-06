@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId "net.juude.widgetsdemos"
         minSdkVersion 15
-        targetSdkVersion 25
+        targetSdkVersion 24
         versionCode 1
         versionName "1.0"
     }

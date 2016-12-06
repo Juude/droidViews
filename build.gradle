@@ -22,11 +22,16 @@ allprojects {
         }
     }
     ext {
+        _buildToolsVersion = "24.0.3"
+        _compileSdkVersion = 24
+        support_sdk_version = "24.2.1"
+
+//        _buildToolsVersion = "25"
+//        _compileSdkVersion = 25
+//        support_sdk_version = "25.0.1"
+
         gdxVersion = '1.6.4'
         aiVersion = '1.4.0'
-        _buildToolsVersion = "25"
-        _compileSdkVersion = 25
-        support_sdk_version = "25.0.1"
         okhttp_version = '3.4.2'
         rxjava_version = '1.1.6'
         rxandroid_version = '1.2.1'
