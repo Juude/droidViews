@@ -24,12 +24,10 @@ dependencies {
     compile "com.facebook.fresco:fresco:${fresco_version}"
     compile "com.github.bumptech.glide:glide:${glide_version}"
     compile "com.squareup.okhttp3:okhttp:${okhttp_version}"
-    compile "com.alibaba:fastjson:${fastjson_version}"
     compile "com.android.support:support-v4:${support_sdk_version}"
     compile "com.android.support:recyclerview-v7:${support_sdk_version}"
     compile "io.reactivex:rxjava:${rxjava_version}"
     compile "io.reactivex:rxandroid:${rxandroid_version}"
     compile "com.squareup.okhttp3:okhttp:${okhttp_version}"
-    compile "me.relex:photodraweeview:${photodraweeview_version}"
     compile project(':droidutils')
 }

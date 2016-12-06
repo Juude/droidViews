@@ -1,4 +1,4 @@
-package net.juude.imagedemos.viewpager;
+package net.juude.widgetsdemos.viewpager;
 
 import android.app.Activity;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import net.juude.imagedemos.R;
+import net.juude.widgetsdemos.R;
 
 import java.util.ArrayList;
 
@@ -87,7 +87,7 @@ public class ImageGalleryDelegate {
         String url = mSmallImageAdapter.getImageAt(position);
         if (url != null) {
             if (mFullscreenImageGallery == null) {
-                mFullscreenImageGallery = new ImageGallery(mContext);
+                mFullscreenImageGallery = new ViewPager(mContext);
             }
             if (mFullscreenImageAdapter == null) {
                 mFullscreenImageAdapter = new FullscreenImageAdapter();

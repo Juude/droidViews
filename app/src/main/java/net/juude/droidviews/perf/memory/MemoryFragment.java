@@ -2,7 +2,6 @@ package net.juude.droidviews.perf.memory;
 
 
 import android.app.AlarmManager;
-import android.app.PendingIntent;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Handler;

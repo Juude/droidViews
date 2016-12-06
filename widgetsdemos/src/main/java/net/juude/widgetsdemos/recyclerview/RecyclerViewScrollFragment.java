@@ -62,12 +62,12 @@ public class RecyclerViewScrollFragment extends Fragment {
                 int i = new Random().nextInt(5);
                 holder.itemView.setBackgroundColor(sColors[i]);
                 TextView positionView = (TextView) holder.itemView.findViewWithTag("textView");
-                positionView.setText("" + position);
+                positionView.setText("" + position + ": height" + mRecyclerView.getHeight());
             }
 
             @Override
             public int getItemCount() {
-                return 50;
+                return 1000;
             }
         });
         v.setOnClickListener(new View.OnClickListener() {

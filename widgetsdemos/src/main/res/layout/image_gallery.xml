@@ -2,11 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <net.juude.imagedemos.viewpager.ImageGallery
+    <net.juude.widgetsdemos.viewpager.ImageGallery
         android:id="@+id/image_gallery"
         android:layout_width="match_parent"
         android:layout_height="200dp">
-    </net.juude.imagedemos.viewpager.ImageGallery>
+    </net.juude.widgetsdemos.viewpager.ImageGallery>
 
     <WebView
         android:id="@+id/webview_article"

@@ -1,4 +1,4 @@
-package net.juude.imagedemos.viewpager;
+package net.juude.widgetsdemos.viewpager;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

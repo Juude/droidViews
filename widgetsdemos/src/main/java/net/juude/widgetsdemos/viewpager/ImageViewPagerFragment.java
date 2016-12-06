@@ -1,4 +1,4 @@
-package net.juude.imagedemos.viewpager;
+package net.juude.widgetsdemos.viewpager;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,7 +12,7 @@ import android.webkit.WebView;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 
-import net.juude.imagedemos.R;
+import net.juude.widgetsdemos.R;
 
 import java.io.IOException;
 import java.util.ArrayList;

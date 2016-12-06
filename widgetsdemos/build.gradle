@@ -43,4 +43,7 @@ dependencies {
     compile project(':locallibs')
     compile project(':droidutils')
     compile "com.facebook.rebound:rebound:${rebound_version}"
+    compile "com.facebook.fresco:fresco:${fresco_version}"
+    compile "me.relex:photodraweeview:${photodraweeview_version}"
+    compile "com.alibaba:fastjson:${fastjson_version}"
 }

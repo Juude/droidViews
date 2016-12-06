@@ -10,8 +10,8 @@ import java.util.ArrayList;
  * Created by juude on 15-5-11.
  */
 public class SmarterSpannableBuilder {
-    private ArrayList<Object> mSpans = new ArrayList();
-    private ArrayList<Integer> mEndIndexes = new ArrayList();
+    private ArrayList<Object> mSpans = new ArrayList<>();
+    private ArrayList<Integer> mEndIndexes = new ArrayList<>();
     private int mCurrentEndIndex = 0;
     private StringBuilder mTexts = new StringBuilder();
 
