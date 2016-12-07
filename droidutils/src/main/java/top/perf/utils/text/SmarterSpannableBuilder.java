@@ -1,4 +1,4 @@
-package net.juude.widgetsdemos.textview;
+package top.perf.utils.text;
 
 import android.support.annotation.NonNull;
 import android.text.SpannableString;

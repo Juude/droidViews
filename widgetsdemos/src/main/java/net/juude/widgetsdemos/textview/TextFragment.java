@@ -15,6 +15,8 @@ import android.widget.TextView;
 
 import net.juude.widgetsdemos.R;
 
+import top.perf.utils.text.SmarterSpannableBuilder;
+
 /**
  * shows how to use TextViews.
  * */
