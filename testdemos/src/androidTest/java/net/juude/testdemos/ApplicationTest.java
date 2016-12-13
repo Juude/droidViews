@@ -1,6 +1,7 @@
 package net.juude.testdemos;
 
 import android.app.Application;
+import android.graphics.Canvas;
 import android.test.ApplicationTestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
@@ -14,6 +15,5 @@ public class ApplicationTest extends ApplicationTestCase<Application> {
 
     @SmallTest
     public void testAAA() {
-
     }
 }

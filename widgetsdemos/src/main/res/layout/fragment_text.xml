@@ -14,10 +14,6 @@
             android:layout_height="50dp"
             android:text="StateListTextView"
             android:background="@drawable/state_list"/>
-        <!--<View-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:background="@drawable/divider"></View>-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -39,12 +35,34 @@
             android:textSize="16sp"
             />
         <EditText
+            android:id="@+id/edit_test_number"
             android:layout_width="78dp"
             android:layout_height="27dp"
             android:textSize="12sp"
             android:inputType="numberDecimal"
             android:background="@drawable/color_rect"
             android:gravity="center"
-            android:hint="¥最低价"/>
+            android:hint="hint"/>
+
+        <EditText
+            android:id="@+id/edit_test"
+            android:layout_width="78dp"
+            android:layout_height="27dp"
+            android:textSize="12sp"
+            android:background="@drawable/color_rect"
+            android:gravity="center"
+            android:imeOptions="actionSearch"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:hint="hint"/>
+
+        <TextView
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:text="331214312413413413413412413241324132412343134141234"
+            android:ellipsize="end"
+            android:textSize="16sp"
+            android:maxLines="1"/>
     </LinearLayout>
 </ScrollView>
