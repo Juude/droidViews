@@ -14,9 +14,12 @@ import android.text.style.TextAppearanceSpan;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.HorizontalScrollView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import net.juude.widgetsdemos.R;
@@ -50,15 +53,27 @@ public class TextFragment extends Fragment {
         SpannableString smarterString = new SmarterSpannableBuilder()
                                         .append("你好",new TextAppearanceSpan(getActivity(), R.style.MainText))
                                         .append("红色的字体",new ForegroundColorSpan(Color.RED))
+                                        .append("SubTest", new TextAppearanceSpan(getActivity(), R.style.SubText))
                                         .build();
         smarterSpannable.setText(smarterString);
         mEditDemo = (EditText) v.findViewById(R.id.edit_test);
         initEditDemo();
+        initMultilineText(v);
         return v;
     }
 
-    private void
-    initEditDemo() {
+    private void initMultilineText(View parentView) {
+//        HorizontalScrollView scrollView = (HorizontalScrollView) parentView.findViewById(R.id.scrollView);
+//        scrollView.setOnTouchListener(new View.OnTouchListener() {
+//            @Override
+//            public boolean onTouch(View v, MotionEvent event) {
+//                return true;
+//            }
+//        });
+//        scrollView.setEnabled(false);
+    }
+
+    private void initEditDemo() {
         mEditDemo.setOnKeyListener(new View.OnKeyListener() {
             @Override
             public boolean onKey(View v, int keyCode, KeyEvent event) {
@@ -69,9 +84,6 @@ public class TextFragment extends Fragment {
                 return false;
             }
         });
-
-//        mEditDemo.setImeActionLabel("搜索2", KeyEvent.KEYCODE_SEARCH);
-        //mEditDemo.setImeActionLabel("搜索", KeyEvent.KEYCODE_ENTER);
         mEditDemo.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {

@@ -64,5 +64,29 @@
             android:ellipsize="end"
             android:textSize="16sp"
             android:maxLines="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:gravity="left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lineSpacingExtra="26px"
+                android:textColor="#666"
+                android:text="nihao:\n的发烧发:\n烧发烧地方撒地方:"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:gravity="left"
+                android:layout_width="1000dp"
+                android:textColor="#999"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:lineSpacingExtra="26px"
+                android:text="nihaofffewrqrerqewrqwerqwerqwerqewrqwerqeeqwr\n的发烧发\n烧发烧地方撒地方"/>
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>

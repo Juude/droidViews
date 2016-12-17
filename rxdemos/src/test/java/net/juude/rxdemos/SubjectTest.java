@@ -158,7 +158,13 @@ public class SubjectTest {
         behaviorSubject.subscribe(new Action1<String>() {
             @Override
             public void call(String s) {
-                System.out.println(s);
+                System.out.println("first " + s);
+            }
+        });
+        behaviorSubject.subscribe(new Action1<String>() {
+            @Override
+            public void call(String s) {
+                System.out.println("jlkl  " + s);
             }
         });
     }

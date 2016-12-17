@@ -19,6 +19,7 @@ import net.juude.widgetsdemos.design.NestingScrollingFragment;
 import net.juude.widgetsdemos.flexbox.FlexboxFragment;
 import net.juude.widgetsdemos.imageview.ImageViewFilterFragment;
 import net.juude.widgetsdemos.imageview.ImageViewScaleTypeFragment;
+import net.juude.widgetsdemos.layout.LinearLayoutFragment;
 import net.juude.widgetsdemos.popup.SlideViewFragment;
 import net.juude.widgetsdemos.popup.PopupWindowFragment;
 import net.juude.widgetsdemos.viewpager.ImageViewPagerFragment;
@@ -44,6 +45,7 @@ public class WidgetsActivity extends AppCompatActivity {
     private static Class mDefaultFragment = ViewPagerFragment.class;
     static {
         sFragmentList = new Class<?>[] {
+            LinearLayoutFragment.class,
             ApplayoutNestScrollingFragment.class,
             ApplayoutRecyclerViewFragment.class,
             NestingScrollingFragment.class,

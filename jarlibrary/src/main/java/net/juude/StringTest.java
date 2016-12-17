@@ -4,6 +4,8 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 /**
  * Created by juude on 2016/12/9.
  */
@@ -26,10 +28,15 @@ public class StringTest {
         System.out.println("1234无".getBytes().length);
         System.out.println("1234无六七".getBytes().length);
         String str = "1234五六七";
-
         for (int i = 0; i < str.length(); i++) {
             Character ch = str.charAt(i);
             System.out.println("  " + str.charAt(i));
         }
+    }
+
+    @Test
+    public void split() {
+        System.out.print(Arrays.toString("fdsafdsaf".split(".")));
+        System.out.print(Arrays.toString("fdsaf.dsaf".split("\\.")));
     }
 }

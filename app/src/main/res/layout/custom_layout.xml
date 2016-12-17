@@ -3,46 +3,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000"
-        android:layout_marginBottom="200dp"
-        />
     <net.juude.droidviews.layout.CustomLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#000" >
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:background="#F00"/>
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:background="#0F0"/>
-    
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:background="#00F"/>
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:background="#FF0"/>
-    
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:background="#0FF"/>
-    <View
-        android:layout_width="10dp"
-        android:layout_height="10dp"
-        android:background="#0AE"/>
-</net.juude.droidviews.layout.CustomLayout>
-<View android:layout_width="match_parent"
-    android:layout_height="160dp"
-    android:background="#F09"
-    android:layout_alignParentBottom="true">
-</View>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="#F00"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="#0F0"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="#00F"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="#FF0"/>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="#0FF"/>
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="#0AE"/>
+    </net.juude.droidviews.layout.CustomLayout>
+    <View android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:background="#F09"
+        android:layout_alignParentBottom="true">
+    </View>
 </RelativeLayout>

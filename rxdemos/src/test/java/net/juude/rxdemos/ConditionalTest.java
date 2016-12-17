@@ -15,6 +15,7 @@ import top.perf.utils.timer.TimerUtils;
  * Created by juude on 16/8/11.
  */
 public class ConditionalTest {
+
     @Test
     public void testAmb() {
         TestSubscriber testSubscriber = new TestSubscriber();
