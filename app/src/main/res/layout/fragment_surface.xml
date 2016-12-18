@@ -2,8 +2,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-
     <net.juude.droidviews.surface.DemoGLSurfaceView
         android:id="@+id/demoGLSurfaceView"
         android:layout_width="match_parent"
