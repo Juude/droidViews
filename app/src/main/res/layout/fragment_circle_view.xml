@@ -2,13 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <net.juude.library.CircleLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CircleLayout"/>
+    <net.juude.droidviews.graphics.CircleLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        >
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="centerCrop"
-            android:src="@drawable/overlay_image"/>
-    </net.juude.library.CircleLayout>
+            android:src="@drawable/the_old_guitarist"/>
+    </net.juude.droidviews.graphics.CircleLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RoundCornerView"/>
+
+    <net.juude.droidviews.graphics.RoundCornerViewGroup
+        android:layout_margin="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/the_old_guitarist"/>
+    </net.juude.droidviews.graphics.RoundCornerViewGroup>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PathDialog"/>
+
+    <net.juude.droidviews.graphics.PathDialog
+        android:layout_width="match_parent"
+        android:layout_margin="30dp"
+        android:layout_height="100dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/the_old_guitarist"/>
+    </net.juude.droidviews.graphics.PathDialog>
 </LinearLayout>

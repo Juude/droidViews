@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Path;
 import android.graphics.RectF;
+import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
 /**
@@ -14,8 +15,8 @@ public class RoundCornerViewGroup extends FrameLayout {
     private Path mPath = new Path();
     private int mCornerRadius = 50;
 
-    public RoundCornerViewGroup(Context context) {
-        super(context);
+    public RoundCornerViewGroup(Context context, AttributeSet attributeSet) {
+        super(context, attributeSet);
         setWillNotDraw(false);
         setBackgroundColor(getResources().getColor(android.R.color.holo_orange_light));
     }

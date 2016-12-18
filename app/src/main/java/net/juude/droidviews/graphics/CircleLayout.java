@@ -11,6 +11,7 @@ import android.widget.FrameLayout;
  * Created by juude on 15-5-28.
  */
 public class CircleLayout extends FrameLayout{
+
     private int mCornerRadius = 50;
 
     public CircleLayout(Context context) {
@@ -25,6 +26,7 @@ public class CircleLayout extends FrameLayout{
         super(context, attrs, defStyleAttr);
         setWillNotDraw(false);
     }
+
     private Path mPath = new Path();
     private RectF mRectF = new RectF();
 
@@ -36,11 +38,9 @@ public class CircleLayout extends FrameLayout{
         canvas.restoreToCount(count);
     }
 
-
     @Override
     protected void onSizeChanged(int w, int h, int oldw, int oldh) {
         super.onSizeChanged(w, h, oldw, oldh);
-        RectF r = new RectF(0, 0, w, h);
         mPath = new Path();
         mRectF.set(0, 0, w, h);
         mPath.addOval(mRectF, Path.Direction.CW);

@@ -68,5 +68,8 @@ dependencies {
     compile "com.facebook.stetho:stetho-js-rhino:${stetho_version}"
     compile "com.facebook.stetho:stetho:${stetho_version}"
     compile project(':locallibs')
+    compile project(':librarydemo')
+    compile project(':droidutils')
+
 }
 
