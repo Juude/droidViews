@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- not used by Java files -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="horizontal" >
     
    <GridLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
        android:background="#EEE"
        android:columnCount="3"
        android:orientation="horizontal"
+       android:alignmentMode="alignBounds"
+       android:textAlignment="center"
        android:rowCount="2">
-
-        <View 
+        <View
             android:background="#F00"
-            android:layout_rowSpan="1"
-            android:layout_columnSpan="1"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
             />
             
         <View 
            android:background="#0F0"
-            android:layout_width="30dp"
+            android:layout_width="130dp"
             android:layout_height="30dp"/>
         
         <View 
