@@ -13,7 +13,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import net.juude.widgetsdemos.alertdialog.AlertDialogFragment;
-import net.juude.widgetsdemos.design.ApplayoutNestScrollingFragment;
+import net.juude.widgetsdemos.design.appbar.ApplayoutNestScrollingFragment;
 import net.juude.widgetsdemos.design.ApplayoutRecyclerViewFragment;
 import net.juude.widgetsdemos.design.NestingScrollingFragment;
 import net.juude.widgetsdemos.flexbox.FlexboxFragment;

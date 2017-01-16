@@ -1,4 +1,4 @@
-package net.juude.widgetsdemos.design;
+package net.juude.widgetsdemos.design.appbar;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -31,9 +31,10 @@ public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
     private static final int PAGE_ANIMATION_DURATION = 500;
 
     private boolean mDetailsVisible = false;
-    public final static String TAG = "DetailAppBarBehavior";
+    public final static String TAG = "SwitchAppBarBehavior";
 
     private NestedScrollView mSubScroll;
+    private AppBarLayout mAppBarLayout;
 
     public SwitchAppBarBehavior(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -42,11 +43,22 @@ public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
 
     @Override
     public boolean onStartNestedScroll(CoordinatorLayout parent, AppBarLayout child, View directTargetChild, View target, int nestedScrollAxes) {
+        mAppBarLayout = appBar(parent);
         if (!mIsLoadingMore) {
             return super.onStartNestedScroll(parent, child, directTargetChild, target, nestedScrollAxes);
         } else {
             return true;
         }
+    }
+
+    @Override
+    public boolean setTopAndBottomOffset(int offset) {
+        Log.d(TAG, "desire offset: " + offset);
+        if (offset > 0) {
+            offset = 0;
+        }
+        Log.d(TAG, "offset: " + offset);
+        return super.setTopAndBottomOffset(offset);
     }
 
     @Override
@@ -64,30 +76,50 @@ public class SwitchAppBarBehavior extends AppBarLayout.Behavior {
         }
         scrollView.setTranslationY(translationY);
     }
-
-    @Override
-    public boolean onNestedPreFling(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, float velocityX, float velocityY) {
-        if (mIsLoadingMore) {
-            return false;
-        } else {
-            return super.onNestedPreFling(coordinatorLayout, child, target, velocityX, velocityY);
-        }
-    }
-
-    @Override
-    public boolean onNestedFling(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, float velocityX, float velocityY, boolean consumed) {
-        if (mIsLoadingMore) {
-            return false;
-        } else {
-            return super.onNestedFling(coordinatorLayout, child, target, velocityX, velocityY, consumed);
-        }
-    }
+//
+//    @Override
+//    public boolean onNestedPreFling(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, float velocityX, float velocityY) {
+//        if (mIsLoadingMore) {
+//            return false;
+//        } else {
+//            return super.onNestedPreFling(coordinatorLayout, child, target, velocityX, velocityY);
+//        }
+//    }
+//
+//    @Override
+//    public boolean onNestedFling(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, float velocityX, float velocityY, boolean consumed) {
+//        if (mIsLoadingMore) {
+//            return false;
+//        } else {
+//            return super.onNestedFling(coordinatorLayout, child, target, velocityX, velocityY, consumed);
+//        }
+//    }
 
     private NestedScrollView mainScroll(CoordinatorLayout parent) {
         if (mMainScroll == null) {
             mMainScroll = (NestedScrollView) parent.findViewById(R.id.main_scroll);
         }
         return mMainScroll;
+    }
+
+    private AppBarLayout appBar(CoordinatorLayout parent) {
+        if (mAppBarLayout == null) {
+            mAppBarLayout = (AppBarLayout) parent.findViewById(R.id.appbar);
+            mAppBarLayout.addOnLayoutChangeListener(new View.OnLayoutChangeListener() {
+                @Override
+                public void onLayoutChange(View v, int left, int top, int right, int bottom, int oldLeft, int oldTop, int oldRight, int oldBottom) {
+                    Log.d(TAG, "layout top change to : " + top);
+                }
+            });
+            mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+                @Override
+                public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                    Log.d(TAG, "verticalOffset : " + verticalOffset);
+                }
+            });
+
+        }
+        return mAppBarLayout;
     }
 
     private NestedScrollView subScroll(CoordinatorLayout parent) {

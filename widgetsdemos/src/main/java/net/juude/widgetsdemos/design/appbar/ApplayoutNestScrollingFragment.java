@@ -1,10 +1,8 @@
-package net.juude.widgetsdemos.design;
+package net.juude.widgetsdemos.design.appbar;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.design.widget.AppBarLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,8 +20,8 @@ public class ApplayoutNestScrollingFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.layout_appbar_paralell, container, false);
-        AppBarLayout appBarLayout = (AppBarLayout) v.findViewById(R.id.appbar);
-        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
+//        AppBarLayout appBarLayout = (AppBarLayout) v.findViewById(R.id.appbar);
+//        Toolbar toolbar = (Toolbar) v.findViewById(R.id.toolbar);
         return v;
     }
 

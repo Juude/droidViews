@@ -37,7 +37,7 @@ public class ApplayoutRecyclerViewFragment extends Fragment implements OnMoreLis
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.layout_appbar_paralell, container, false);
+        View v = inflater.inflate(R.layout.layout_headbar_paralell, container, false);
         SuperRecyclerView recyclerView = (SuperRecyclerView) v.findViewById(R.id.super_recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);

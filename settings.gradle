@@ -1,4 +1,4 @@
-include ':app', ':jarlibrary', ':andfixdemo', ':droidutils',
+include ':app', ':jarlibrary', ':andfixdemo', ':droidutils', ':recyclerview_playground',
         ':testdemos', ':imagedemos',
-         ':rxdemos', ':transitiondemos',
+        ':rxdemos', ':transitiondemos',
         ':widgetsdemos', ':andfixdemo', ":snow", ":librarydemo", ":locallibs"

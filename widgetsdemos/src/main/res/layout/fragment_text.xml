@@ -8,7 +8,9 @@
         android:orientation="vertical"
         android:divider="@drawable/divider"
         android:dividerPadding="10dp"
-        android:showDividers="middle">
+        android:showDividers="middle"
+        android:focusableInTouchMode="true"
+        android:focusable="true">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
@@ -55,6 +57,11 @@
             android:maxLines="1"
             android:singleLine="true"
             android:hint="hint"/>
+        <Button
+            android:id="@+id/closeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CloseButton"/>
 
         <TextView
             android:layout_width="90dp"

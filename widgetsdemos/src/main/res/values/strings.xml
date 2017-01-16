@@ -11,4 +11,9 @@
         <item>Uranus</item>
         <item>Neptune</item>
     </string-array>
+
+
+    <string name="appbar_behavior">net.juude.widgetsdemos.design.appbar.SwitchAppBarBehavior</string>
+
+    <string name="page_behavior">net.juude.widgetsdemos.design.appbar.DetailScrollingBehavior</string>
 </resources>

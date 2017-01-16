@@ -1,6 +1,8 @@
 
 package net.juude.widgetsdemos.textview;
 
+import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,6 +19,7 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.HorizontalScrollView;
 import android.widget.ScrollView;
@@ -57,20 +60,26 @@ public class TextFragment extends Fragment {
                                         .build();
         smarterSpannable.setText(smarterString);
         mEditDemo = (EditText) v.findViewById(R.id.edit_test);
+        v.findViewById(R.id.closeButton).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                closeSoftKeyboard(getActivity());
+            }
+        });
         initEditDemo();
-        initMultilineText(v);
         return v;
     }
 
-    private void initMultilineText(View parentView) {
-//        HorizontalScrollView scrollView = (HorizontalScrollView) parentView.findViewById(R.id.scrollView);
-//        scrollView.setOnTouchListener(new View.OnTouchListener() {
-//            @Override
-//            public boolean onTouch(View v, MotionEvent event) {
-//                return true;
-//            }
-//        });
-//        scrollView.setEnabled(false);
+    public static void closeSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager
+                = (InputMethodManager) activity.getSystemService(
+                Context.INPUT_METHOD_SERVICE);
+        //如果软键盘已经开启
+        if (inputMethodManager.isActive()) {
+            inputMethodManager.hideSoftInputFromWindow(
+                    activity.getCurrentFocus().getWindowToken(),
+                    InputMethodManager.HIDE_NOT_ALWAYS);
+        }
     }
 
     private void initEditDemo() {
@@ -88,6 +97,7 @@ public class TextFragment extends Fragment {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 Log.d(TAG, "onEditorAction: " + actionId);
+                closeSoftKeyboard(getActivity());
                 return false;
             }
         });
