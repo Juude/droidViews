@@ -4,6 +4,9 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
 import java.util.Arrays;
 
 /**
@@ -38,5 +41,21 @@ public class StringTest {
     public void split() {
         System.out.print(Arrays.toString("fdsafdsaf".split(".")));
         System.out.print(Arrays.toString("fdsaf.dsaf".split("\\.")));
+    }
+
+    /*
+    *
+    *
+    * */
+    @Test
+    public void testEncode() {
+        String encoded = "http://baidu.com?k=" + URLEncoder.encode("你好");
+        System.out.println(encoded);
+        try {
+            URL url = new URL(encoded);
+            System.out.println(url.getQuery());
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
     }
 }
