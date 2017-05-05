@@ -17,7 +17,7 @@ public class GraphicsDemoFragment extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_circle_view, container, false);
+        View v = inflater.inflate(R.layout.fragment_graphics_demo, container, false);
         return v;
     }
 }

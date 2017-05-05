@@ -30,6 +30,7 @@ import butterknife.OnClick;
  * press triggerMemory button to trigger memory leak.
  */
 public class MemoryFragment extends Fragment {
+
     private static final String TAG = "MemoryFragment";
     @Bind(R.id.triggerMemory)
     Button triggerMemory;
