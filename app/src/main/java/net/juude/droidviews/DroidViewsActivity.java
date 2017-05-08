@@ -51,7 +51,7 @@ public class DroidViewsActivity extends FragmentActivity {
             OverdrawFragment.class,
         };
     }
-    private Class mDefaultFragment = MemoryFragment.class;
+    private Class mDefaultFragment = GraphicsDemoFragment.class;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

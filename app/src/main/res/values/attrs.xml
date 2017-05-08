@@ -2,5 +2,13 @@
 <resources>
     <declare-styleable name="systemui"> 
         <attr name="forceTextColor" format="color"/> 
-    </declare-styleable> 
+    </declare-styleable>
+
+    <declare-styleable name="RoundCornerButton">
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="shape" format="enum">
+            <enum name="normal" value="0" />
+            <enum name="special" value="1" />
+        </attr>
+    </declare-styleable>
 </resources>
