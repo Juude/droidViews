@@ -36,7 +36,7 @@ dependencies {
         exclude(group: 'com.android.support', module: 'support-v4')
     }
     apt "com.github.hotchemi:permissionsdispatcher-processor:${latest_version}"
-    compile 'com.google.android:flexbox:0.2.3'
+    compile 'com.google.android:flexbox:0.3.0'
     compile "com.squareup.okhttp3:okhttp:${okhttp_version}"
     compile "io.reactivex:rxjava:${rxjava_version}"
     compile "io.reactivex:rxandroid:${rxandroid_version}"

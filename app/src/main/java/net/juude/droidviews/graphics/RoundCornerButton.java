@@ -16,8 +16,6 @@ import android.widget.Button;
 
 import net.juude.droidviews.R;
 
-import static android.R.attr.path;
-
 /**
  * Created by juude on 2017/5/5.
  */

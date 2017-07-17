@@ -33,7 +33,6 @@ public class PathDialog extends FrameLayout {
     public PathDialog(Context context, AttributeSet attrs) {
         super(context, attrs);
         mPath = new Path();
-        //setBackgroundColor(Color.RED);
         setWillNotDraw(false);
         mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         mPaint.setAntiAlias(false);
@@ -43,16 +42,6 @@ public class PathDialog extends FrameLayout {
         mDestPath = new Path();
         setBackgroundColor(Color.GRAY);
     }
-
-
-//    @Override
-//    public void draw(Canvas canvas) {
-//        canvas.save();
-//        canvas.clipPath(mPath);
-//        super.draw(canvas);
-//        canvas.restore();
-//    }
-
 
     @Override
     protected void dispatchDraw(Canvas canvas) {

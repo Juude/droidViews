@@ -22,6 +22,7 @@ import net.juude.widgetsdemos.imageview.ImageViewScaleTypeFragment;
 import net.juude.widgetsdemos.layout.LinearLayoutFragment;
 import net.juude.widgetsdemos.popup.SlideViewFragment;
 import net.juude.widgetsdemos.popup.PopupWindowFragment;
+import net.juude.widgetsdemos.switchx.SwitchxFragment;
 import net.juude.widgetsdemos.viewpager.ImageViewPagerFragment;
 import net.juude.widgetsdemos.viewpager.ViewPagerFragment;
 import net.juude.widgetsdemos.textview.TextFragment;
@@ -42,9 +43,10 @@ public class WidgetsActivity extends AppCompatActivity {
     private static Class[] sFragmentList;
     private HashMap<Class, Fragment> mFragmentsMap = new HashMap<Class, Fragment>();
 
-    private static Class mDefaultFragment = ViewPagerFragment.class;
+    private static Class mDefaultFragment = SwitchxFragment.class;
     static {
         sFragmentList = new Class<?>[] {
+            SwitchxFragment.class,
             LinearLayoutFragment.class,
             ApplayoutNestScrollingFragment.class,
             ApplayoutRecyclerViewFragment.class,

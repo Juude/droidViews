@@ -1103,7 +1103,7 @@ public class RecyclerView extends ViewGroup implements ScrollingView, NestedScro
             return;
         }
         stopScroll();
-        // TODO We should do this switch a dispatchLayout pass and animate children. There is a good
+        // TODO We should do this switchx a dispatchLayout pass and animate children. There is a good
         // chance that LayoutManagers will re-use views.
         if (mLayout != null) {
             // end all running animations
