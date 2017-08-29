@@ -32,7 +32,7 @@ public class CircleDraweeView extends SimpleDraweeView{
     @Override
     protected void onDraw(Canvas canvas) {
         Log.d(TAG, "onDraw canvas width : " + canvas.getWidth() + " height : " + canvas.getHeight());
-        canvas.drawArc(0, 0, canvas.getWidth(), canvas.getHeight(), -90, 135, true, mPaint);
+        //canvas.drawArc(0, 0, canvas.getWidth(), canvas.getHeight(), -90, 135, true, mPaint);
         super.onDraw(canvas);
         //canvas.drawArc();
     }

@@ -13,7 +13,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import net.juude.imagedemos.fresco.FrescoFragment;
-import net.juude.imagedemos.viewpager.ImageViewPagerFragment;
 import net.juude.imagedemos.glide.GlideFragment;
 
 import java.util.HashMap;
@@ -32,12 +31,11 @@ public class ImageDemosActivity extends FragmentActivity {
     private static Class[] sFragmentList;
     private HashMap<Class, Fragment> mFragmentsMap = new HashMap<Class, Fragment>();
 
-    private static Class mDefaultFragment = ImageViewPagerFragment.class;
+    private static Class mDefaultFragment = FrescoFragment.class;
     static {
         sFragmentList = new Class<?>[] {
             FrescoFragment.class,
             GlideFragment.class,
-            ImageViewPagerFragment.class
         };
     }
 

@@ -28,6 +28,7 @@
             android:name=".alertdialog.DialogActivity"
             android:theme="@style/TranslucentDialg"
             android:launchMode="standard"
+            android:exported="true"
             >
         </activity>
 

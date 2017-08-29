@@ -78,6 +78,8 @@ public class AlertDialogFragment extends Fragment implements View.OnClickListene
             case R.id.showdialog:
                 if (Build.VERSION.SDK_INT >= 23) {
                     checkAndShowDialog();
+                } else {
+                    createAndShowDialog();
                 }
                 break;
             case R.id.show_dialog_activity:

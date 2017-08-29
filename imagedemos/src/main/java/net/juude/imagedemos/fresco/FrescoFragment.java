@@ -43,6 +43,7 @@ public class FrescoFragment extends Fragment {
         scale_center_crop.getHierarchy().setActualImageScaleType(ScalingUtils.ScaleType.CENTER_CROP);
 
         SimpleDraweeView scale_fit_center = (SimpleDraweeView) v.findViewById(R.id.scale_fit_center);
+        scale_fit_center.setImageBitmap(null);
         scale_fit_center.setImageURI(Uri.parse("http://www.iapps.im/public/uploadfiles/icons/276ed0e2790fe3d1faf70b5e51e0c61e.jpg"));
         return v;
     }
