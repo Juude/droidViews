@@ -132,5 +132,11 @@
             android:layout_height="100dp"
             fresco:actualImageScaleType="fitCenter"
             />
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/big_iamge"
+            android:background="#F00"
+            android:layout_width="500px"
+            android:layout_height="2000px"
+            />
     </LinearLayout>
 </ScrollView>

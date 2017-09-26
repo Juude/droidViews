@@ -44,10 +44,12 @@ public class GlideFragment extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_glide, null);
+        /*
         mRecyclerImages  = (RecyclerView) v.findViewById(R.id.recycler_view);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.VERTICAL, false);
         mRecyclerImages.setLayoutManager(linearLayoutManager);
         mRecyclerImages.setAdapter(new ImageViewAdapter());
+        */
         return v;
     }
 
@@ -132,6 +134,7 @@ public class GlideFragment extends Fragment{
     @Override
     public void onResume() {
         super.onResume();
+        /*8
         OkHttpClient okHttpClient = new OkHttpClient();
         okHttpClient.newCall(
                 new Request.Builder()
@@ -166,6 +169,7 @@ public class GlideFragment extends Fragment{
             }
 
         });
+        */
     }
 
     @Override

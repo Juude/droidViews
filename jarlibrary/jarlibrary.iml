@@ -13,7 +13,7 @@
       </configuration>
     </facet>
   </component>
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/build/classes/main" />
     <output-test url="file://$MODULE_DIR$/build/classes/test" />
     <exclude-output />
@@ -27,7 +27,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="junit-4.10" level="project" />
-    <orderEntry type="library" name="hamcrest-core-1.1" level="project" />
+    <orderEntry type="library" exported="" name="junit-4.10" level="project" />
+    <orderEntry type="library" exported="" name="_Users_juude__gradle_caches_modules_2_files_2_1_org_hamcrest_hamcrest_core_1_1_860340562250678d1a344907ac75754e259cdb14_hamcrest_core_1_1_jar" level="project" />
   </component>
 </module>
