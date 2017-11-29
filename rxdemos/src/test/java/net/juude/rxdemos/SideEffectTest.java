@@ -16,12 +16,7 @@ import rx.functions.Action1;
  * Created by sjd on 16/9/10.
  */
 public class SideEffectTest {
-    //tes the whether doOnSubscribe or OnSubscribe called first
-    //result is:
-    //onOnSubscribe
-    //onSubscribe before
-    //testOnSubscribe onNext
-    //onSubscribe after
+
     @Test
     public void testOnSubscribe() {
         final AtomicBoolean doOnSubscribeCalled = new AtomicBoolean(false);

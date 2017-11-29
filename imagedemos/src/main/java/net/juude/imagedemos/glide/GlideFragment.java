@@ -1,11 +1,18 @@
 package net.juude.imagedemos.glide;
 
+import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Parcel;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Spannable;
+import android.text.SpannableString;
+import android.text.Spanned;
+import android.text.style.SuperscriptSpan;
+import android.text.style.TextAppearanceSpan;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,7 +57,23 @@ public class GlideFragment extends Fragment{
         mRecyclerImages.setLayoutManager(linearLayoutManager);
         mRecyclerImages.setAdapter(new ImageViewAdapter());
         */
+
+        ((TextView)v.findViewById(R.id.text_round)).setText(makeQuantity(getActivity(), 23432));
         return v;
+    }
+
+    private CharSequence makeQuantity(Context context,  int quantity) {
+        Parcel parcel = Parcel.obtain();
+        parcel.writeString("+");
+        SpannableString quantitySpan = new SpannableString("x" +
+                ((quantity >= 1000) ? "999+" : String.valueOf(quantity)) +
+                 "件");
+        quantitySpan.setSpan(new TextAppearanceSpan(context, R.style.Text12_ColorWhite), 0, quantitySpan.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
+        int indexOfPlus = quantitySpan.toString().indexOf("+");
+        if (indexOfPlus != -1) {
+            quantitySpan.setSpan(new SuperscriptSpan(parcel), indexOfPlus, indexOfPlus + 1, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        }
+        return quantitySpan;
     }
 
     class ImageViewHolder extends RecyclerView.ViewHolder {

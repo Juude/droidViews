@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     >
+    <TextView
+        android:id="@+id/text_round"
+        android:layout_marginTop="22dp"
+        android:text="23423"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@drawable/rounddrawable"/>
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"

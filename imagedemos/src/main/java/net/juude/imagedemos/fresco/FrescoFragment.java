@@ -60,7 +60,7 @@ public class FrescoFragment extends Fragment {
 //        SimpleDraweeView scale_fit_center = (SimpleDraweeView) v.findViewById(R.id.scale_fit_center);
 //        scale_fit_center.setImageBitmap(null);
 //        scale_fit_center.setImageURI(Uri.parse("http://www.iapps.im/public/uploadfiles/icons/276ed0e2790fe3d1faf70b5e51e0c61e.jpg"));
-         bigImage = (SimpleDraweeView)v.findViewById(R.id.big_iamge);
+         bigImage = (SimpleDraweeView)v.findViewById(R.id.strech_image);
         //bigImage.setImageURI(Uri.parse("http://www.imgbase.info/images/safe-wallpapers/photography/water/20814_water_wave_big_wave.jpg"));
         return v;
     }
@@ -74,7 +74,7 @@ public class FrescoFragment extends Fragment {
                 .build();
         //String url = "http://www.imgbase.info/images/safe-wallpapers/photography/water/20814_water_wave_big_wave.jpg";
         //String url = "http://cimg.taohuaan.net/upload/201211/09/161159Wq7P8.jpg";
-        String url = "https://gw.alicdn.com/tfs/TB1cHjma3oQMeJjy0FoXXcShVXa-640-5585.jpg";
+        String url = "https://img.alicdn.com/tfs/TB1RjL3oMoQMeJjy0FoXXcShVXa-750-320.png";
         ImageRequest request = ImageRequestBuilder
                 .newBuilderWithSource(Uri.parse(url))
                 .setImageDecodeOptions(decodeOptions)

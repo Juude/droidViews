@@ -19,7 +19,7 @@
 
         <activity
             android:name=".PermissionShadowActivity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
             android:launchMode="singleTop"
             >
         </activity>
@@ -31,7 +31,15 @@
             android:exported="true"
             >
         </activity>
-
+<!--
+android:style/Theme.Translucent.NoTitleBar
+        <item name="windowNoTitle">true</item>
+        <item name="windowContentOverlay">@null</item>
+        <item name="windowBackground">@color/transparent</item>
+        <item name="colorBackgroundCacheHint">@null</item>
+        <item name="windowIsTranslucent">true</item>
+        <item name="windowAnimationStyle">@style/Animation</item>
+        -->
     </application>
 
 </manifest>

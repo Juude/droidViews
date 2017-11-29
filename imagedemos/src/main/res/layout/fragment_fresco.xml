@@ -132,6 +132,14 @@
             android:layout_height="100dp"
             fresco:actualImageScaleType="fitCenter"
             />
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/strech_image"
+            android:background="#F00"
+            android:layout_width="1440px"
+            android:layout_height="614px"
+            />
+
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/big_iamge"
             android:background="#F00"

@@ -1,4 +1,4 @@
-package net.juude.rxdemos;
+package net.juude.rxdemos.multicast;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -188,4 +188,5 @@ public class MulticastingTest {
         Assert.assertEquals(subscribeCount.intValue(), 0);
         Assert.assertEquals(resultCount.intValue(), 0);
     }
+
 }

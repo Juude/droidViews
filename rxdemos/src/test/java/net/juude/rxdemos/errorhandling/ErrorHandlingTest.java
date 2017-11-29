@@ -1,4 +1,4 @@
-package net.juude.rxdemos;
+package net.juude.rxdemos.errorhandling;
 import junit.framework.Assert;
 
 import net.juude.rxdemos.test.SimplePrintSubscriber;
@@ -36,12 +36,12 @@ public class ErrorHandlingTest {
             @Override
             public void call() {
                 atomicInteger.incrementAndGet();
+                System.out.println("doOnSubscribe" + atomicInteger);
             }
         })
         .retry(2)
         .toBlocking()
-        .subscribe(new TestSubscriber<String>());
-        Assert.assertTrue(atomicInteger.intValue() == 3);
+        .subscribe(new SimplePrintSubscriber("testRetry"));
     }
 
     @Test
@@ -51,20 +51,20 @@ public class ErrorHandlingTest {
             @Override
             public void call(Subscriber<? super String> subscriber) {
                 subscriber.onNext(String.valueOf(System.currentTimeMillis()));
-                subscriber.onError(new Exception(String.valueOf(atomicInteger.incrementAndGet())));
+                subscriber.onError(new Exception(String.valueOf("87897")));
             }
         })
         .retry(new Func2<Integer, Throwable, Boolean>() {
             @Override
             public Boolean call(Integer integer, Throwable throwable) {
-                System.out.println("integer: " + integer + "  throwable : " + throwable.getMessage() + "\n" + LogUtils.getStackTraceString(throwable));
-                return false;
+                System.out.println("integer: " + integer + "  throwable : " + throwable.getMessage());
+                atomicInteger.incrementAndGet();
+                return atomicInteger.intValue() < 3;
             }
         })
-        .toBlocking()
         .subscribe(new SimplePrintSubscriber("testRetryFunc"));
-        System.out.println("atomicInteger : " + atomicInteger.intValue());
-        Assert.assertTrue(atomicInteger.intValue() == 5);
+//        System.out.println("atomicInteger : " + atomicInteger.intValue());
+//        Assert.assertTrue(atomicInteger.intValue() == 5);
     }
 
     @Test
@@ -107,6 +107,8 @@ public class ErrorHandlingTest {
             @Override
             public void call(Subscriber<? super Integer> subscriber) {
                 subscriber.onError(new Exception(String.valueOf(atomicInteger.getAndIncrement())));
+                subscriber.onNext(3);
+                subscriber.onCompleted();
             }
         })
         .onErrorReturn(new Func1<Throwable, Integer>() {
@@ -115,28 +117,31 @@ public class ErrorHandlingTest {
                 return -1;
             }
         })
-        .subscribe(testSubscriber);
-        Assert.assertEquals(testSubscriber.getOnNextEvents().get(0).intValue(), -1);
+        .subscribe(new SimplePrintSubscriber("testOnErrorReturn"));
+        //Assert.assertEquals(testSubscriber.getOnNextEvents().get(0).intValue(), -1);
     }
 
     @Test
     public void testOnExceptionResumeNext() {
         final AtomicInteger atomicInteger = new AtomicInteger(0);
         TestSubscriber<Integer> testSubscriber = new TestSubscriber<>();
-        Observable.create(new Observable.OnSubscribe<Integer>() {
+        Observable<Integer> observerable = Observable.create(new Observable.OnSubscribe<Integer>() {
             @Override
             public void call(Subscriber<? super Integer> subscriber) {
                 subscriber.onNext(-1);
                 subscriber.onError(new Exception(String.valueOf(atomicInteger.getAndIncrement())));
+                subscriber.onNext(8);
             }
-        })
-        .onErrorResumeNext(Observable.just(1,3,5))
-        .subscribe(testSubscriber);
+        });
+        observerable.onErrorResumeNext(observerable)
+        .subscribe(new SimplePrintSubscriber("testOnExceptionResumeNext"));
+        /*
         List<Integer> nextList = testSubscriber.getOnNextEvents();
         Assert.assertTrue(nextList.size() == 4);
         Assert.assertTrue(nextList.get(0) == -1);
         Assert.assertTrue(nextList.get(1) == 1);
         Assert.assertTrue(nextList.get(2) == 3);
         Assert.assertTrue(nextList.get(3) == 5);
+        */
     }
 }

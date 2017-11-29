@@ -11,7 +11,7 @@ import rx.observers.TestSubscriber;
 import rx.schedulers.Schedulers;
 
 /**
- * Created by sjd on 16/9/9.
+ * Created by juude on 16/9/9.
  */
 public class BlockingTest {
 

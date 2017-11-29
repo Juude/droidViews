@@ -9,6 +9,10 @@
         android:targetSdkVersion="25" />
     <uses-feature android:name="android.hardware.camera" />
     <uses-feature android:name="android.software.live_wallpaper" />
+
+    <uses-permission
+        android:name="android.permission.AUTHENTICATE_ACCOUNTS"
+        android:maxSdkVersion="22" />
     <uses-permission android:name="android.permission.READ_FRAME_BUFFER"/>
     <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
     <uses-permission android:name="android.permission.STATUS_BAR"/>
@@ -21,6 +25,8 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -37,8 +43,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:name=".sync.XXAccountProvider"
+            android:authorities="net.juude.droidviews.xx"
+            android:exported="false"
+            android:syncable="true"/>
 
-
+        <service
+            android:name=".sync.XXSyncService"
+            android:exported="true"
+            android:process=":core">
+            <intent-filter>
+                <action
+                    android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.content.SyncAdapter"
+                android:resource="@xml/sync_adapter"/>
+        </service>
     </application>
 
 </manifest>

@@ -28,6 +28,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="junit-4.10" level="project" />
-    <orderEntry type="library" exported="" name="_Users_juude__gradle_caches_modules_2_files_2_1_org_hamcrest_hamcrest_core_1_1_860340562250678d1a344907ac75754e259cdb14_hamcrest_core_1_1_jar" level="project" />
+    <orderEntry type="library" exported="" name="hamcrest-core-1.1" level="project" />
   </component>
 </module>

@@ -95,7 +95,6 @@ public class PermissionRequester {
         } else {
             throw new RuntimeException("cxt is net a activity or fragment");
         }
-
         return true;
     }
 }
