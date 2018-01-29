@@ -8,6 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.Arrays;
+import java.util.HashMap;
 
 /**
  * Created by juude on 2016/12/9.
@@ -40,7 +41,19 @@ public class StringTest {
     @Test
     public void split() {
         System.out.print(Arrays.toString("fdsafdsaf".split(".")));
-        System.out.print(Arrays.toString("fdsaf.dsaf".split("\\.")));
+        System.out.println(Arrays.toString("fdsaf.dsaf.ddds".split("\\.", 2)));
+
+        String keyValue = "fdsaf=dsaf=ddds";
+        HashMap<String, String> properteis = new HashMap<>();
+        if (keyValue != null && keyValue.contains("=")) {
+            String[] splitArray = keyValue.split("=", 2);
+            if (splitArray.length == 2) {
+                properteis.put(splitArray[0], splitArray[1]);
+            }
+        }
+        for (String key : properteis.keySet()) {
+            System.out.println("key : " + key + "value: " + properteis.get(key));
+        }
     }
 
     /*

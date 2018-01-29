@@ -45,7 +45,7 @@ public class DroidViewsApplication extends Application{
                     }
                 })
                 .build());
-        createSyncAccount(this);
+        //createSyncAccount(this);
 
     }
 

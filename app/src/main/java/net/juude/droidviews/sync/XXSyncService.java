@@ -40,7 +40,7 @@ public class XXSyncService extends Service {
 
         @Override
         public void onPerformSync(Account account, Bundle extras, String authority, ContentProviderClient provider, SyncResult syncResult) {
-            getContext().getContentResolver().notifyChange(XXAccountProvider.CONTENT_URI, null, false);
+            //getContext().getContentResolver().notifyChange(XXAccountProvider.CONTENT_URI, null, false);
         }
     }
 }

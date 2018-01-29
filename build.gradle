@@ -23,8 +23,9 @@ allprojects {
     }
     ext {
         _buildToolsVersion = "24.0.3"
-        _compileSdkVersion = 24
-        support_sdk_version = "24.2.1"
+        _compileSdkVersion = 26
+        support_sdk_version = "25.1.0"
+        //  compile 'com.android.support:appcompat-v7:26.0.0-beta1'
 
 //        _buildToolsVersion = "25"
 //        _compileSdkVersion = 25

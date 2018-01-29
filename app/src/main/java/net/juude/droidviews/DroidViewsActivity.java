@@ -19,6 +19,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import net.juude.droidviews.graphics.GraphicsDemoFragment;
+import net.juude.droidviews.notifications.NotificationSettingsFragment;
 import net.juude.droidviews.perf.memory.MemoryFragment;
 import net.juude.droidviews.perf.overdraw.OverdrawFragment;
 import net.juude.droidviews.surface.SurfaceFragment;
@@ -49,6 +50,7 @@ public class DroidViewsActivity extends FragmentActivity {
             MemoryFragment.class,
             SurfaceFragment.class,
             OverdrawFragment.class,
+            NotificationSettingsFragment.class
         };
     }
     private Class mDefaultFragment = GraphicsDemoFragment.class;
